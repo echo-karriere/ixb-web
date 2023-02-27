@@ -4,8 +4,7 @@ import "remixicon/fonts/remixicon.css";
 
 export default function Footer() {
   return (
-    <footer
-      className="mb-6 mt-12">
+    <footer className="mb-6 mt-12">
       <hr />
 
       <div className="flex justify-center">
@@ -176,7 +175,7 @@ export default function Footer() {
 
       <div className="flex justify-center">
         <a
-          href="https://vercel.com/?utm_source=echo-karriere-website&utm_campaign=oss"
+          href="https://vercel.com/?utm_source=echo-karriere-ixb-web&utm_campaign=oss"
           target="_blank"
           rel="noopener noreferrer"
           className="focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg focus:ring-blue-400">
