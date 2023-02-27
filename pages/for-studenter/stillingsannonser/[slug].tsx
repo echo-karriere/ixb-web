@@ -32,6 +32,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const queryParams = { slug: params?.slug ?? `` };
 
+  // Add some error handling
+  if (!params || !params.slug) {
+    return { notFound: true };
+  }
+
   const joblisting = await client.fetch(query, queryParams);
 
   return {
