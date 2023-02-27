@@ -4,6 +4,7 @@ import Layout from "../components/common/Layout";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
+import { Analytics } from "@vercel/analytics/react";
 
 //Route Events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -61,6 +62,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </>
   );
 }
