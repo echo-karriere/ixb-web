@@ -1,6 +1,7 @@
 import type { SanityDocument } from "@sanity/client";
 import ReactSelect from "react-select";
 import { useState } from "react";
+import Link from "next/dist/client/link";
 
 export default function Joblist({
   joblistings,
@@ -43,7 +44,6 @@ export default function Joblist({
       (selectedTypes.length === 0 ||
         selectedTypes.some((type) => job.type.includes(type)))
   );
-
 
   return (
     <>
@@ -113,36 +113,40 @@ export default function Joblist({
         <div className="col-span-2 md:ml-8 md:w-full">
           {filteredJobs.map((job) => (
             <div key={job._id} className="mb-4 w-full">
-              <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded">
-                <div className="w-full m-2 md:w-1/2">
-                  <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
-                    {job?.title}
-                  </h3>
-                  <p className="text-gray-700">
-                    {" "}
-                    <i className="ri-building-3-line" /> {job?.company}
-                  </p>
-
-                  <p className="text-gray-700">
-                    <i className="ri-map-pin-line" /> {job?.location.join(", ")}
-                  </p>
-
-                  <p className="text-gray-700">
-                    <i className="ri-suitcase-line" /> {job?.type}
-                  </p>
-
-                  {job?.deadline && (
+              <Link
+                href={`/for-studenter/stillingsannonser/${job.slug.current}`}>
+                <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded">
+                  <div className="w-full m-2 md:w-1/2">
+                    <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
+                      {job.title}
+                    </h3>
                     <p className="text-gray-700">
-                      <i className="ri-calendar-line" />{" "}
-                      {new Date(job?.deadline).toLocaleDateString("nb-NO", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      {" "}
+                      <i className="ri-building-3-line" /> {job.company}
                     </p>
-                  )}
+
+                    <p className="text-gray-700">
+                      <i className="ri-map-pin-line" />{" "}
+                      {job.location.join(", ")}
+                    </p>
+
+                    <p className="text-gray-700">
+                      <i className="ri-suitcase-line" /> {job.type}
+                    </p>
+
+                    {job.deadline && (
+                      <p className="text-gray-700">
+                        <i className="ri-calendar-line" />{" "}
+                        {new Date(job.deadline).toLocaleDateString("nb-NO", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
