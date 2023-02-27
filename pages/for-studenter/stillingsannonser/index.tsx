@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
   return { props: { data } };
 };
 
-export default function Home({ data }: { data: SanityDocument[] }) {
+export default function JobAds({ data }: { data: SanityDocument[] }) {
   return (
     <>
       <HeadSEO

@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default function Page({
+export default function JobAd({
   data,
 }: {
   data: { joblisting: SanityDocument };
