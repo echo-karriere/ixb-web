@@ -15,10 +15,38 @@ const query = groq`*[_type == "committeeMember" ]{
 
 export const getStaticProps = async () => {
   const data = await client.fetch(query);
-  // make slug default to id if not set
-  data.forEach((item: { slug: any; _id: any; }) => {
+
+  // Used to give each committee member a slug if they don't have one, crutial for the page to be deployed on vercel.
+  data.forEach((item: { slug: any; _id: any }) => {
     if (!item.slug) {
       item.slug = item._id;
+    }
+  });
+
+  // sort after role
+  data.sort((a: { role: string }, b: { role: string }) => {
+    if (a.role === "Leder") {
+      return -1;
+    } else if (b.role === "Leder") {
+      return 1;
+    } else if (a.role === "Nestleder") {
+      return -1;
+    } else if (b.role === "Nestleder") {
+      return 1;
+    } else if (a.role === "Økonomiansvarlig") {
+      return -1;
+    } else if (b.role === "Økonomiansvarlig") {
+      return 1;
+    } else if (a.role === "Webansvarlig") {
+      return -1;
+    } else if (b.role === "Webansvarlig") {
+      return 1;
+    } else if (a.role === "Bedriftsansvarlig") {
+      return -1;
+    } else if (b.role === "Bedriftsansvarlig") {
+      return 1;
+    } else {
+      return a.role.localeCompare(b.role);
     }
   });
 
