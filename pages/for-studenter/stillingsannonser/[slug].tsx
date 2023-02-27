@@ -5,7 +5,8 @@ import { client } from "../../../src/lib/sanity.client";
 import Stillingsannonse from "../../../components/for-studenter/stillingsannonser/stillingsannonse";
 
 const query = groq`*[_type == "joblisting" && slug.current == $slug][0]{
- publish,
+  _id,
+  publish,
   title,
   slug,
   company,
@@ -14,7 +15,7 @@ const query = groq`*[_type == "joblisting" && slug.current == $slug][0]{
   location,
   description,
   deadline,
-  link,
+  link
 }`;
 
 // Prepare Next.js to know which routes already exist

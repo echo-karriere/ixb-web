@@ -3,26 +3,26 @@ import type { SanityDocument } from "@sanity/client";
 import ReactSelect from "react-select";
 import { useState } from "react";
 
-export default function Joblist2({
-  joblisting,
+export default function Joblist({
+  joblistings,
 }: {
-  joblisting: SanityDocument[];
+  joblistings: SanityDocument[];
 }) {
   // Get a list of all unique companies
-  const allCompanies = joblisting
+  const allCompanies = joblistings
     .map((job) => job.company)
     .filter((company, index, companies) => companies.indexOf(company) === index)
     .sort();
 
   // Get a list of all unique locations
-  const allLocations = joblisting
+  const allLocations = joblistings
     .flatMap((job) => job.location)
     .filter(
       (location, index, locations) => locations.indexOf(location) === index
     )
     .sort();
 
-  const allTypes = joblisting
+  const allTypes = joblistings
     .map((job) => job.type)
     .filter((type, index, types) => types.indexOf(type) === index)
     .sort();
@@ -33,7 +33,7 @@ export default function Joblist2({
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
 
   // Filter the job listings based on the selected companies and locations
-  const filteredJobs = joblisting.filter(
+  const filteredJobs = joblistings.filter(
     (job) =>
       (selectedCompanies.length === 0 ||
         selectedCompanies.includes(job.company)) &&

@@ -32,7 +32,7 @@ export default function JobAds({ data }: { data: SanityDocument[] }) {
         title="Stillingsannonser | ITxBERGEN"
         description="Stillingsannonser for studenter ved ITxBERGEN"
       />
-      <Stillingsannonser joblisting={data} />
+      <Stillingsannonser joblistings={data} />
     </>
   );
 }
