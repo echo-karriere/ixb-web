@@ -3,7 +3,7 @@ import type { SanityDocument } from "@sanity/client";
 import ReactSelect from "react-select";
 import { useState } from "react";
 
-export default function Joblisting({
+export default function Joblist2({
   joblisting,
 }: {
   joblisting: SanityDocument[];

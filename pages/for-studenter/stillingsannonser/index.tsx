@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import type { SanityDocument } from "@sanity/client";
 import { client } from "../../../src/lib/sanity.client";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
-import Stillingsannonser from "../../../components/for-bedrifter/stillingsannonser/stillingsannonser";
+import Stillingsannonser from "../../../components/for-studenter/stillingsannonser/stillingsannonser";
 
 const query = groq`*[_type == "joblisting" && defined(slug.current)]{
   _id,
@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
     (a: { deadline: string }, b: { deadline: string }) =>
       new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
   );
-  
+
   return { props: { data } };
 };
 

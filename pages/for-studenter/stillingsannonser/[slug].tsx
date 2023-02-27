@@ -2,7 +2,7 @@ import { SanityDocument } from "@sanity/client";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { groq } from "next-sanity";
 import { client } from "../../../src/lib/sanity.client";
-import Stillingsannonse from "../../../components/for-bedrifter/stillingsannonser/stillingsannonse";
+import Stillingsannonse from "../../../components/for-studenter/stillingsannonser/stillingsannonse";
 
 const query = groq`*[_type == "joblisting" && slug.current == $slug][0]{
  publish,
@@ -45,5 +45,5 @@ export default function JobAd({
 }: {
   data: { joblisting: SanityDocument };
 }) {
-    return <Stillingsannonse joblisting={data.joblisting} />;
+  return <Stillingsannonse joblisting={data.joblisting} />;
 }

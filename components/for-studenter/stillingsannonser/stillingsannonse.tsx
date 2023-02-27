@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const builder = imageUrlBuilder(client);
 
-export default function Joblisting({
+export default function Joblist({
   joblisting,
 }: {
   joblisting: SanityDocument;
