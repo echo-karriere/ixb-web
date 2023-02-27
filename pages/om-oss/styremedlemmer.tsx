@@ -4,7 +4,7 @@ import { client } from "../../src/lib/sanity.client";
 import Styremedlemmer from "../../components/om-oss/styremedlemmer/styremedlemmer";
 import { HeadSEO } from "../../components/common/functions/HeadSEO";
 
-const query = groq`*[_type == "committeeMember" && defined(slug.current)]{
+const query = groq`*[_type == "committeeMember" ]{
   _id,
   name,
   role,
@@ -15,6 +15,12 @@ const query = groq`*[_type == "committeeMember" && defined(slug.current)]{
 
 export const getStaticProps = async () => {
   const data = await client.fetch(query);
+  // make slug default to id if not set
+  data.forEach((item: { slug: any; _id: any; }) => {
+    if (!item.slug) {
+      item.slug = item._id;
+    }
+  });
 
   return {
     props: {

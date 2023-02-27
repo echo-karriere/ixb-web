@@ -9,7 +9,7 @@ export default function LogoCloud() {
           <img
             src="/colab/knowit.svg"
             alt="Knowit"
-            className="max-h-8 filter grayscale"
+            className="max-h-8 filter"
           />
         </div>
 
