@@ -1,0 +1,30 @@
+{
+  "name": "ITxBergen",
+  "short_name": "ITxBergen",
+  "description": "Legg til ITxBergen, og ha oss alltid lett tilgjengelig!",
+  "start_url": "/",
+  "screenshots": [
+    {
+      "src": "../webpageAssets/ITxBergen_image.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ],
+
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#33030d",
+  "background_color": "#33030d",
+  "display": "standalone"
+}

@@ -1,0 +1,8 @@
+# Acknowledgements
+
+Acknowledgements will be given publically for any higher severity bug reports, or we can respect your privacy. Tell us what you wish when reporting to us. We are not providing any monetary rewards because we are a non-profit organization.
+
+# We would like to thank the following:
+# [yyyy-mm-dd] Name -- description
+
+[0000-00-00] N/A -- N/A

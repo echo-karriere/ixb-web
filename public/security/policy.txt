@@ -1,0 +1,5 @@
+# Policy
+
+We welcome any friendly bug report. Please contact us in advance if you wish to use methods that can trigger warnings or cause denial of service. Issues with the website can also be reported to our GitHub repository: https://github.com/echo-karriere/web/issues
+
+All illegal activities towards our website under Norwegian law will be reported to the Police (Vest Politidistrikt).

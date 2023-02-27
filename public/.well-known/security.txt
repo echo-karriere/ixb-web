@@ -1,0 +1,8 @@
+Contact: mailto:webmaster@echokarriere.no
+Preferred-Languages: nb-NO, nn-NO, en
+Policy: http://www.ixb.no/security/policy.txt
+Acknowledgments: http://www.ixb.no/security/acknowledgments.txt
+Encryption: https://www.ixb.no/security/ITxBERGEN_PGP_PUBLIC.asc
+Canonical: https://www.ixb.no/.well-known/security.txt
+
+# PGP Fingerprint: ADF3 736A FCB3 5659 DFF2 15D3 C3D5 9320 4AD3 089F
