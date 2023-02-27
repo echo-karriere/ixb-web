@@ -118,26 +118,26 @@ export default function Joblist({
                 <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded">
                   <div className="w-full m-2 md:w-1/2">
                     <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
-                      {job.title}
+                      {job?.title}
                     </h3>
                     <p className="text-gray-700">
                       {" "}
-                      <i className="ri-building-3-line" /> {job.company}
+                      <i className="ri-building-3-line" /> {job?.company}
                     </p>
 
                     <p className="text-gray-700">
                       <i className="ri-map-pin-line" />{" "}
-                      {job.location.join(", ")}
+                      {job?.location.join(", ")}
                     </p>
 
                     <p className="text-gray-700">
-                      <i className="ri-suitcase-line" /> {job.type}
+                      <i className="ri-suitcase-line" /> {job?.type}
                     </p>
 
-                    {job.deadline && (
+                    {job?.deadline && (
                       <p className="text-gray-700">
                         <i className="ri-calendar-line" />{" "}
-                        {new Date(job.deadline).toLocaleDateString("nb-NO", {
+                        {new Date(job?.deadline).toLocaleDateString("nb-NO", {
                           year: "numeric",
                           month: "long",
                           day: "numeric",
