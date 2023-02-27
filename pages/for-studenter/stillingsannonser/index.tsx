@@ -21,7 +21,19 @@ const query = groq`*[_type == "joblisting" && defined(slug.current)]{
 export const getStaticProps = async () => {
   const data = await client.fetch(query);
 
-  return { props: { data } };
+  const now = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const filteredData = data.filter((job: { deadline: string }) => {
+    const jobDeadline = new Date(job.deadline);
+
+    return jobDeadline >= now;
+  });
+
+  // sort after deadline so that the closest deadline is first
+  filteredData.sort((a: { deadline: string }, b: { deadline: string }) => {
+    return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
+  });
+
+  return { props: { data: filteredData } };
 };
 
 export default function JobAds({ data }: { data: SanityDocument[] }) {
