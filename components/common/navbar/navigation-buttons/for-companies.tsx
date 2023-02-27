@@ -72,6 +72,7 @@ export default function ForCompanies() {
                     <a
                       href="https://skjema.ixb.no/karrieredagene2023"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
                       <span className="flex items-center">
                         <span className="text-sm font-medium text-gray-100">

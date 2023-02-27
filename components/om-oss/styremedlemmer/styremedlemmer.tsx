@@ -59,7 +59,8 @@ export default function CommitteeMember({
                       <a
                         aria-label={`Trykk her for å sende e-post til ${person.name}`}
                         href={`mailto:${person.email}`}
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <i className="ri-mail-line ri-lg text-gray-600"></i>
                       </a>
 
@@ -67,7 +68,8 @@ export default function CommitteeMember({
                         <a
                           aria-label={`Trykk her for å gå til ${person.name} sin LinkedIn-profil.`}
                           href={person.linkedin}
-                          target="_blank">
+                          target="_blank"
+                          rel="noopener noreferrer">
                           <i className="ri-linkedin-fill ri-lg text-gray-600"></i>
                         </a>
                       )}
