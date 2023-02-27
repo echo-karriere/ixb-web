@@ -51,5 +51,5 @@ export default function JobAd({
 }: {
   data: { joblisting: SanityDocument };
 }) {
-  return <Stillingsannonse joblisting={data.joblisting} />;
+  return <Stillingsannonse joblisting={data?.joblisting} />;
 }

@@ -15,8 +15,7 @@ const query = groq`*[_type == "joblisting" && defined(slug.current)]{
   location,
   description,
   deadline,
-  link,
-
+  link
 }`;
 
 export const getStaticProps = async () => {
