@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
   const data = await client.fetch(query);
 
   const now = new Date();
-  now.setDate(now.getDate() + 1);
+  now.setHours(0, 0, 0, 0);
 
   const filteredData = data.filter((job: { deadline: string }) => {
     const jobDeadline = new Date(job.deadline);
