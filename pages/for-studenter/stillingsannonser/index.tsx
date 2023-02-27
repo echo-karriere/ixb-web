@@ -21,7 +21,9 @@ const query = groq`*[_type == "joblisting" && defined(slug.current)]{
 export const getStaticProps = async () => {
   const data = await client.fetch(query);
 
-  const now = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const now = new Date();
+  now.setDate(now.getDate() + 1);
+
   const filteredData = data.filter((job: { deadline: string }) => {
     const jobDeadline = new Date(job.deadline);
 
@@ -41,7 +43,7 @@ export default function JobAds({ data }: { data: SanityDocument[] }) {
     <>
       <HeadSEO
         title="Stillingsannonser | ITxBERGEN"
-        description="Stillingsannonser for studenter ved ITxBERGEN"
+        description="Finn stillingsannonser som passer for studenter under utdanning og nyutdannede"
       />
       <Stillingsannonser joblistings={data} />
     </>

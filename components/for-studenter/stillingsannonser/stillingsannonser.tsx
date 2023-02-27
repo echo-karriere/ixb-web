@@ -44,6 +44,19 @@ export default function Joblist({
         selectedTypes.some((type) => job.type.includes(type)))
   );
 
+  // sort deadline by date
+  filteredJobs.sort((a, b) => {
+    const dateA = new Date(a.deadline);
+    const dateB = new Date(b.deadline);
+    return dateA.getTime() - dateB.getTime();
+  });
+
+  // if deadline is passed, don't show
+
+
+
+
+
   return (
     <>
       <div className="max-w-6xl w-11/12 mt-6 md:mt-10 mx-auto flex flex-col md:flex-row">
