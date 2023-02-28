@@ -1,6 +1,6 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-
+import Link from "next/link";
 
 const forcompanies = [
   {
@@ -70,7 +70,7 @@ export default function ForCompanies() {
                     ))}
                   </div>
                   <div className="bg-gray-800 p-4">
-                    <a
+                    <Link
                       href="/for-bedrifter/pamelding"
                       className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
                       <span className="flex items-center">
@@ -81,7 +81,7 @@ export default function ForCompanies() {
                       <span className="block text-sm text-gray-200">
                         Påmeldingen til karrieredagene 2023 er nå åpen.
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </Popover.Panel>
