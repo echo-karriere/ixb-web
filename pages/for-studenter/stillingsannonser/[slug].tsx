@@ -58,8 +58,9 @@ export default function JobAd({ data }: JobAdProps) {
   const builder = imageUrlBuilder(client);
 
   // set the image size and format
-  const imageUrl = builder.image(logo).size(400, 200).format("jpg").url();
+  const imageUrl = builder.image(logo).size(200, 200).format("jpg").url();
 
+  // content should be moved to a separate component, did it like this because of deployment issues with Vercel
   return (
     <>
       <HeadSEO
@@ -84,13 +85,18 @@ export default function JobAd({ data }: JobAdProps) {
               />
             </div>
             <p className="font-bold">
-              <i aria-label="Bedrift:" className="ri-building-3-line"/> {company}
+              <i aria-label="Bedrift:" className="ri-building-3-line" />{" "}
+              {company}
             </p>
             <p>
-              <i aria-label="Lokalisjoner hvor stillingen er relevant:" className="ri-map-pin-line"/> {location.join(", ")}
+              <i
+                aria-label="Lokalisjoner hvor stillingen er relevant:"
+                className="ri-map-pin-line"
+              />{" "}
+              {location.join(", ")}
             </p>
             <p>
-              <i aria-label="Jobbtype:" className="ri-suitcase-line"/> {type}
+              <i aria-label="Jobbtype:" className="ri-suitcase-line" /> {type}
             </p>
             {deadline && (
               <p>
