@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ITxBERGEN
+
+README in the making....
+
+[![Powered by Vercel](https://raw.githubusercontent.com/echo-karriere/web/develop/.github/powered-by-vercel.svg)](https://vercel.com?utm_source=echo-karriere&utm_campaign=oss)
 
 ## Getting Started
 
