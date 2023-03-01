@@ -34,11 +34,10 @@ export default function Footer() {
                   <a
                     href="https://echokarriere.pameldinger.no/"
                     target="_blank"
-                    aria-label="Påmelding til arrangementer, ekstern lenke"
+                    aria-label="Arrangementer, ekstern lenke"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
-                    Påmelding til arrangementer{" "}
-                    <i className="ri-external-link-fill"></i>
+                    Arrangementer <i className="ri-external-link-fill"></i>
                   </a>
                 </li>
                 <li>
