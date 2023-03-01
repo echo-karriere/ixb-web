@@ -9,6 +9,7 @@ const Pameldingsvilkar: NextPage = () => {
       <HeadSEO
         title="Salgs- og påmeldingsvilkår | ITxBergen"
         description="Les om våre Salgs- og påmeldingsvilkår for våre arrangementer hos ITxBERGEN"
+        canonical="/info/pameldingsvilkar"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

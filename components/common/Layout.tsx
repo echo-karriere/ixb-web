@@ -14,11 +14,13 @@ export default function DashboardLayout({
       <Head>
         <meta
           name="keywords"
-          content="ITxBERGEN, ITxBergen, IT X BERGEN, ixb, IT, Karrieredag, Karrieredager, Karrieredagene, Bergen, itDagene, Bindeleddet, Student, Studenter, Bergen, echo, Cloud, Enter, Linjeforening, ITØK, Enigma, HVL, UiB, Høgskulen på Vestlandet, Universitetet i Bergen, IT-student, echo karriere, Echo Karriere, Echo karrieredag"
+          content="ITxBERGEN, ITxBergen, IT X BERGEN, ixb, IT, Karrieredag, Karrieredager, Karrieredagene, Bergen, itDagene, Bindeleddet, Student, Studenter, Bergen, echo, Cloud, Enter, Linjeforening, ITØK, Enigma, HVL, UiB, Høgskulen på Vestlandet, Universitetet i Bergen, IT-student, echo karriere, Echo Karriere, Echo karrieredag, IT Bergen"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="image" content="/webpageAssets/ITxBergen_image.png" />
         <meta name="og:image" content="/webpageAssets/ITxBergen_image.png" />
+        <meta name="og:image:width" content="1200" />
+        <meta name="og:image:height" content="630" />
         <meta name="robots" content="index, follow" />
         <link
           rel="apple-touch-icon"
@@ -46,6 +48,8 @@ export default function DashboardLayout({
         <meta name="msapplication-TileColor" content="#33030d" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#33030d" />
+
+        <meta name="publisher" content="ITxBergen" />
       </Head>
       <SkipToContent />
       <Navbar />

@@ -9,6 +9,7 @@ const Privacy: NextPage = () => {
       <HeadSEO
         title="Personvernerklæring | ITxBergen"
         description="Les om hvordan ITxBERGEN behandler dine personopplysninger."
+        canonical="/info/personvern"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

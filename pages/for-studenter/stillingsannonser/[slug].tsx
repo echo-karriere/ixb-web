@@ -66,6 +66,8 @@ export default function JobAd({ data }: JobAdProps) {
       <HeadSEO
         title={`${title} | ITxBERGEN`}
         description={`Ta en titt på stillingsannonsen til ${company}, og finn flere stillinger for IT-studenter og nyutdannede på ITxBERGEN sin side.`}
+        canonical={`/for-studenter/stillingsannonser/${data.slug.current}`}
+        author={company}
       />
       <div className="mb-12 mt-8 md:mt-12 flex flex-col items-center justify-center">
         <div className="md:grid md:grid-cols-3 md:gap-4 w-11/12 max-w-7xl">

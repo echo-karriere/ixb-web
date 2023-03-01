@@ -63,6 +63,7 @@ export default function Styremedlem({ data }: { data: SanityDocument[] }) {
       <HeadSEO
         title="Styremedlemmer | ITxBERGEN"
         description="Se hvem som sitter i styret for ITxBERGEN, hvem som er ansvarlig for hva og kontaktinformasjon."
+        canonical="/om-oss/styremedlemmer"
       />
       <Styremedlemmer committeeMember={data} />
     </>

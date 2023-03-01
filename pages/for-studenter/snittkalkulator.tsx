@@ -8,6 +8,7 @@ const calculator: NextPage = () => {
       <HeadSEO
         title="Regn ut karaktersnittet for høgskole og universitet | ITxBERGEN"
         description="Regn ut karaktersnittet ditt for høgskole og universitet. Vi har laget en snittkalkulator som gjør det enkelt å regne ut snittet ditt."
+        canonical="/for-studenter/snittkalkulator"
       />
       <main>
         <Snittkalkulator />

@@ -7,6 +7,7 @@ export default function newName() {
       <HeadSEO
         title="Adjø echo karriere. Hallo ITxBERGEN!"
         description="echo karriere er nå ITxBERGEN. Vår leder har skrevet en liten tekst om hvorfor vi har endret navn, og hva vi har i vente fremover."
+        canonical="/nytt-navn"
       />
 
       <main>

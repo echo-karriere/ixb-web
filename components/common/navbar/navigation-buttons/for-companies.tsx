@@ -15,6 +15,12 @@ const forcompanies = [
     href: "https://airtable.com/shrEXkOYcPiAG7cDP",
     icon: IconThree,
   },
+  {
+    name: "Påmeding karrieredagene",
+    description: " Påmeldingen til karrieredagene 2023 er nå åpen.",
+    href: "/for-bedrifter/pamelding",
+    icon: IconTwo,
+  },
 ];
 
 export default function ForCompanies() {
@@ -69,7 +75,7 @@ export default function ForCompanies() {
                       </a>
                     ))}
                   </div>
-                  <div className="bg-gray-800 p-4">
+                  {/* <div className="bg-gray-800 p-4">
                     <Link
                       href="/for-bedrifter/pamelding"
                       className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
@@ -82,7 +88,7 @@ export default function ForCompanies() {
                         Påmeldingen til karrieredagene 2023 er nå åpen.
                       </span>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </Popover.Panel>
             </Transition>
@@ -98,6 +104,11 @@ export default function ForCompanies() {
 function IconOne() {
   return <i className="ri-information-line ri-2x text-[#33030d]"></i>;
 }
+
+function IconTwo() {
+  return <i className="ri-pencil-line ri-2x text-[#33030d]"></i>;
+}
+
 
 function IconThree() {
   return <i className="ri-suitcase-line ri-2x text-[#33030d]"></i>;

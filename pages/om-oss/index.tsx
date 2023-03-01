@@ -8,6 +8,7 @@ const AboutUs: NextPage = () => {
       <HeadSEO
         title="Om oss | ITxBERGEN"
         description="Hvem er vi og hva gjør vi? Les mer om ITxBERGEN her, og hva vi jobber med og hva vi står for."
+        canonical="/om-oss"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

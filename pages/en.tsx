@@ -7,6 +7,8 @@ export default function Custom404() {
       <HeadSEO
         title="ITxBERGEN - We organise career fairs for IT students in Bergen"
         description="ITxBERGEN (formerly known as echo karriere) is a student group that organises career fairs where IT students can get to know future employers, as well as get an insight into what the job market looks like for IT students in Bergen and Norway."
+        canonical="/en"
+      
       />
 
       <main>

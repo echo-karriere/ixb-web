@@ -9,6 +9,7 @@ const ContactUs: NextPage = () => {
       <HeadSEO
         title="Kontakt oss | ITxBERGEN"
         description="Informasjon om hvordan du kan komme i kontakt med oss."
+        canonical="/om-oss/kontakt-oss"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

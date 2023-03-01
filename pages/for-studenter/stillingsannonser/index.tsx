@@ -27,11 +27,18 @@ export const getStaticProps = async () => {
   const filteredData = data.filter((job: { deadline: string }) => {
     const jobDeadline = new Date(job.deadline);
 
-    return jobDeadline >= now;
+    return !job.deadline || jobDeadline >= now;
   });
 
-  // sort after deadline so that the closest deadline is first
+  // sort after deadline so that the closest deadline is first,
+  // and jobs without a deadline are always at the bottom
   filteredData.sort((a: { deadline: string }, b: { deadline: string }) => {
+    if (!a.deadline) {
+      return 1;
+    }
+    if (!b.deadline) {
+      return -1;
+    }
     return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
   });
 
@@ -44,6 +51,7 @@ export default function JobAds({ data }: { data: SanityDocument[] }) {
       <HeadSEO
         title="Stillingsannonser | ITxBERGEN"
         description="Finn stillingsannonser som passer for studenter under utdanning og nyutdannede"
+        canonical="/for-studenter/stillingsannonser"
       />
       <Stillingsannonser joblistings={data} />
     </>

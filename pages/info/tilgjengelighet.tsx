@@ -8,6 +8,7 @@ const Tilgjengelighet: NextPage = () => {
       <HeadSEO
         title="Tilgjengelighet | ITxBergen"
         description="Les om hvordan vi i ITxBERGEN jobber for å gjøre våre nettsider og arrangementer tilgjengelig for alle sammen."
+        canonical="/info/tilgjengelighet"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

@@ -9,6 +9,7 @@ const Press: NextPage = () => {
       <HeadSEO
         title="Presse | ITxBERGEN"
         description="Informasjon til pressen om ITxBERGEN"
+        canonical="/info/presse"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

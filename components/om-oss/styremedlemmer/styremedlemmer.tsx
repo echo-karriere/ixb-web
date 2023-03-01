@@ -1,6 +1,7 @@
 import type { SanityDocument } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../../../src/lib/sanity.client";
+import Image from "next/dist/client/image";
 import "remixicon/fonts/remixicon.css";
 
 const builder = imageUrlBuilder(client);
@@ -38,7 +39,7 @@ export default function CommitteeMember({
             {committeeMember.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-4">
-                  <img
+                  <Image
                     className="h-28 w-28 rounded-full"
                     src={builder
                       .image(person.profilePicture)
@@ -47,6 +48,8 @@ export default function CommitteeMember({
                       .url()}
                     // alt bilde av person.name
                     alt={`Bilde av ${person.name}`}
+                    width={400}
+                    height={400}
                   />
                   <div>
                     <h3 className="md:font-2xl font-semibold leading-7 -mt-2 tracking-tight text-gray-900">

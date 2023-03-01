@@ -9,6 +9,7 @@ const Informasjonskapsler: NextPage = () => {
       <HeadSEO
         title="Informasjonskapsler | ITxBergen"
         description="Les om hvordan ITxBERGEN bruker informasjonskapsler (cookies) på sine nettsider, samt instruksjoner om hvordan du kan slette eller deaktivere informasjonskapsler."
+        canonical="/info/informasjonskapsler"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

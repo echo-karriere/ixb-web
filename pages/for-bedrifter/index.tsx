@@ -8,6 +8,7 @@ const ForCompanies: NextPage = () => {
       <HeadSEO
         title="For bedrifter | ITxBERGEN"
         description="Informasjon om ITxBERGEN for bedrifter, og informajon om hva vi kan tilby til bedrifter."
+        canonical="/for-bedrifter"
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">

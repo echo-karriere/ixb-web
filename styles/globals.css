@@ -30,3 +30,6 @@ ul.footer {
   @apply list-none -ml-2 list-outside;
 }
 
+p:empty {
+  @apply mb-4
+}
