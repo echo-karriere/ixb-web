@@ -1,6 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import "remixicon/fonts/remixicon.css";
+import Link from "next/link";
 
 const aboutus = [
   {
@@ -31,12 +32,6 @@ const aboutus = [
 
 // when a user click a <Link> component, the pop-over menu will close
 
-const closeMenu = () => {
-  const menu = document.getElementById("menu");
-  menu?.classList.remove("block");
-  menu?.classList.add("hidden");
-};
-
 export default function AboutUs() {
   return (
     // For studenter
@@ -58,38 +53,43 @@ export default function AboutUs() {
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1">
-              <Popover.Panel className="absolute z-10 w-screen max-w-xs px-4 mt-3 -left-[4.4rem] md:left-0 transform -translate-x-1/2 sm:px-0 ">
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                  <div className="relative grid gap-8 bg-gray-50 p-7">
-                    {aboutus.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-red-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
-                          <item.icon aria-hidden="true" />
-                        </div>
-                        <div className="ml-4">
-                          {item.name === "" ? (
-                            <p className="text-sm font-medium text-black">
-                              {item.name}{" "}
-                              <i
-                                aria-label="Ekstern lenke."
-                                className="ri-external-link-fill"></i>
-                            </p>
-                          ) : (
-                            <p className="text-sm font-medium text-black">
-                              {item.name}
-                            </p>
-                          )}
-                          <p className="text-sm text-gray-700">
-                            {item.description}
-                          </p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                  {/* <div className="bg-gray-50 p-4">
+              <Popover.Panel
+                static
+                focus
+                className="absolute z-10 w-screen max-w-xs px-4 mt-3 -left-[4.4rem] md:left-0 transform -translate-x-1/2 sm:px-0 ">
+                {({ close }) => (
+                  <span onClick={() => close()}>
+                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="relative grid gap-8 bg-gray-50 p-7">
+                        {aboutus.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-red-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
+                              <item.icon aria-hidden="true" />
+                            </div>
+                            <div className="ml-4">
+                              {item.name === "" ? (
+                                <p className="text-sm font-medium text-black">
+                                  {item.name}{" "}
+                                  <i
+                                    aria-label="Ekstern lenke."
+                                    className="ri-external-link-fill"></i>
+                                </p>
+                              ) : (
+                                <p className="text-sm font-medium text-black">
+                                  {item.name}
+                                </p>
+                              )}
+                              <p className="text-sm text-gray-700">
+                                {item.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                      {/* <div className="bg-gray-50 p-4">
                     <a
                       href="##"
                       className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50"
@@ -104,7 +104,9 @@ export default function AboutUs() {
                       </span>
                     </a>
                   </div> */}
-                </div>
+                    </div>
+                  </span>
+                )}
               </Popover.Panel>
             </Transition>
           </>

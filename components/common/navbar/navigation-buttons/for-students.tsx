@@ -3,12 +3,6 @@ import { Fragment } from "react";
 import router from "next/router";
 import "remixicon/fonts/remixicon.css";
 
-// when a new page is loaded, the pop-over menu will close
-router.events.on("routeChangeComplete", () => {
-  const menu = document.getElementById("menu");
-  menu?.classList.remove("block");
-  menu?.classList.add("hidden");
-});
 
 const forstudents = [
   {
@@ -84,57 +78,64 @@ export default function ForStudents() {
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1">
-              <Popover.Panel className="absolute z-10 w-screen max-w-xs px-4 mt-3 left-[8.8rem] md:left-0 transform -translate-x-1/2 sm:px-0 ">
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                  <div className="relative grid gap-8 bg-gray-50 p-7">
-                    {forstudents.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-red-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
-                          <item.icon aria-hidden="true" />
-                        </div>
-                        <div className="ml-4">
-                          {item.name === "Arrangementer" ? (
-                            <p className="text-sm font-medium text-black">
-                              {item.name}{" "}
+              <Popover.Panel
+                static
+                focus
+                className="absolute z-10 w-screen max-w-xs px-4 mt-3 left-[8.8rem] md:left-0 transform -translate-x-1/2 sm:px-0 ">
+                {({ close }) => (
+                  <span onClick={() => close()}>
+                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                      <div className="relative grid gap-8 bg-gray-50 p-7">
+                        {forstudents.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-red-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
+                              <item.icon aria-hidden="true" />
+                            </div>
+                            <div className="ml-4">
+                              {item.name === "Arrangementer" ? (
+                                <p className="text-sm font-medium text-black">
+                                  {item.name}{" "}
+                                  <i
+                                    aria-label="Ekstern lenke."
+                                    className="ri-external-link-fill"></i>
+                                </p>
+                              ) : (
+                                <p className="text-sm font-medium text-black">
+                                  {item.name}
+                                </p>
+                              )}
+                              <p className="text-sm text-gray-700">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                      <div className="bg-gray-800 p-4">
+                        <a
+                          href="https://old.echokarriere.no/for-studenter/sok-til-styret/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
+                          <span className="flex items-center">
+                            <span className="text-sm font-medium text-gray-100">
+                              Bli styremedlem{" "}
                               <i
                                 aria-label="Ekstern lenke."
                                 className="ri-external-link-fill"></i>
-                            </p>
-                          ) : (
-                            <p className="text-sm font-medium text-black">
-                              {item.name}
-                            </p>
-                          )}
-                          <p className="text-sm text-gray-700">
-                            {item.description}
-                          </p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                  <div className="bg-gray-800 p-4">
-                    <a
-                      href="https://old.echokarriere.no/for-studenter/sok-til-styret/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
-                      <span className="flex items-center">
-                        <span className="text-sm font-medium text-gray-100">
-                          Bli styremedlem{" "}
-                          <i
-                            aria-label="Ekstern lenke."
-                            className="ri-external-link-fill"></i>
-                        </span>
-                      </span>
-                      <span className="block text-sm text-gray-200">
-                        Send inn din søknad her.
-                      </span>
-                    </a>
-                  </div>
-                </div>
+                            </span>
+                          </span>
+                          <span className="block text-sm text-gray-200">
+                            Send inn din søknad her.
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </span>
+                )}
               </Popover.Panel>
             </Transition>
           </>
