@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import router from "next/router";
 import "remixicon/fonts/remixicon.css";
+import Link from "next/link";
 
 
 const forstudents = [
@@ -87,7 +87,7 @@ export default function ForStudents() {
                     <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="relative grid gap-8 bg-gray-50 p-7">
                         {forstudents.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-red-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
@@ -111,7 +111,7 @@ export default function ForStudents() {
                                 {item.description}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                       <div className="bg-gray-800 p-4">
