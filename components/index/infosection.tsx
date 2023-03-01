@@ -7,8 +7,8 @@ export default function Infosection() {
       <hr className="border-gray-300 mb-6" />
       <h2 className="text-3xl font-bold">Hva er ITxBERGEN?</h2>
       <p className="mt-4">
-        ITxBERGEN arrangerer karrieredager for IT-studenter i bergensområdet som
-        tidligere er kjent som echo karriere. Arrangementet ble holdt for første
+        ITxBERGEN arrangerer karrieredager for IT-studenter i bergensområdet, og
+        er tidligere kjent som echo karriere. Arrangementet ble holdt for første
         gang i 2019, noe som ble en stor suksess med stort oppmøte fra
         IT-studenter fra hele Bergen. Eneklte ganger holder vi også andre
         karrierefremmende arrangementer.
