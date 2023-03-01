@@ -3,6 +3,7 @@ import Hero from "../components/index/hero";
 import Notification from "../components/index/notification";
 import LogoCloud from "../components/index/logocloud";
 import { HeadSEO } from "../components/common/functions/HeadSEO";
+import Infosection from "../components/index/infosection";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
         <Hero />
         <Notification />
         <LogoCloud />
-
+        <Infosection />
         <br />
       </main>
     </div>

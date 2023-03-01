@@ -1,4 +1,4 @@
-Contact: mailto:webmaster@echokarriere.no
+Contact: mailto:webmaster@ixb.no
 Preferred-Languages: nb-NO, nn-NO, en
 Policy: http://www.ixb.no/security/policy.txt
 Acknowledgments: http://www.ixb.no/security/acknowledgments.txt

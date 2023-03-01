@@ -114,7 +114,7 @@ export default function Footer() {
               <ul className="mt-4 space-y-4 footer">
                 <li>
                   <a
-                    href="https://www.linkedin.com/company/echo-karriere"
+                    href="https://www.linkedin.com/company/itxbergen"
                     target="_blank"
                     aria-label="LinkedIn, ekstern lenke"
                     rel="noopener noreferrer"
@@ -125,7 +125,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/echokarriere/"
+                    href="https://www.instagram.com/itxbergen/"
                     target="_blank"
                     aria-label="Instagram, ekstern lenke"
                     rel="noopener noreferrer"
@@ -136,7 +136,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.facebook.com/echokarriere"
+                    href="https://www.facebook.com/itxbergen"
                     target="_blank"
                     aria-label="Facebook, ekstern lenke"
                     rel="noopener noreferrer"
@@ -175,7 +175,7 @@ export default function Footer() {
 
       <div className="flex justify-center">
         <a
-          href="https://vercel.com/?utm_source=echo-karriere-ixb-web&utm_campaign=oss"
+          href="https://vercel.com/?utm_source=echo-karriere&utm_campaign=oss"
           target="_blank"
           rel="noopener noreferrer"
           className="focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg focus:ring-blue-400">
