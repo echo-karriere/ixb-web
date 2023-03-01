@@ -53,9 +53,9 @@ export default function Infosection() {
         className="bg-[#cab169] hover:bg-gray-800 rounded p-2 font-semibold hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-400"
         href="https://salmoncity.no/"
         target="_blank"
-        rel="noreferrer">
-        Les mer om Salmon City{" "}
-        <i aria-label=", Ekstern lenke." className="ri-external-link-fill"></i>
+        rel="noreferrer"
+        aria-label="Les mer om Salmon City, ekstern lenke.">
+        Les mer om Salmon City <i className="ri-external-link-fill"></i>
       </a>
     </div>
   );
