@@ -19,8 +19,16 @@ export default function DashboardLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="image" content="/webpageAssets/ITxBergen_image.png" />
         <meta name="og:image" content="/webpageAssets/ITxBergen_image.png" />
+        <meta
+          name="image"
+          property="og:image"
+          content="/webpageAssets/ITxBergen_image.png"
+        />
         <meta name="og:image:width" content="1200" />
         <meta name="og:image:height" content="630" />
+        <meta property="og:site_name" content="ITxBergen" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/png" />
         <meta name="robots" content="index, follow" />
         <link
           rel="apple-touch-icon"
