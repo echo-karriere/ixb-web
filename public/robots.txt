@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /security
 Disallow: /about-us.txt
+Disallow: /.well-known
