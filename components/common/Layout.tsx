@@ -48,8 +48,6 @@ export default function DashboardLayout({
         <meta name="msapplication-TileColor" content="#33030d" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#33030d" />
-
-        <meta name="publisher" content="ITxBergen" />
       </Head>
       <SkipToContent />
       <Navbar />

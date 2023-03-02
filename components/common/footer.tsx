@@ -24,22 +24,26 @@ export default function Footer() {
               <ul className="mt-4 space-y-4 footer">
                 <li>
                   <Link
+                    href="/for-studenter"
+                    className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
+                    For studenter
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/for-bedrifter"
+                    className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
+                    For bedrifter
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/om-oss"
                     className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
                     Om oss
                   </Link>
                 </li>
 
-                <li>
-                  <a
-                    href="https://echokarriere.pameldinger.no/"
-                    target="_blank"
-                    aria-label="Arrangementer, ekstern lenke"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
-                    Arrangementer <i className="ri-external-link-fill"></i>
-                  </a>
-                </li>
                 <li>
                   <Link
                     href="/en"
