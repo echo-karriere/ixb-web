@@ -205,16 +205,6 @@ export default function Footer() {
         </a>
       </div>
 
-      <br />
-      <div className="flex justify-center align-center ">
-        <a
-          href="https://intern.ixb.no"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="focus:outline-none">
-          <small>internsider</small>
-        </a>
-      </div>
     </footer>
   );
 }
