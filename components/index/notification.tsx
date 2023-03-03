@@ -3,7 +3,7 @@ import "remixicon/fonts/remixicon.css";
 
 export default function Notification() {
   return (
-    <div className="bg-gradient-to-r bg-yellow-200 flex justify-left max-w-7xl md:w-11/12 mx-auto md:shadow-md px-6 py-4 mb-4 mb:mt-6 ">
+    <div className="bg-gradient-to-r bg-yellow-200 flex justify-left max-w-7xl w-11/12 mx-auto shadow-md px-6 py-4 mb-4 mt-6 ">
       <br />
       <p className="text-lg">
         <i className="ri-information-line text-2xl" />

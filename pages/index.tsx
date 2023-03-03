@@ -5,6 +5,7 @@ import LogoCloud from "../components/index/logocloud";
 import { HeadSEO } from "../components/common/functions/HeadSEO";
 import Infosection from "../components/index/infosection";
 
+
 const Home: NextPage = () => {
   return (
     <div>
