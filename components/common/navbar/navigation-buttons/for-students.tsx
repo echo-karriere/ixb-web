@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import "remixicon/fonts/remixicon.css";
 import Link from "next/link";
 
-
 const forstudents = [
   {
     name: "For studenter",
@@ -114,7 +113,7 @@ export default function ForStudents() {
                           </Link>
                         ))}
                       </div>
-                      <div className="bg-gray-800 p-4">
+                      {/* <div className="bg-gray-800 p-4">
                         <a
                           href="https://old.echokarriere.no/for-studenter/sok-til-styret/"
                           target="_blank"
@@ -132,7 +131,7 @@ export default function ForStudents() {
                             Send inn din søknad her.
                           </span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </span>
                 )}
