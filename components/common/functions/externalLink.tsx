@@ -22,7 +22,7 @@ export function ExternalLink({ href, linkText }: ExternalLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={linkText + ", ekstern lenke,"}>
-      {linkText} <i className=" ri-external-link-fill"></i>
+      {linkText} <i className=" ri-external-link-fill" />
     </a>
   );
 }

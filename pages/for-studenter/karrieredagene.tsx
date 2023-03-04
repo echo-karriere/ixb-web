@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { HeadSEO } from "../../components/common/functions/HeadSEO";
 import Karrieredagene from "../../components/for-studenter/karrieredagene/karrieredagene.mdx";
+import { HeadSEO } from "../../components/common/functions/HeadSEO";
 
 const CareerFair: NextPage = () => {
   return (
