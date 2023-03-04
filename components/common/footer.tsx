@@ -110,6 +110,13 @@ export default function Footer() {
                     Informasjonskapsler
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/sitemap"
+                    className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
+                    Sidekart
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="col-span-1">
@@ -204,7 +211,6 @@ export default function Footer() {
           />
         </a>
       </div>
-
     </footer>
   );
 }
