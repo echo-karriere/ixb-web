@@ -100,19 +100,6 @@ export default function Joblist({
         selectedTypes.some((type) => job.type.includes(type)))
   );
 
-  const [dismissed, setDismissed] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem("dismissed") ?? "false");
-    } catch {
-      return false;
-    }
-  });
-
-  function handleDismiss() {
-    localStorage.setItem("dismissed", "true");
-    setDismissed(true);
-  }
-
   return (
     <>
       <div className="max-w-6xl w-11/12 mt-6 md:mt-10 mx-auto flex flex-col md:flex-row">
@@ -264,7 +251,7 @@ export default function Joblist({
                 <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
                     <i className="ri-add-line mr-2" />
-                    Utlys en stilling!
+                    Utlys en stilling
                   </button>
                 </Link>
               </div>
