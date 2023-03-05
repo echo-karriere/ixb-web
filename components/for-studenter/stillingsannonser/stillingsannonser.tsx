@@ -50,14 +50,13 @@ export default function Joblist({
     }
   });
 
-
   useEffect(() => {
     try {
       localStorage.setItem(
         "selectedCompanies",
         JSON.stringify(selectedCompanies)
       );
-    } catch { }
+    } catch {}
   }, [selectedCompanies]);
 
   useEffect(() => {
@@ -66,16 +65,14 @@ export default function Joblist({
         "selectedLocations",
         JSON.stringify(selectedLocations)
       );
-    } catch { }
+    } catch {}
   }, [selectedLocations]);
 
   useEffect(() => {
     try {
       localStorage.setItem("selectedTypes", JSON.stringify(selectedTypes));
-    } catch { }
+    } catch {}
   }, [selectedTypes]);
-
-
 
   // Filter the job listings based on the selected companies and locations
   const filteredJobs = joblistings.filter(
@@ -166,6 +163,21 @@ export default function Joblist({
               )
             }
           />
+
+          {selectedCompanies.length > 0 ||
+          selectedLocations.length > 0 ||
+          selectedTypes.length > 0 ? (
+            <button
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer w-full"
+              onClick={() => {
+                setSelectedCompanies([]);
+                setSelectedLocations([]);
+                setSelectedTypes([]);
+              }}>
+              <i className="ri-refresh-line mr-2" />
+              Nullstill filter
+            </button>
+          ) : null}
         </div>
         <div className="col-span-2 md:ml-8 md:w-full">
           {filteredJobs.map((job) => (
@@ -206,6 +218,24 @@ export default function Joblist({
               </Link>
             </div>
           ))}
+
+          <div className="border-2 py-4 px-4 my-5 bg-gray-200 rounded">
+            <div className="w-full m-2">
+              <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
+                Har du en stilling som du ønsker å legge ut?
+              </h3>
+              <p className="text-gray-700">
+                Vi tilbyr gratis annonsering av stillingsannonser på våre
+                nettsider. Klikk på knappen under for å utlyse en stilling.
+              </p>
+              <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
+                  <i className="ri-add-line mr-2" />
+                  Utlys en stilling
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
