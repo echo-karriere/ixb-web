@@ -20,6 +20,7 @@ export default function Joblist({
     localStorage.setItem("dismissed", "true");
     setDismissed(true);
   }
+
   // Get a list of all unique companies
   const allCompanies = joblistings
     .map((job) => job.company)
