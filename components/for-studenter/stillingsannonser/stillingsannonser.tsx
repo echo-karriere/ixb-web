@@ -251,7 +251,7 @@ export default function Joblist({
                 <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
                     <i className="ri-add-line mr-2" />
-                    Utlys en stilling
+                    Utlys en stilling!
                   </button>
                 </Link>
               </div>
