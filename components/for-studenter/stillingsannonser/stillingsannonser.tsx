@@ -100,6 +100,19 @@ export default function Joblist({
         selectedTypes.some((type) => job.type.includes(type)))
   );
 
+  const [dismissed, setDismissed] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("dismissed") ?? "false");
+    } catch {
+      return false;
+    }
+  });
+
+  function handleDismiss() {
+    localStorage.setItem("dismissed", "true");
+    setDismissed(true);
+  }
+
   return (
     <>
       <div className="max-w-6xl w-11/12 mt-6 md:mt-10 mx-auto flex flex-col md:flex-row">
