@@ -87,6 +87,19 @@ export default function Joblist({
         selectedTypes.some((type) => job.type.includes(type)))
   );
 
+  const [dismissed, setDismissed] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("dismissed") ?? "false");
+    } catch {
+      return false;
+    }
+  });
+
+  function handleDismiss() {
+    localStorage.setItem("dismissed", "true");
+    setDismissed(true);
+  }
+
   return (
     <>
       <div className="max-w-6xl w-11/12 mt-6 md:mt-10 mx-auto flex flex-col md:flex-row">
@@ -219,23 +232,31 @@ export default function Joblist({
             </div>
           ))}
 
-          <div className="border-2 py-4 px-4 my-5 bg-gray-200 rounded">
-            <div className="w-full m-2">
-              <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
-                Har du en stilling som du ønsker å legge ut?
-              </h3>
-              <p className="text-gray-700">
-                Vi tilbyr gratis annonsering av stillingsannonser på våre
-                nettsider. Klikk på knappen under for å utlyse en stilling.
-              </p>
-              <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
-                  <i className="ri-add-line mr-2" />
-                  Utlys en stilling
-                </button>
-              </Link>
+          {!dismissed && (
+            <div className="border-2 py-4 px-4 my-5 bg-gray-200 rounded relative">
+              <button
+                className="absolute top-2 right-2 text-gray-700 hover:text-gray-900"
+                onClick={handleDismiss}>
+                <i className="ri-close-line text-xl" />
+              </button>
+              <div className="w-full m-2">
+                <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
+                  Har du en stilling som du ønsker å legge ut?
+                </h3>
+                <p className="text-gray-700">
+                  Vi tilbyr gratis annonsering av stillingsannonser på våre
+                  nettsider. Klikk på knappen under for å utlyse en stilling.
+                </p>
+                <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
+                    <i className="ri-add-line mr-2" />
+                    Utlys en stilling
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
+          
         </div>
       </div>
     </>
