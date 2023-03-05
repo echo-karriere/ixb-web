@@ -113,9 +113,9 @@ export default function ForStudents() {
                           </Link>
                         ))}
                       </div>
-                      {/* <div className="bg-gray-800 p-4">
+                      <div className="bg-gray-800 p-4">
                         <a
-                          href="https://old.echokarriere.no/for-studenter/sok-til-styret/"
+                          href="https://skjema.ixb.no/bli-styremedlem"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-50">
@@ -131,7 +131,7 @@ export default function ForStudents() {
                             Send inn din søknad her.
                           </span>
                         </a>
-                      </div> */}
+                      </div>
                     </div>
                   </span>
                 )}

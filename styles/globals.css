@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 h1 {
   @apply text-2xl md:text-4xl font-bold mb-4 md:mb-6;
 }
@@ -27,10 +26,14 @@ ul {
   @apply list-disc list-outside ml-6;
 }
 
+ol {
+  @apply list-outside ml-6;
+}
+
 ul.footer {
   @apply list-none -ml-2 list-outside;
 }
 
 p:empty {
-  @apply mb-4
+  @apply mb-4;
 }
