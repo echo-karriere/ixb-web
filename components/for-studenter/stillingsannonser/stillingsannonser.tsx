@@ -236,12 +236,19 @@ export default function Joblist({
             <div className="border-2 py-4 px-4 my-5 bg-gray-200 rounded relative">
               <button
                 className="absolute top-2 right-2 text-gray-700 hover:text-gray-900"
+<<<<<<< HEAD
                 aria-label="Lukk banner og ikke vis igjen"
+=======
+>>>>>>> main
                 onClick={handleDismiss}>
                 <i className="ri-close-line text-xl" />
               </button>
               <div className="w-full m-2">
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold mt-4 mb-1 text-gray-900">
+=======
+                <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
+>>>>>>> main
                   Har du en stilling som du ønsker å legge ut?
                 </h3>
                 <p className="text-gray-700">
@@ -257,6 +264,10 @@ export default function Joblist({
               </div>
             </div>
           )}
+<<<<<<< HEAD
+=======
+          
+>>>>>>> main
         </div>
       </div>
     </>
