@@ -1,6 +1,6 @@
 import type { SanityDocument } from "@sanity/client";
 import ReactSelect from "react-select";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/dist/client/link";
 
 export default function Joblist({
@@ -28,9 +28,54 @@ export default function Joblist({
     .sort();
 
   // Define the state for the selected companies and locations
-  const [selectedCompanies, setSelectedCompanies] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [selectedCompanies, setSelectedCompanies] = useState<string[]>(() => {
+    try {
+      return JSON.parse(localStorage.getItem("selectedCompanies") ?? "[]");
+    } catch {
+      return [];
+    }
+  });
+  const [selectedLocations, setSelectedLocations] = useState<string[]>(() => {
+    try {
+      return JSON.parse(localStorage.getItem("selectedLocations") ?? "[]");
+    } catch {
+      return [];
+    }
+  });
+  const [selectedTypes, setSelectedTypes] = useState<string[]>(() => {
+    try {
+      return JSON.parse(localStorage.getItem("selectedTypes") ?? "[]");
+    } catch {
+      return [];
+    }
+  });
+
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        "selectedCompanies",
+        JSON.stringify(selectedCompanies)
+      );
+    } catch { }
+  }, [selectedCompanies]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        "selectedLocations",
+        JSON.stringify(selectedLocations)
+      );
+    } catch { }
+  }, [selectedLocations]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("selectedTypes", JSON.stringify(selectedTypes));
+    } catch { }
+  }, [selectedTypes]);
+
+
 
   // Filter the job listings based on the selected companies and locations
   const filteredJobs = joblistings.filter(
@@ -63,6 +108,10 @@ export default function Joblist({
               value: company,
               label: company,
             }))}
+            value={selectedCompanies.map((company) => ({
+              value: company,
+              label: company,
+            }))}
             onChange={(selected) =>
               setSelectedCompanies(
                 selected ? selected.map((option) => option.value) : []
@@ -83,6 +132,10 @@ export default function Joblist({
               value: location,
               label: location,
             }))}
+            value={selectedLocations.map((location) => ({
+              value: location,
+              label: location,
+            }))}
             onChange={(selected) =>
               setSelectedLocations(
                 selected ? selected.map((option) => option.value) : []
@@ -100,6 +153,10 @@ export default function Joblist({
             isMulti
             noOptionsMessage={() => "Kunne ikke finne noen typer"}
             options={allTypes.map((type) => ({
+              value: type,
+              label: type,
+            }))}
+            value={selectedTypes.map((type) => ({
               value: type,
               label: type,
             }))}

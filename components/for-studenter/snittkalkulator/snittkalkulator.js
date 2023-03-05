@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "remixicon/fonts/remixicon.css";
 
+
 function GradeCalculator() {
   const [grades, setGrades] = useState({});
   const [weights, setWeights] = useState({});
