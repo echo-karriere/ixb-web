@@ -8,6 +8,18 @@ export default function Joblist({
 }: {
   joblistings: SanityDocument[];
 }) {
+  const [dismissed, setDismissed] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("dismissed") ?? "false");
+    } catch {
+      return false;
+    }
+  });
+
+  function handleDismiss() {
+    localStorage.setItem("dismissed", "true");
+    setDismissed(true);
+  }
   // Get a list of all unique companies
   const allCompanies = joblistings
     .map((job) => job.company)
@@ -86,19 +98,6 @@ export default function Joblist({
       (selectedTypes.length === 0 ||
         selectedTypes.some((type) => job.type.includes(type)))
   );
-
-  const [dismissed, setDismissed] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem("dismissed") ?? "false");
-    } catch {
-      return false;
-    }
-  });
-
-  function handleDismiss() {
-    localStorage.setItem("dismissed", "true");
-    setDismissed(true);
-  }
 
   return (
     <>
