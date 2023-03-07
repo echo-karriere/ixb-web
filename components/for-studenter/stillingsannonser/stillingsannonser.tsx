@@ -205,14 +205,22 @@ export default function Joblist({
             }
           />
 
-          {favorites.length > 0 && (
-            <button
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer w-full"
-              onClick={() => setShowFavorites((prev) => !prev)}>
-              <i className="ri-heart-line mr-2" />
-              {showFavorites ? "Vis alle" : "Vis kun favoritter"}
-            </button>
-          )}
+          <button
+            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer w-full"
+            onClick={() => setShowFavorites((prev) => !prev)}>
+            {showFavorites ? (
+              <>
+                <i className="ri-heart-line mr-2" />
+                Vis alle stillinger
+              </>
+            ) : (
+              <>
+                <i className="ri-heart-fill mr-2" />
+                Vis kun favoritter
+              </>
+            )}
+          </button>
+
           {selectedCompanies.length > 0 ||
           selectedLocations.length > 0 ||
           selectedTypes.length > 0 ? (
