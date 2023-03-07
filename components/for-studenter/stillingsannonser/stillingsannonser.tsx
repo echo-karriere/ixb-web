@@ -67,6 +67,18 @@ export default function Joblist({
     }
   });
 
+  // Define the state for the list of liked jobs
+  const [favorites, setFavorites] = useState<string[]>(() => {
+    try {
+      return JSON.parse(localStorage.getItem("favorites") ?? "[]");
+    } catch {
+      return [];
+    }
+  });
+
+  // Define the state for showing all jobs or only liked jobs
+  const [showFavorites, setShowFavorites] = useState(false);
+
   useEffect(() => {
     try {
       localStorage.setItem(
@@ -91,18 +103,27 @@ export default function Joblist({
     } catch {}
   }, [selectedTypes]);
 
-  // Filter the job listings based on the selected companies and locations
-  const filteredJobs = joblistings.filter(
-    (job) =>
-      (selectedCompanies.length === 0 ||
-        selectedCompanies.includes(job.company)) &&
-      (selectedLocations.length === 0 ||
-        selectedLocations.some((location) =>
-          job.location.includes(location)
-        )) &&
-      (selectedTypes.length === 0 ||
-        selectedTypes.some((type) => job.type.includes(type)))
-  );
+  useEffect(() => {
+    try {
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    } catch {}
+  }, [favorites]);
+
+  // Define a function to check if a job is liked
+  function isFavorite(id: string) {
+    return favorites.includes(id);
+  }
+
+  // Define a function to toggle the like status of a job
+  function toggleFavorite(id: string) {
+    if (isFavorite(id)) {
+      setFavorites((prevFavorites) =>
+        prevFavorites.filter((fav) => fav !== id)
+      );
+    } else {
+      setFavorites((prevFavorites) => [...prevFavorites, id]);
+    }
+  }
 
   // create a builder for the image URL
   const builder = imageUrlBuilder(client);
@@ -184,6 +205,14 @@ export default function Joblist({
             }
           />
 
+          {favorites.length > 0 && (
+            <button
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer w-full"
+              onClick={() => setShowFavorites((prev) => !prev)}>
+              <i className="ri-heart-line mr-2" />
+              {showFavorites ? "Vis alle" : "Vis kun favoritter"}
+            </button>
+          )}
           {selectedCompanies.length > 0 ||
           selectedLocations.length > 0 ||
           selectedTypes.length > 0 ? (
@@ -200,50 +229,105 @@ export default function Joblist({
           ) : null}
         </div>
         <div className="col-span-2 md:ml-8 md:w-full">
-          {filteredJobs.map((job) => (
-            <div key={job._id} className="mb-4 w-full">
-              <Link
-                href={`/for-studenter/stillingsannonser/${job.slug.current}`}>
-                <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded flex items-center">
-                  <div className="w-1/5 flex justify-center">
-                    <Image
-                      className=" rounded"
-                      src={builder.image(job.logo).width(256).height(256).url()}
-                      alt={job.title}
-                      width={100}
-                      height={100}
-                    />
-                  </div>
-                  <div className="w-4/5 ml-4">
-                    <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
-                      {job.title}
-                    </h3>
-                    <p className="text-gray-700">
-                      {" "}
-                      <i className="ri-building-3-line" /> {job.company}
-                    </p>
-                    <p className="text-gray-700">
-                      <i className="ri-map-pin-line" />{" "}
-                      {job.location.join(", ")}
-                    </p>
-                    <p className="text-gray-700">
-                      <i className="ri-suitcase-line" /> {job.type}
-                    </p>
-                    {job.deadline && (
+          {joblistings
+            .filter((job) => {
+              // Filter by company
+              if (
+                selectedCompanies.length > 0 &&
+                !selectedCompanies.includes(job.company)
+              ) {
+                return false;
+              }
+              // Filter by location
+              if (
+                selectedLocations.length > 0 &&
+                !job.location.some((loc: string) =>
+                  selectedLocations.includes(loc)
+                )
+              ) {
+                return false;
+              }
+              // Filter by job type
+              if (
+                selectedTypes.length > 0 &&
+                !selectedTypes.includes(job.type)
+              ) {
+                return false;
+              }
+              // Filter by favorites
+              if (showFavorites && !isFavorite(job._id)) {
+                return false;
+              }
+              return true;
+            })
+            .map((job) => (
+              <div key={job._id} className="mb-4 w-full">
+                <Link
+                  href={`/for-studenter/stillingsannonser/${job.slug.current}`}>
+                  <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded flex items-center">
+                    <div className="w-1/5 flex justify-center">
+                      <Image
+                        className=" rounded"
+                        src={builder
+                          .image(job.logo)
+                          .width(256)
+                          .height(256)
+                          .url()}
+                        alt={job.title}
+                        width={100}
+                        height={100}
+                      />
+                    </div>
+                    <div className="w-4/5 ml-4">
+                      <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
+                        {job.title}
+                      </h3>
                       <p className="text-gray-700">
-                        <i className="ri-calendar-line" />{" "}
-                        {new Date(job.deadline).toLocaleDateString("nb-NO", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
+                        {" "}
+                        <i className="ri-building-3-line" /> {job.company}
                       </p>
-                    )}
+                      <p className="text-gray-700">
+                        <i className="ri-map-pin-line" />{" "}
+                        {job.location.join(", ")}
+                      </p>
+                      <p className="text-gray-700">
+                        <i className="ri-suitcase-line" /> {job.type}
+                      </p>
+                      {job.deadline && (
+                        <p className="text-gray-700">
+                          <i className="ri-calendar-line" />{" "}
+                          {new Date(job.deadline).toLocaleDateString("nb-NO", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="favorite">
+                      <button
+                        aria-label={`${
+                          isFavorite(job._id)
+                            ? "Fjern fra favoritter"
+                            : "Legg til i favoritter"
+                        }`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleFavorite(job._id);
+                        }}
+                        className=" text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
+                        {isFavorite(job._id) ? (
+                          <i className="ri-heart-fill text-red-500" />
+                        ) : (
+                          <i className="ri-heart-line" />
+                        )}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
 
           {!dismissed && (
             <div className="border-2 py-4 px-4 my-5 bg-gray-200 rounded relative">
