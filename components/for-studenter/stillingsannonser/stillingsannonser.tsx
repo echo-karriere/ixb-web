@@ -5,6 +5,7 @@ import Link from "next/dist/client/link";
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../../../src/lib/sanity.client";
+import "remixicon/fonts/remixicon.css";
 
 export default function Joblist({
   joblistings,
@@ -210,12 +211,12 @@ export default function Joblist({
             onClick={() => setShowFavorites((prev) => !prev)}>
             {showFavorites ? (
               <>
-                <i className="ri-heart-line mr-2" />
+                <i className="ri-heart-fill mr-2" />
                 Vis alle stillinger
               </>
             ) : (
               <>
-                <i className="ri-heart-fill mr-2" />
+                <i className="ri-heart-fill mr-2 text-red-500" />
                 Vis kun favoritter
               </>
             )}
@@ -326,9 +327,9 @@ export default function Joblist({
                         }}
                         className=" text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
                         {isFavorite(job._id) ? (
-                          <i className="ri-heart-fill text-red-500" />
+                          <p>&#10084;&#65039;</p>
                         ) : (
-                          <i className="ri-heart-line" />
+                          <p>&#128420;</p>
                         )}
                       </button>
                     </div>
