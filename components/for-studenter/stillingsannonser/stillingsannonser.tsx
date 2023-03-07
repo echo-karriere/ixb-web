@@ -208,7 +208,7 @@ export default function Joblist({
                   <div className="w-1/5 flex justify-center">
                     <Image
                       className=" rounded"
-                      src={builder.image(job.logo).width(100).height(100).url()}
+                      src={builder.image(job.logo).width(256).height(256).url()}
                       alt={job.title}
                       width={100}
                       height={100}
