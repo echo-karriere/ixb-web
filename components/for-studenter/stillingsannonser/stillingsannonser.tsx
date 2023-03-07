@@ -2,12 +2,16 @@ import type { SanityDocument } from "@sanity/client";
 import ReactSelect from "react-select";
 import { useEffect, useState } from "react";
 import Link from "next/dist/client/link";
+import Image from "next/image";
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from "../../../src/lib/sanity.client";
 
 export default function Joblist({
   joblistings,
 }: {
   joblistings: SanityDocument[];
 }) {
+  // check if the user has dismissed the banner
   const [dismissed, setDismissed] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("dismissed") ?? "false");
@@ -99,6 +103,9 @@ export default function Joblist({
       (selectedTypes.length === 0 ||
         selectedTypes.some((type) => job.type.includes(type)))
   );
+
+  // create a builder for the image URL
+  const builder = imageUrlBuilder(client);
 
   return (
     <>
@@ -197,8 +204,17 @@ export default function Joblist({
             <div key={job._id} className="mb-4 w-full">
               <Link
                 href={`/for-studenter/stillingsannonser/${job.slug.current}`}>
-                <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded">
-                  <div className="w-full m-2 md:w-1/2">
+                <div className="border-2 py-4 px-4 my-5 hover:border-gray-400 rounded flex items-center">
+                  <div className="w-1/5 flex justify-center">
+                    <Image
+                      className=" rounded"
+                      src={builder.image(job.logo).width(100).height(100).url()}
+                      alt={job.title}
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div className="w-4/5 ml-4">
                     <h3 className="text-xl font-bold -mt-2 mb-1 text-gray-900">
                       {job.title}
                     </h3>
@@ -206,16 +222,13 @@ export default function Joblist({
                       {" "}
                       <i className="ri-building-3-line" /> {job.company}
                     </p>
-
                     <p className="text-gray-700">
                       <i className="ri-map-pin-line" />{" "}
                       {job.location.join(", ")}
                     </p>
-
                     <p className="text-gray-700">
                       <i className="ri-suitcase-line" /> {job.type}
                     </p>
-
                     {job.deadline && (
                       <p className="text-gray-700">
                         <i className="ri-calendar-line" />{" "}
