@@ -73,35 +73,7 @@ export default function Infosection() {
         </div>
       </div> */}
 
-      <div className="mx-auto flex w-11/12 mt-6 max-w-7xl  ">
-        <div className="w-full rounded bg-[#f2f2f2] p-8 shadow-md">
-          <h2>Salmon City 2023</h2>
-          <p>
-            I fjor vår var Kulturhuset på kokepunktet da Salmon City inntok
-            Bergen for første gang. Den 6. og 7. mars 2023 ønsker de å invitere
-            IT-studenter tilbake med andreutgaven av Norges største møteplass
-            for studenter og sjømatnæringen.
-            <br />
-            <br />
-            Dit kommer bl.a. Gustav Witzøe Sr., CEO i Lerøy, Henning Beltestad,
-            General Manager i Skretting, Håvard Walde, partner i McKinsey Anders
-            Milde Gjendemsjø, CEO i GSI Sophie Ryan, Sjømatguru Dag Sletmo og
-            mange, mange flere.
-          </p>
-          <br />
-          <a
-            className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
-            href="https://salmoncity.no/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Les mer om Salmon City, ekstern lenke.">
-            Les mer om Salmon City <i className="ri-external-link-fill"></i>
-          </a>
-
-          <br />
-          <br />
-        </div>
-      </div>
+      
     </>
   );
 }

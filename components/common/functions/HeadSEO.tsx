@@ -30,7 +30,7 @@ export function HeadSEO({
       <meta property="og:title" content={title} />
       <meta name="og:description" content={description} />
       {canonical && (
-        <link rel="canonical" href={`https://www.ixb.no${canonical}`} />
+        <link rel="canonical" href={`https://www.itxbergen.no${canonical}`} />
       )}
       {author && <meta name="author" content={author} />}
     </Head>
