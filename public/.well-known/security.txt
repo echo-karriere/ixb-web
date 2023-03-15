@@ -1,4 +1,4 @@
-Contact: mailto:webmaster@ixb.no
+Contact: mailto:webmaster@itxbergen.no
 Preferred-Languages: nb-NO, nn-NO, en
 Policy: http://www.ixb.no/security/policy.txt
 Acknowledgments: http://www.ixb.no/security/acknowledgments.txt
