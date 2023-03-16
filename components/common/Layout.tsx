@@ -60,7 +60,10 @@ export default function DashboardLayout({
       <SkipToContent />
       <Navbar />
       <MainContent />
-      {children}
+      <div 
+        // keep footer on bottom of page, but also visible without need to scroll on short pages
+        style={{ minHeight: "calc(100vh - 675px)" }}
+      >{children}</div>
       <Footer />
     </>
   );

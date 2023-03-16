@@ -4,7 +4,10 @@ import "remixicon/fonts/remixicon.css";
 
 export default function Footer() {
   return (
-    <footer className="mb-6 mt-12">
+    <footer className="mb-6 mt-12 ">
+    
+    
+
       <hr />
 
       <div className="flex justify-center">
