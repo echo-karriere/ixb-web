@@ -18,7 +18,10 @@ export default function whistleblower() {
               IxB Whistleblower lar deg melde i fra kritikkverdig atferd på
               ITxBERGEN sine arrangementer.
             </p>
-            <a href="https://skjema.ixb.no/ixb-whistleblower" className="bg-blue-500 hover:bg-blue-700 text-white p-2 mt-2 rounded">
+            <br />
+            <a
+              href="https://skjema.ixb.no/ixb-whistleblower"
+              className="bg-blue-500 hover:bg-blue-700 text-white p-2 mt-2 rounded">
               Send inn varsel
             </a>
             <br />
