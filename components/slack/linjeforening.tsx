@@ -3,7 +3,7 @@ import { ExternalLink } from "../common/functions/externalLink";
 export default function Slack() {
   return (
     <>
-      <h1>Slack for leder av linjeforening</h1>
+      <h1>Slack for ledere av IT-linjeforening i Bergen</h1>
       <p>
         Er du leder av en linjeforening for IT i Bergen? Vi har en slack kanal
         for deg hvor du enkelt kan kommunisere med oss.
@@ -20,7 +20,7 @@ export default function Slack() {
       <br />
       <h2>Har du ikke tilgang?</h2>
       <p>
-        Hvis du ikke har tilgang til Slack kanalen, må du kontakte oss for å få en
+        Hvis du ikke har tilgang til Slack kanalen, da må du kontakte oss for å få en
         invitasjon. Det kan du gjøre ved å trykke på lenken under.
       </p>
       <br />
