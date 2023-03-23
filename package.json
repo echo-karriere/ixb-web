@@ -29,7 +29,7 @@
     "tailwindcss-radix": "^2.7.0"
   },
   "devDependencies": {
-    "@types/node": "18.15.3",
+    "@types/node": "18.15.5",
     "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.28",
     "autoprefixer": "^10.4.13",
