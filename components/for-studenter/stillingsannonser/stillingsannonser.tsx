@@ -143,6 +143,7 @@ export default function Joblist({
             instanceId="company"
             isMulti
             noOptionsMessage={() => "Kunne ikke finne noen bedrifter"}
+            closeMenuOnSelect={false}
             options={allCompanies.map((company) => ({
               value: company,
               label: company,
@@ -166,6 +167,7 @@ export default function Joblist({
             placeholder="Filtrer etter sted"
             instanceId="location"
             isMulti
+            closeMenuOnSelect={false}
             noOptionsMessage={() => "Kunne ikke finne noen steder"}
             options={allLocations.map((location) => ({
               value: location,
@@ -190,6 +192,7 @@ export default function Joblist({
             placeholder="Filtrer etter type"
             instanceId="type"
             isMulti
+            closeMenuOnSelect={false}
             noOptionsMessage={() => "Kunne ikke finne noen typer"}
             options={allTypes.map((type) => ({
               value: type,
