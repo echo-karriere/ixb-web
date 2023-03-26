@@ -11,7 +11,7 @@ export default async function handler(
   }
 ) {
   const jobListings = await client.fetch(
-    `*[_type == "joblisting"]{slug, title, deadline, company, location}`
+    `*[_type == "joblisting"]{slug, title, deadline, company, location, type}`
   );
   jobListings.sort(
     (
@@ -36,20 +36,29 @@ export default async function handler(
       return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
     }
   );
+  const jobListingsWithSlug = jobListings.map((job: { slug: any }) => {
+    return {
+      ...job,
+      slug: job.slug.current,
+    };
+  }); 
 
-  res.status(200).json(jobListings);
+
+  res.status(200).json(jobListingsWithSlug);
 }
 
 export async function getStaticProps() {
   const jobListings = await client.fetch(
-    `*[_type == "joblisting"]{slug, title, deadline, company, location}`
+    `*[_type == "joblisting"]{slug, title, deadline, company, location, type}`
   );
   const jobTitles = jobListings.map((job: { title: any }) => job.title);
   const jobDeadlines = jobListings.map(
     (job: { deadline: any }) => job.deadline
   );
-  // only get the value under current locale
-  const slug = jobListings.map((job: { slug: any }) => job.slug);
+
+
+  const slug = jobListings.map((job: { slug: any }) => job.slug.current);
+const type = jobListings.map((job: { type: any }) => job.type);
   const company = jobListings.map((job: { company: any }) => job.company);
   const location = jobListings.map((job: { location: any }) => job.location);
 
@@ -60,6 +69,7 @@ export async function getStaticProps() {
       jobDeadlines,
       company,
       location,
+      type,
     },
   };
 }
