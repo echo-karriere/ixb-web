@@ -40,11 +40,13 @@ export default async function handler(
 
   const builder = imageUrlBuilder(client);
   const jobListingsWithLogo = jobListings.map((job: { logo: any }) => {
+    const cachedImageLink = builder.image(job.logo).width(200).height(200).url();
     return {
       ...job,
-      logo: builder.image(job.logo).width(200).height(200).url(),
+      logo: cachedImageLink,
     };
   });
+
 
   const jobListingsWithSlug = jobListingsWithLogo.map((job: { slug: any }) => {
     return {
@@ -70,6 +72,8 @@ export async function getStaticProps() {
   const company = jobListings.map((job: { company: any }) => job.company);
   const location = jobListings.map((job: { location: any }) => job.location);
   const logo = jobListings.map((job: { logo: any }) => job.logo);
+
+
 
   return {
     props: {
