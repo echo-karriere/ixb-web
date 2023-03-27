@@ -12,7 +12,7 @@ export default async function handler(
   }
 ) {
   const jobListings = await client.fetch(
-    `*[_type == "joblisting"]{slug, title, deadline, company, location, type, logo}`
+    `*[_type == "joblisting"]{slug, title, deadline, company, location, type, logo, description, link}`
   );
   jobListings.sort(
     (
@@ -40,13 +40,16 @@ export default async function handler(
 
   const builder = imageUrlBuilder(client);
   const jobListingsWithLogo = jobListings.map((job: { logo: any }) => {
-    const cachedImageLink = builder.image(job.logo).width(200).height(200).url();
+    const cachedImageLink = builder
+      .image(job.logo)
+      .width(200)
+      .height(200)
+      .url();
     return {
       ...job,
       logo: cachedImageLink,
     };
   });
-
 
   const jobListingsWithSlug = jobListingsWithLogo.map((job: { slug: any }) => {
     return {
@@ -60,7 +63,7 @@ export default async function handler(
 
 export async function getStaticProps() {
   const jobListings = await client.fetch(
-    `*[_type == "joblisting"]{slug, title, deadline, company, location, type, logo}`
+    `*[_type == "joblisting"]{slug, title, deadline, company, location, type, logo, description, link}`
   );
   const jobTitles = jobListings.map((job: { title: any }) => job.title);
   const jobDeadlines = jobListings.map(
@@ -72,8 +75,10 @@ export async function getStaticProps() {
   const company = jobListings.map((job: { company: any }) => job.company);
   const location = jobListings.map((job: { location: any }) => job.location);
   const logo = jobListings.map((job: { logo: any }) => job.logo);
-
-
+  const description = jobListings.map(
+    (job: { description: any }) => job.description
+  );
+  const link = jobListings.map((job: { url: any }) => job.url);
 
   return {
     props: {
@@ -84,6 +89,8 @@ export async function getStaticProps() {
       location,
       type,
       logo,
+      description,
+      link,
     },
   };
 }
