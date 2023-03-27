@@ -14,7 +14,17 @@ export default async function handler(
   const jobListings = await client.fetch(
     `*[_type == "joblisting"]{slug, title, deadline, company, location, type, logo, description, link}`
   );
-  jobListings.sort(
+
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  const filteredData = jobListings.filter((job: { deadline: string }) => {
+    const jobDeadline = new Date(job.deadline);
+
+    return !job.deadline || jobDeadline >= now;
+  });
+
+  filteredData.sort(
     (
       a: {
         title: any;
@@ -39,7 +49,7 @@ export default async function handler(
   );
 
   const builder = imageUrlBuilder(client);
-  const jobListingsWithLogo = jobListings.map((job: { logo: any }) => {
+  const jobListingsWithLogo = filteredData.map((job: { logo: any }) => {
     const cachedImageLink = builder
       .image(job.logo)
       .width(200)
