@@ -12,7 +12,7 @@ export default function Custom404() {
 
       <main>
       
-        <InfoRibbon text='Kommer du fra en søkemotor? Vi har fått nye nettsider, så det kan ta litt tid før våre nye sider har litt indeksert. Benytt menyen for å finne det du leter etter i mellomtiden. Ønsker dere å melde dere på karrieredagen som en bedrift? Dere finner påmeldingslenken uner "For bedrifter" i menyen over' />
+        {/* <InfoRibbon text='Kommer du fra en søkemotor? Vi har fått nye nettsider, så det kan ta litt tid før våre nye sider har litt indeksert. Benytt menyen for å finne det du leter etter i mellomtiden. Ønsker dere å melde dere på karrieredagen som en bedrift? Dere finner påmeldingslenken uner "For bedrifter" i menyen over' /> */}
         <FourOhFour />
       </main>
     </>
