@@ -1,5 +1,4 @@
 import { client } from "../../src/lib/sanity.client";
-import imageUrlBuilder from "@sanity/image-url";
 
 export default async function handler(
   req: any,
@@ -48,27 +47,34 @@ export default async function handler(
     }
   );
 
-  const builder = imageUrlBuilder(client);
-  const jobListingsWithLogo = filteredData.map((job: { logo: any }) => {
-    const cachedImageLink = builder
-      .image(job.logo)
-      .width(200)
-      .height(200)
-      .url();
-    return {
-      ...job,
-      logo: cachedImageLink,
-    };
-  });
-
-  const jobListingsWithSlug = jobListingsWithLogo.map((job: { slug: any }) => {
+  const jobListingsWithSlug = filteredData.map((job: { slug: any }) => {
     return {
       ...job,
       slug: job.slug.current,
     };
   });
 
-  res.status(200).json(jobListingsWithSlug);
+  // output the logo under logo-> asset -> ref
+  const jobListingsWithLogo = jobListingsWithSlug.map((job: { logo: any }) => {
+    const logoRef = job.logo.asset._ref;
+    const modifiedLogoRef = logoRef
+      .replace("image-", "")
+      .replace("-png", ".png")
+      .replace("-jpg", ".jpg")
+      .replace("-jpeg", ".jpeg")
+      .replace("-webp", ".webp")
+      .replace("-gif", ".gif")
+      .replace("-bmp", ".bmp")
+      .replace("-tiff", ".tiff")
+      .replace("-svg", ".svg");
+
+    return {
+      ...job,
+      logo: `https://www.itxbergen.no/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fkirm0obl%2Fproduction%2F${modifiedLogoRef}%3Fw%3D256%26h%3D256&w=256&q=75`,
+    };
+  });
+
+  res.status(200).json(jobListingsWithLogo);
 }
 
 export async function getStaticProps() {
