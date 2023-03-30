@@ -11,6 +11,7 @@ import { groq } from "next-sanity";
 const query = groq`*[_type == "event" && defined(slug.current)]{
   _id,
   title,
+  slug,
   deadline,
   eventType,
   location,

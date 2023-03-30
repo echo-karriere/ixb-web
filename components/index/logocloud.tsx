@@ -1,8 +1,8 @@
 export default function LogoCloud() {
   return (
     <div className="mx-auto py-4 px-4 w-full max-w-7xl">
-      <h2 className="font-semibold text-center  mb-10">
-        Våre samarbeidspartnere
+      <h2 className="font-semibold text-center mt-10  mb-10">
+        Samarbeidspartnere
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-5">
         <div className="col-span-3 sm:col-span-2 lg:col-span-1 flex justify-center items-center">
