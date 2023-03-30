@@ -64,8 +64,8 @@ export default function event({ data }: EventProps) {
     <>
       <HeadSEO
         title={`${title} | ITxBERGEN`}
-        description={`Ta en titt på stillingsannonsen til ${title}, og finn flere stillinger for IT-studenter og nyutdannede på ITxBERGEN sin side.`}
-        canonical={`/arrangementer/${data.slug.current}`}
+        description={`Finn arrangementer som ${title}, og mer på ITxBERGEN.`}
+        canonical={`/arrangement/${data.slug.current}`}
       />
       <div className="mb-12 mt-8 md:mt-12 flex flex-col items-center justify-center">
         <div className="md:grid md:grid-cols-3 md:gap-4 w-11/12 max-w-7xl">
@@ -126,8 +126,7 @@ export default function event({ data }: EventProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="border text-center border-transparent mt-2 p-1 font-sm rounded text-gray-900 bg-gray-200 hover:bg-gray-300 w-36">
-              <i className="ri-map-line" />
-              Vis på kart
+              <i className="ri-map-line" /> Vis på kart
               <i
                 aria-label="Ekstern lenke"
                 className="ri-external-link-fill ml-2"
