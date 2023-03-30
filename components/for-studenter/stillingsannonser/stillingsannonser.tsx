@@ -351,16 +351,16 @@ export default function Joblist({
               </button>
               <div className="w-full m-2">
                 <h3 className="text-xl font-bold mt-4 mb-1 text-gray-900">
-                  Har du en stilling som du ønsker å legge ut?
+                  Har du en stillingsannonse som du ønsker å legge ut?
                 </h3>
                 <p className="text-gray-700">
                   Vi tilbyr gratis annonsering av stillingsannonser på våre
-                  nettsider. Klikk på knappen under for å utlyse en stilling.
+                  nettsider. Klikk på knappen under for å publisere deres stillingsannonse på denne siden.
                 </p>
                 <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
                     <i className="ri-add-line mr-2" />
-                    Utlys en stilling
+                    Publiser stillingsannonse
                   </button>
                 </Link>
               </div>

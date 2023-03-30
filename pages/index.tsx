@@ -15,9 +15,9 @@ const Home: NextPage = () => {
       />
       <main>
         <Hero />
-        <LogoCloud />
         <Events />
         <Infosection />
+        <LogoCloud />
         <br />
       </main>
     </div>
