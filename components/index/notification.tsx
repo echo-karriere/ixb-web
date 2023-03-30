@@ -23,7 +23,7 @@ export default function Notification() {
   }
 
   return (
-    <div className="bg-yellow-200 flex justify-left w-full mx-auto px-6 py-4 relative">
+    <><div className="flex justify-left w-full mx-auto px-6 py-4 relative">
       <div className="max-w-7xl w-11/12 mx-auto">
         <div className="ml-3">
           <p className="text-lg">
@@ -44,6 +44,6 @@ export default function Notification() {
           </button>
         </div>
       </div>
-    </div>
+    </div><hr className="border-gray-200" /></>
   );
 }
