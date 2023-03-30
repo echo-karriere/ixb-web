@@ -4,8 +4,19 @@ import LogoCloud from "../components/index/logocloud";
 import { HeadSEO } from "../components/common/functions/HeadSEO";
 import Infosection from "../components/index/infosection";
 import Events from "../components/index/events";
+import { GetStaticProps } from "next";
+import { client } from "../src/lib/sanity.client";
+import { groq } from "next-sanity";
 
-const Home: NextPage = () => {
+const query = groq`*[_type == "event" && defined(slug.current)]{
+  _id,
+  title,
+  deadline,
+  eventType,
+  location,
+  }`;
+
+const Home: NextPage<{ events: any[] }> = ({ events }) => {
   return (
     <div>
       <HeadSEO
@@ -15,13 +26,28 @@ const Home: NextPage = () => {
       />
       <main>
         <Hero />
-        <Events />
+        <Events events={events} />
         <Infosection />
         <LogoCloud />
         <br />
       </main>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const events = await client.fetch(query);
+  events.sort(
+    (
+      a: { deadline: string | number | Date },
+      b: { deadline: string | number | Date }
+    ) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
+  );
+  return {
+    props: {
+      events,
+    },
+  };
 };
 
 export default Home;
