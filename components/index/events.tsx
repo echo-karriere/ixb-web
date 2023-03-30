@@ -16,7 +16,7 @@ export default function Events() {
   const [events, setEvents] = useState<SanityDocument[]>([]);
 
   useEffect(() => {
-    const fetchEvents = async () => {
+    const getStaticProps = async () => {
       const result = await client.fetch(query);
       result.sort(
         (
@@ -26,7 +26,7 @@ export default function Events() {
       );
       setEvents(result);
     };
-    fetchEvents();
+    getStaticProps();
   }, []);
 
   return (
@@ -52,17 +52,15 @@ export default function Events() {
                     key={event._id}>
                     <h3 className="font-bold">{event.title}</h3>
                     <p key={event._id}>
-                      <i className="ri-calendar-line mr-2" />
+                      <i className="ri-calendar-line mr-2"/>
                       {new Date(event.deadline).toLocaleDateString("nb-NO", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       })}
                     </p>
-                    <p>
-                      <i className="ri-map-pin-line mr-2" />
-                      {event.location}
-                    </p>
+                    <p><i className="ri-map-pin-line mr-2"/>
+                      {event.location}</p>
                   </div>
                 );
               }
@@ -85,7 +83,7 @@ export default function Events() {
                     key={event._id}>
                     <h3 className="font-bold">{event.title}</h3>
                     <p key={event._id}>
-                      <i className="ri-calendar-line mr-2" />
+                      <i className="ri-calendar-line mr-2"/>
                       {new Date(event.deadline).toLocaleDateString("nb-NO", {
                         year: "numeric",
                         month: "long",
@@ -93,9 +91,8 @@ export default function Events() {
                       })}
                     </p>
                     <p>
-                      <i className="ri-map-pin-line mr-2" />
-                      {event.location}
-                    </p>
+                      <i className="ri-map-pin-line mr-2"/>
+                      {event.location}</p>
                   </div>
                 );
               }
@@ -121,7 +118,7 @@ export default function Events() {
               key={event._id}>
               <h3 className="font-bold">{event.title}</h3>
               <p key={event._id}>
-                <i className="ri-calendar-line mr-2" />
+                <i className="ri-calendar-line mr-2"/>
                 {new Date(event.deadline).toLocaleDateString("nb-NO", {
                   year: "numeric",
                   month: "long",
@@ -129,9 +126,8 @@ export default function Events() {
                 })}
               </p>
               <p>
-                <i className="ri-map-pin-line mr-2" />
-                {event.location}
-              </p>
+                <i className="ri-map-pin-line mr-2"/>
+                {event.location}</p>
             </div>
           );
         })}
