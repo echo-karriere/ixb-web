@@ -18,7 +18,7 @@ export const getStaticProps = async ({
 }) => {
   const { slug } = params;
 
-  // fetch the data for the job listing with the matching slug
+
   const data = await client.fetch(
     groq`*[_type == "joblisting" && slug.current == $slug][0]{
       _id,
@@ -53,11 +53,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function JobAd({ data }: JobAdProps) {
   const { title, company, logo, type, location, description, deadline } = data;
-
-  // create a builder for the image URL
   const builder = imageUrlBuilder(client);
-
-  // set the image size and format
   const imageUrl = builder.image(logo).size(200, 200).format("jpg").url();
 
   // content should be moved to a separate component, did it like this because of deployment issues with Vercel
@@ -139,7 +135,7 @@ export default function JobAd({ data }: JobAdProps) {
                   setTimeout(() => {
                     document.getElementById("shareButton")!.innerHTML =
                       "Del stillingen på nytt";
-                  }, 5000);
+                  }, 3000);
                 } else {
                   // fallback to copy to clipboard
                   const url = window.location.href;
@@ -150,14 +146,14 @@ export default function JobAd({ data }: JobAdProps) {
                   document.execCommand("copy");
                   document.body.removeChild(el);
 
-                  // change id to "shareButton" to show the text for 5 seconds
+                  // change id to "shareButton" to show the text for 3 seconds
                   document.getElementById("shareButton")!.innerHTML =
                     "Lenke kopiert til utklippstavlen";
 
                   setTimeout(() => {
                     document.getElementById("shareButton")!.innerHTML =
                       "Del stillingen på nytt";
-                  }, 5000);
+                  }, 3000);
                 }
               }}
               className="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 w-full font-semibold py-2 px-4 rounded flex justify-center items-center">

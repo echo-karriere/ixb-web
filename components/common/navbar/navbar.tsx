@@ -3,10 +3,11 @@ import ForStudents from "./navigation-buttons/for-students";
 import ForCompanies from "./navigation-buttons/for-companies";
 import AboutUs from "./navigation-buttons/about-us";
 import Link from "next/link";
+import Notification from "../../index/notification";
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-[#33030d] md:bg-transparent">
+    <><Disclosure as="nav" className="bg-[#33030d] md:bg-transparent">
       <>
         <div className="mx-auto w-11/12 max-w-7xl">
           <div className="relative flex h-16 items-center justify-between">
@@ -20,8 +21,7 @@ export default function Navbar() {
                   <img
                     className="block h-10 w-auto md:hidden"
                     src="/webpageAssets/itxbergen.svg"
-                    alt="IT X BERGEN"
-                  />
+                    alt="IT X BERGEN" />
                 </Link>
               </div>
               <div className="flex flex-shrink-0 items-center">
@@ -32,8 +32,7 @@ export default function Navbar() {
                   <img
                     className="hidden h-10 md:block"
                     src="/webpageAssets/itxbergen.svg"
-                    alt="IT X BERGEN"
-                  />
+                    alt="IT X BERGEN" />
                 </Link>
               </div>
 
@@ -66,6 +65,6 @@ export default function Navbar() {
 
         <hr className="border-gray-200" />
       </>
-    </Disclosure>
+    </Disclosure><Notification /></>
   );
 }

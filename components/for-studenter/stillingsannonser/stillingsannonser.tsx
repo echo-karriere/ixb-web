@@ -366,6 +366,17 @@ export default function Joblist({
               </div>
             </div>
           )}
+          <p>
+            Lag noe kult med stillingsannonsene våre. Sjekk ut{" "}
+            <a
+              href="https://api.itxbergen.no"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline">
+              api.itxbergen.no{" "}
+              <i className="ri-external-link-fill" aria-label="Ekstern lenke" />
+            </a>
+          </p>
         </div>
       </div>
     </>

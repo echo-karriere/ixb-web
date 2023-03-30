@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Hero from "../components/index/hero";
-import Notification from "../components/index/notification";
 import LogoCloud from "../components/index/logocloud";
 import { HeadSEO } from "../components/common/functions/HeadSEO";
 import Infosection from "../components/index/infosection";
+import Events from "../components/index/events";
 
 const Home: NextPage = () => {
   return (
@@ -15,8 +15,8 @@ const Home: NextPage = () => {
       />
       <main>
         <Hero />
-        <Notification />
         <LogoCloud />
+        <Events />
         <Infosection />
         <br />
       </main>

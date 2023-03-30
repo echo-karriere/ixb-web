@@ -6,7 +6,7 @@ export default function PameldingInfo() {
       <div className="max-w-3xl">
         <h1>Påmelding til ITxBERGEN sine karrieredager 2023</h1>
 
-        <div
+        {/* <div
           className="bg-yellow-100  rounded-b px-4 py-3 shadow-md"
           role="alert">
           <p>
@@ -21,14 +21,14 @@ export default function PameldingInfo() {
               .
             </span>
           </p>
-        </div>
-        <br />
+        </div> */}
+ 
 
         <p>
           Ønsker du og din bedrift å delta på våre karrieredager for
           IT-studenter i september? Påmeldingen er nå åpen! Du kan lese mer om
-          arrangementet i invitasjonen nedenfor. Påmeldingen er åpen til 31.
-          mars.
+          arrangementet i invitasjonen nedenfor. Påmeldingen er åpen til 30.
+          april.
         </p>
         <br />
         <a
