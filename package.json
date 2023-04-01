@@ -30,9 +30,9 @@
     "tailwindcss-radix": "^2.7.0"
   },
   "devDependencies": {
-    "@types/node": "18.15.10",
+    "@types/node": "18.15.11",
     "@types/nprogress": "^0.2.0",
-    "@types/react": "18.0.30",
+    "@types/react": "18.0.31",
     "@types/sanitize-html": "^2.9.0",
     "autoprefixer": "^10.4.13",
     "eslint": "8.36.0",
