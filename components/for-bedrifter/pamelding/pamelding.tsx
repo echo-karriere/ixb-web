@@ -59,6 +59,7 @@ export default function PameldingInfo() {
           type="text"
           name="ref"
           id="ref"
+          inputMode="numeric"
           required
           pattern="[0-9]{9}"
           onInput={(e) => {
