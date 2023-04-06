@@ -16,12 +16,7 @@ const forstudents = [
     href: "/for-studenter/karrieredagene",
     icon: IconOne,
   },
-  {
-    name: "Arrangementer",
-    description: "Få en oversikt over våre kommende arrangementer",
-    href: "https://echokarriere.pameldinger.no",
-    icon: IconTwo,
-  },
+
   {
     name: "Stillingsannonser",
     description: "Finn jobber for studenter og nyutdannede",
@@ -94,18 +89,10 @@ export default function ForStudents() {
                               <item.icon aria-hidden="true" />
                             </div>
                             <div className="ml-4">
-                              {item.name === "Arrangementer" ? (
-                                <p className="text-sm font-medium text-black">
-                                  {item.name}{" "}
-                                  <i
-                                    aria-label="Ekstern lenke."
-                                    className="ri-external-link-fill"></i>
-                                </p>
-                              ) : (
-                                <p className="text-sm font-medium text-black">
-                                  {item.name}
-                                </p>
-                              )}
+                              <p className="text-sm font-medium text-black">
+                                {item.name}
+                              </p>
+
                               <p className="text-sm text-gray-700">
                                 {item.description}
                               </p>

@@ -4,20 +4,29 @@ import LogoCloud from "../components/index/logocloud";
 import { HeadSEO } from "../components/common/functions/HeadSEO";
 import Infosection from "../components/index/infosection";
 import Events from "../components/index/events";
+import News from "../components/index/news";
 import { GetStaticProps } from "next";
 import { client } from "../src/lib/sanity.client";
 import { groq } from "next-sanity";
 
-const query = groq`*[_type == "event" && defined(slug.current)]{
+const eventQuery = groq`*[_type == "event" && defined(slug.current)] {
   _id,
   title,
   slug,
   deadline,
   eventType,
-  location,
-  }`;
+  location
+}`;
 
-const Home: NextPage<{ events: any[] }> = ({ events }) => {
+const newsQuery = groq`*[_type == "news"] {
+  _id,
+  title,
+  slug,
+  _createdAt,
+  newsimage,
+} | order(_createdAt desc)`;
+
+const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
   return (
     <div>
       <HeadSEO
@@ -28,6 +37,7 @@ const Home: NextPage<{ events: any[] }> = ({ events }) => {
       <main>
         <Hero />
         <Events events={events} />
+        <News news={news} />
         <Infosection />
         <LogoCloud />
         <br />
@@ -37,16 +47,18 @@ const Home: NextPage<{ events: any[] }> = ({ events }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const events = await client.fetch(query);
+  const events = await client.fetch(eventQuery);
   events.sort(
-    (
-      a: { deadline: string | number | Date },
-      b: { deadline: string | number | Date }
-    ) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
+    (a: any, b: any) =>
+      new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
   );
+
+  const news = await client.fetch(newsQuery);
+
   return {
     props: {
       events,
+      news,
     },
   };
 };
