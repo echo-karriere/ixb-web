@@ -33,7 +33,7 @@ export default function News({ news }: NewsProps) {
           )}
 
           <h3 className="font-bold mb-2">{newsItem.title}</h3>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-800">
             Publisert:{" "}
             {new Date(newsItem._createdAt).toLocaleDateString("no-NO", {
               year: "numeric",
