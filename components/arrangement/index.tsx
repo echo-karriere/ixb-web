@@ -43,32 +43,20 @@ export default function Events({ events }: { events: SanityDocument[] }) {
   if (events.length === 0) {
     return (
       <div className="max-w-7xl w-11/12 mx-auto pt-6">
-        <h2 className="text-2xl font-bold ml-4">Arrangementer</h2>
+        <h1 className="ml-4">Arrangementer</h1>
         <p className="text-gray-500 ml-4">Ingen arrangementer å vise 🙁</p>
       </div>
     );
   }
   return (
     <div className="max-w-7xl w-11/12 mx-auto pt-6">
-      <h2 className="text-2xl font-bold ml-4">Arrangementer</h2>
+      <h1 className="ml-4">Arrangementer</h1>
       <div className="flex flex-wrap">
-        {events.slice(0, 6).map((event, index) => (
+        {events.map((event, index) => (
           <div key={event._id} className={`w-full md:w-1/3 `}>
             <Event event={event} index={index} />
           </div>
         ))}
-
-        {events.length > 6 && (
-          // create a show more button center bellow
-          <div className="w-full flex justify-center">
-            <Link href="/arrangement" passHref>
-              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                Vis flere arrangementer
-                <i className="ri-arrow-right-line ml-1" />
-              </button>
-            </Link>
-          </div>
-        )}
       </div>
     </div>
   );

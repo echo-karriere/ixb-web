@@ -72,7 +72,7 @@ export default function News({ news }: NewsProps) {
 
   return (
     <div className="max-w-7xl w-11/12 mx-auto pt-6">
-      <h2 className="text-2xl font-bold mb-1 ml-4">Nyheter</h2>
+      <h1 className="ml-4">Nyheter</h1>
       <br />
       <NewsGrid isMobile={false} />
       <NewsGrid isMobile={true} />

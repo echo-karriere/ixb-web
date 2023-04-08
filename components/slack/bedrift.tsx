@@ -18,7 +18,7 @@ export default function Slack() {
         onClick={() => {
           window.location.href = "https://itxbergen.slack.com/?no_sso=1";
         }}
-        className="bg-blue-500 hover:bg-blue-700 text-white p-2 mt-2 font-semibold rounded">
+        className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
         Logg inn
       </button>
       <br />

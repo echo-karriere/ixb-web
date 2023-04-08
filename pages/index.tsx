@@ -16,7 +16,7 @@ const eventQuery = groq`*[_type == "event" && defined(slug.current)] {
   deadline,
   eventType,
   location
-}`;
+} | order(deadline asc)`;
 
 const newsQuery = groq`*[_type == "news"] {
   _id,
@@ -48,10 +48,6 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const events = await client.fetch(eventQuery);
-  events.sort(
-    (a: any, b: any) =>
-      new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
-  );
 
   const news = await client.fetch(newsQuery);
 

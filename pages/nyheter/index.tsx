@@ -16,7 +16,7 @@ const newsQuery = groq`*[_type == "news"] {
   newsimage,
 } | order(_createdAt desc)`;
 
-const AllNews: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
+const AllNews: NextPage<{ news: any[] }> = ({ news }) => {
   return (
     <div>
       <HeadSEO
