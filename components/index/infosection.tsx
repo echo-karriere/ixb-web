@@ -4,7 +4,7 @@ import "remixicon/fonts/remixicon.css";
 export default function Infosection() {
   return (
     <>
-      <div className="mx-auto flex w-11/12 mt-6 max-w-7xl  ">
+      <div className="mx-auto flex w-11/12 mt-6 px-4 max-w-7xl  ">
         <div className="w-full rounded bg-[#f2f2f2] p-6">
           <h2>Hva er ITxBERGEN?</h2>
           <p>
@@ -72,8 +72,6 @@ export default function Infosection() {
           </div>
         </div>
       </div> */}
-
-      
     </>
   );
 }
