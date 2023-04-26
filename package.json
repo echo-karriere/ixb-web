@@ -18,7 +18,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^1.0.2",
     "@stitches/react": "^1.2.8",
-    "@vercel/analytics": "^0.1.10",
+    "@vercel/analytics": "^1.0.0",
     "next": "^13.1.6",
     "next-sanity": "^4.1.5",
     "nprogress": "^0.2.0",
