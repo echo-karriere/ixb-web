@@ -9,14 +9,14 @@ export default function Hero() {
         </h1>
         <p className="text-white text-md text-sm  md:text-xl md:w-9/12 pl-4 pr-4 md:pl-24 md:pr-24">
           Neste karrieredagene arrangeres 14. og 15. september 2023 i
-          Grieghallen. Påmeldingen for bedrifter er nå åpen!
+          Grieghallen. Vi gleder oss til å se deg der!
         </p>
-        <br />
+        {/* <br />
         <Link
           href="/for-bedrifter/pamelding"
           className="bg-[#cab169] text-[#33030d] text-sm md:text-lg font-semibold  px-4 py-2 ml-4 mr-4 mt-16 md:mt-6 md:ml-24 focus:outline-none focus:ring-4 rounded focus:ring-blue-400 hover:bg-white">
           Meld deg på som bedrift{" "}
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
