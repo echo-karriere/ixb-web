@@ -21,12 +21,7 @@ function Event({ event, index }: EventProps) {
             : "border-gray-700"
         } p-4 m-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
         key={event._id}>
-        {event.title.length > 34 ? (
-          <h3 className="font-bold">{event.title.slice(0, 31) + "..."}</h3>
-        ) : (
-          <h3 className="font-bold">{event.title}</h3>
-        )}
-
+        <h3 className="font-bold truncate ">{event.title}</h3>
         <p>
           <i className="ri-calendar-line mr-2" />
           {new Date(event.deadline).toLocaleDateString("nb-NO", {
@@ -35,7 +30,7 @@ function Event({ event, index }: EventProps) {
             day: "numeric",
           })}
         </p>
-        <p>
+        <p className="truncate">
           <i className="ri-map-pin-line mr-2" />
           {event.location}
         </p>

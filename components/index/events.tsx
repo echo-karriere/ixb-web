@@ -21,11 +21,9 @@ function Event({ event, index }: EventProps) {
             : "border-gray-700"
         } p-4 m-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
         key={event._id}>
-      {event.title.length > 34 ? (
-  <h3 className="font-bold">{event.title.slice(0, 31) + "..."}</h3>
-) : (
-  <h3 className="font-bold">{event.title}</h3>
-)}
+        <div className="flex flex-col justify-between h-full">
+          <h3 className="font-bold truncate">{event.title}</h3>
+        </div>
 
         <p>
           <i className="ri-calendar-line mr-2" />
@@ -35,8 +33,8 @@ function Event({ event, index }: EventProps) {
             day: "numeric",
           })}
         </p>
-        <p>
-          <i className="ri-map-pin-line mr-2" />
+        <p className="truncate">
+          <i className="ri-map-pin-line mr-2 " />
           {event.location}
         </p>
       </div>
