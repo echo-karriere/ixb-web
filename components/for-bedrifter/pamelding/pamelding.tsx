@@ -4,23 +4,20 @@ export default function PameldingInfo() {
       <div className="max-w-3xl">
         <h1>Påmelding til ITxBERGEN sine karrieredager 2023</h1>
         <p>
-          Ønsker du og din bedrift å delta på våre karrieredager for
-          IT-studenter i september? Påmeldingen er nå åpen! Du kan lese mer om
-          arrangementet i invitasjonen nedenfor. Påmeldingen er åpen til 30.
-          april.
+          Fristen for å delta på karrieredagene 2023 har gått ut. Dersom du
+          ønsker å melde bedriften på ventelisten, kan du sende en e-post til{" "}
+          <a
+            className="underline text-blue-500"
+            href="mailto:kontakt@itxbergen.no">
+            kontakt@itxbergen.no
+            <i className="ri-external-link-line" aria-label=", ekstern lenke."></i>
+          </a>
         </p>
         <br />
         <a
           className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
           href="https://old.echokarriere.no/files/invitation.pdf">
           Last ned invitasjonen
-        </a>
-        <br />
-        <br />
-        <a
-          className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
-          href="https://skjema.ixb.no/karrieredagene2023">
-          Gå til påmeldingsskjema
         </a>
         <br />
         <br />
