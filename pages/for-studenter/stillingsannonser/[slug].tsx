@@ -18,7 +18,6 @@ export const getStaticProps = async ({
 }) => {
   const { slug } = params;
 
-
   const data = await client.fetch(
     groq`*[_type == "joblisting" && slug.current == $slug][0]{
       _id,
@@ -69,7 +68,9 @@ export default function JobAd({ data }: JobAdProps) {
         <div className="md:grid md:grid-cols-3 md:gap-4 w-11/12 max-w-7xl">
           <div className="mb-4 static col-span-2 ...">
             <h1>{title}</h1>
-            <PortableText value={description} />
+            <span className="prose prose-slate">
+              <PortableText value={description} />
+            </span>
           </div>
           <hr className="my-4 bg-blue-200 md:hidden" />
           <div className="col-span-1 flex flex-col justify-left items-left">

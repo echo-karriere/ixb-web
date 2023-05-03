@@ -22,7 +22,7 @@ function Event({ event, index }: EventProps) {
         } p-4 m-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
         key={event._id}>
         <h3 className="font-bold truncate ">{event.title}</h3>
-        <p>
+        <p className="truncate">
           <i className="ri-calendar-line mr-2" />
           {new Date(event.deadline).toLocaleDateString("nb-NO", {
             year: "numeric",

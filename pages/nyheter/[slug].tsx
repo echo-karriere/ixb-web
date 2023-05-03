@@ -101,7 +101,9 @@ export default function news({ data }: EventProps) {
             ) : null}
 
             <br />
-            <PortableText value={content} />
+            <span className="prose prose-slate">
+              <PortableText value={content} />
+            </span>
           </div>
         </div>
       </div>

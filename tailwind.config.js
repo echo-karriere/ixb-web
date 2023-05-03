@@ -30,5 +30,6 @@ module.exports = {
   plugins: [
     // Initialize with default values (see options below)
     require("tailwindcss-radix")(),
+    require('@tailwindcss/typography'),
   ],
 };
