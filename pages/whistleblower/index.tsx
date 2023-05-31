@@ -41,9 +41,9 @@ export default function whistleblower() {
               du bruke for å lese svar på varselet.{" "}
               <b>Det er viktig at du ikke mister referansekoden</b> om du ønsker
               å kommunisere videre om saken. Ønsker du å svare på en melding
-              trykker du på "Reply" knappen over meldingen. Logg deg også inn
-              for å sjekke bekreftelse på at varselet er mottatt med en gang du
-              har sendt det inn. Om bekreftelsen ikke er mottatt kan det være
+              trykker du på Reply knappen over meldingen. Logg deg også inn for
+              å sjekke bekreftelse på at varselet er mottatt med en gang du har
+              sendt det inn. Om bekreftelsen ikke er mottatt kan det være
               midlertidige problemer med tjenesten, og vi vil oppfordre deg til
               å sende inn varselet på nytt på et senere tidspunkt.
             </p>
@@ -84,7 +84,7 @@ export default function whistleblower() {
               href="https://skjema.ixb.no/ixb-whistleblower"
               className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
               Send inn varsel
-            </a>{" "}
+            </a>
             <br />
             <br />
             <Link
