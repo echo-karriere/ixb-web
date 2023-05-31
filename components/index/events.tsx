@@ -63,9 +63,9 @@ export default function Events({ events }: { events: SanityDocument[] }) {
 
         {events.length > 6 && (
           // create a show more button center bellow
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center ">
             <Link href="/arrangement" passHref>
-              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
                 Vis flere arrangementer
                 <i className="ri-arrow-right-line ml-1" />
               </button>

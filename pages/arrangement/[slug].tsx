@@ -4,6 +4,7 @@ import { HeadSEO } from "../../components/common/functions/HeadSEO";
 import { groq } from "next-sanity";
 import { GetStaticPaths } from "next";
 import { PortableText } from "@portabletext/react";
+import Link from "next/link";
 
 interface EventProps {
   data: SanityDocument;
@@ -127,13 +128,41 @@ export default function event({ data }: EventProps) {
               href={`${linkLocation}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="border text-center border-transparent mt-2 p-1 font-sm rounded text-gray-900 bg-gray-200 hover:bg-gray-300 w-36">
+              className="border text-center border-transparent mt-2 p-1 px-2 font-sm text-gray-900 bg-gray-200 hover:bg-gray-300 w-fit focus:outline-none focus:ring-4 rounded focus:ring-yellow-400">
               <i className="ri-map-line" /> Vis på kart
               <i
                 aria-label="Ekstern lenke"
                 className="ri-external-link-fill ml-2"
               />
             </a>
+
+            <a
+              href={`data:text/calendar;charset=utf8,${encodeURIComponent(
+                `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+URL:https://itxbergen.no/arrangement/${data.slug.current}
+DTSTART:${new Date(deadline).toISOString().replace(/-|:|\.\d\d\d/g, "")}
+DTEND:${new Date(deadline).toISOString().replace(/-|:|\.\d\d\d/g, "")}
+SUMMARY:${title}
+DESCRIPTION:For mer informasjon om arrangementet, og eventuelt forandringer, gå til <a href="https://itxbergen.no/arrangement/${
+                  data.slug.current
+                }">itxbergen.no/arrangement/${data.slug.current}</a> 
+                
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`
+              )}`}
+              download={`${title}.ics`}
+              className="border border-transparent mt-2 p-1 px-2 font-sm text-gray-900 bg-gray-200 hover:bg-gray-300 w-fit focus:outline-none focus:ring-4 rounded focus:ring-yellow-400">
+              <i className="ri-calendar-line" /> Legg til i kalender
+            </a>
+
+            <Link
+              href="/whistleblower"
+              className="border border-transparent mt-2 p-1 px-2 font-sm text-gray-900 bg-gray-200 hover:bg-gray-300 w-fit focus:outline-none focus:ring-4 rounded focus:ring-yellow-400">
+              <i className="ri-bug-line" /> Debug
+            </Link>
 
             {link ? (
               <div className="border border-gray-900 border-transparent mt-2 p-4 font-sm rounded text-gray-900 bg-gray-200 ">
@@ -150,7 +179,7 @@ export default function event({ data }: EventProps) {
                   href={`${link}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border text-center border-transparent p-2 font-sm rounded text-gray-100 bg-blue-500 hover:bg-blue-700 w-32">
+                  className="border text-center border-transparent p-2 font-sm text-gray-100 bg-blue-500 hover:bg-blue-700 w-32 focus:outline-none focus:ring-4 rounded focus:ring-yellow-400">
                   Gå til påmelding
                   <i
                     aria-label="Ekstern lenke"

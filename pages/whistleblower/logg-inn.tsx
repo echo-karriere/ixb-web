@@ -4,30 +4,20 @@ export default function whistleblower() {
   return (
     <>
       <HeadSEO
-        title="Logg inn - IxB Whistleblower | ITxBERGEN"
-        description="IxB Whistleblower - Logg inn for å lese svar på varsel."
+        title="Logg inn - ITxBergen Debugger | ITxBERGEN"
+        description="ITxBergen Debugger - Logg inn for å lese svar på varsel."
         canonical="/whistleblower/logg-inn"
       />
 
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">
           <div className="max-w-3xl">
-            <h1>Logg inn - IxB Whistleblower</h1>
+            <h1>Logg inn - ITxBergen Debugger</h1>
             <p>
               Skriv inn referansekoden du fikk når du sendte inn ditt varsel.
               Alle svar fra oss blir lagret i 8 dager før de slettes.
             </p>
-            <br />
-            <p>
-              <b>Svare på vår henvendelse:</b>
-            </p>
 
-            <p>
-              Du kan svare på vår henvendelse ved å sende en melding til denne
-              adressen etter at du har logget inn:
-              <br />
-              <i>alt.ca-3i7b2fa@yopmail.com</i>
-            </p>
             <br />
             <form>
               <label className="font-bold" htmlFor="ref">
@@ -61,7 +51,7 @@ export default function whistleblower() {
                 style={{ color: "red", marginTop: "0.5rem" }}></div>
               {/* on submit, go to https://yopmail.com/?login=[ref here] */}
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white p-2 mt-2 rounded"
+                className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
                 type="submit"
                 onClick={(e) => {
                   e.preventDefault(); // prevent default form submission
@@ -76,7 +66,7 @@ export default function whistleblower() {
                   if (!ref || !pattern.test(ref)) {
                     // check if ref is falsy or does not match pattern
                     errorMessage.innerText =
-                      "Refferansekoden du skrev inn er feil. Dobbeltsjekk og prøv på nytt."; // set error message text
+                      "Referansekoden du skrev inn er feil. Dobbeltsjekk og prøv på nytt."; // set error message text
                     return; // exit the function without redirecting
                   }
                   window.location.href = `https://yopmail.com/?login=${ref}`; // append value to URL and redirect

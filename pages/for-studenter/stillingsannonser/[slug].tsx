@@ -113,7 +113,7 @@ export default function JobAd({ data }: JobAdProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Trykk her for å gå til søknaden for stillingen - ${title}, Ekstern lenke.`}
-              className="mt-4 bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded flex justify-center items-center">
+              className="mt-4 bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded flex justify-center items-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
               <span className="text-center">Gå til søknad</span>
               <i className="ri-external-link-fill ml-2" />
             </a>
@@ -157,7 +157,7 @@ export default function JobAd({ data }: JobAdProps) {
                   }, 3000);
                 }
               }}
-              className="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 w-full font-semibold py-2 px-4 rounded flex justify-center items-center">
+              className="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 w-full font-semibold py-2 px-4 flex justify-center items-center rounded focus:outline-none focus:ring-4 focus:ring-yellow-400">
               <span id="shareButton" className="text-center ">
                 Del stillingen
               </span>
@@ -187,7 +187,7 @@ export default function JobAd({ data }: JobAdProps) {
                     "Fjern fra favoritter";
                 }
               }}
-              className="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 w-full font-semibold py-2 px-4 rounded flex justify-center items-center">
+              className="mt-4 bg-gray-200 hover:bg-gray-300 text-gray-800 w-full font-semibold py-2 px-4 rounded flex justify-center items-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
               <span id="favoriteButton" className="text-center">
                 {typeof localStorage !== "undefined" &&
                 JSON.parse(localStorage.getItem("favorites") || "[]").includes(
