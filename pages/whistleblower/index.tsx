@@ -80,11 +80,11 @@ export default function whistleblower() {
             </div>
             <br />
             <br />
-            <Link
+            <a
               href="https://skjema.ixb.no/ixb-whistleblower"
               className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
               Send inn varsel
-            </Link>{" "}
+            </a>{" "}
             <br />
             <br />
             <Link
