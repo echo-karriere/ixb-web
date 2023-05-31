@@ -95,7 +95,7 @@ export default function whistleblower() {
           </div>
           <br />
           <small className="text-gray-500">
-            Navnet IxB Whistleblower og IxB Debugger brukes for øyeblikket om
+            Navnet IxB Whistleblower og ITxBergen Debugger brukes for øyeblikket om
             hverandre. Dette vil bli endret i fremtiden.
           </small>
         </div>
