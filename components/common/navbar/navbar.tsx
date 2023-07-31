@@ -21,7 +21,7 @@ export default function Navbar() {
                     aria-label="Gå til forsiden"
                     className="rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 px-2 focus:ring-blue-400 md:hidden">
                     <Image
-                      width={256}
+                      width={175}
                       height={500}
                       className="block h-10 w-auto md:hidden"
                       src="/webpageAssets/itxbergen.svg"
@@ -35,7 +35,7 @@ export default function Navbar() {
                     aria-label="Gå til forsiden"
                     className="rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 md:block">
                     <Image
-                      width={256}
+                      width={175}
                       height={500}
                       className="hidden h-10 md:block"
                       src="/webpageAssets/itxbergen.svg"
