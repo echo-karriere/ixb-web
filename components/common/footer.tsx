@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex justify-center">
         <div className="max-w-7xl w-11/12 mt-6 mb-6">
           <div className="mb-6">
-            <img
+            <Image
               className="mb-4 mt-2"
               src="/webpageAssets/itxbergen-text.svg"
               alt="IT X BERGEN Footer"
@@ -178,7 +178,6 @@ export default function Footer() {
                     href="/slack"
                     className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
                     <i className="ri-slack-fill ri-lg"></i> Slack{" "}
-  
                   </Link>
                 </li>
               </ul>
@@ -217,7 +216,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg focus:ring-blue-400">
-          <img
+          <Image
             className="m-2"
             src="/webpageAssets/sanity.svg"
             alt="Sanity"
