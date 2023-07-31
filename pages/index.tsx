@@ -13,10 +13,10 @@ const eventQuery = groq`*[_type == "event" && defined(slug.current)] {
   _id,
   title,
   slug,
-  deadline,
+  starttime,
   eventType,
   location
-} | order(deadline asc)`;
+} | order(starttime asc)`;
 
 const newsQuery = groq`*[_type == "news"] {
   _id,

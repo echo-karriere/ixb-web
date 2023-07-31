@@ -11,10 +11,10 @@ const EventQuery = groq`*[_type == "event"] {
   _id,
   title,
   slug,
-  deadline,
+  starttime,
   eventType, 
     location,
-} | order(deadline asc)`;
+} | order(starttime asc)`;
 
 const AllEvents: NextPage<{ events: any[] }> = ({ events }) => {
   return (

@@ -24,7 +24,8 @@ export const getStaticProps = async ({
       slug,
         description,
         eventType,
-        deadline,
+        starttime,
+        endtime,
         location,
         linkLocation,
         link
@@ -55,7 +56,8 @@ export default function event({ data }: EventProps) {
     description,
     eventType,
     location,
-    deadline,
+    starttime,
+    endtime,
     linkLocation,
     link,
   } = data;
@@ -96,11 +98,11 @@ export default function event({ data }: EventProps) {
               />{" "}
               {eventType}
             </p>
-            {deadline && (
+            {starttime && (
               <>
                 <p>
                   <i className="ri-calendar-line"></i>{" "}
-                  {new Date(deadline).toLocaleDateString("nb-NO", {
+                  {new Date(starttime).toLocaleDateString("nb-NO", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
@@ -109,7 +111,7 @@ export default function event({ data }: EventProps) {
 
                 <p>
                   <i className="ri-time-line"></i>{" "}
-                  {new Date(deadline).toLocaleTimeString("nb-NO", {
+                  {new Date(starttime).toLocaleTimeString("nb-NO", {
                     hour: "2-digit",
                     minute: "2-digit",
                   })}
@@ -142,8 +144,8 @@ export default function event({ data }: EventProps) {
 VERSION:2.0
 BEGIN:VEVENT
 URL:https://itxbergen.no/arrangement/${data.slug.current}
-DTSTART:${new Date(deadline).toISOString().replace(/-|:|\.\d\d\d/g, "")}
-DTEND:${new Date(deadline).toISOString().replace(/-|:|\.\d\d\d/g, "")}
+DTSTART:${new Date(starttime).toISOString().replace(/-|:|\.\d\d\d/g, "")}
+DTEND:${new Date(endtime).toISOString().replace(/-|:|\.\d\d\d/g, "")}
 SUMMARY:${title}
 DESCRIPTION:For mer informasjon om arrangementet, og eventuelt forandringer, gå til <a href="https://itxbergen.no/arrangement/${
                   data.slug.current
