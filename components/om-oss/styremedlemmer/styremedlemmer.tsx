@@ -1,7 +1,7 @@
 import type { SanityDocument } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../../../src/lib/sanity.client";
-import Image from "next/dist/client/image";
+import Image from "next/image";
 import "remixicon/fonts/remixicon.css";
 
 const builder = imageUrlBuilder(client);
