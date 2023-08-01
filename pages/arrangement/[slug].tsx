@@ -161,7 +161,7 @@ END:VCALENDAR`
             </a>
 
             <Link
-              href="/whistleblower"
+              href="/debug"
               className="border border-transparent mt-2 p-1 px-2 font-sm text-gray-900 bg-gray-200 hover:bg-gray-300 w-fit focus:outline-none focus:ring-4 rounded focus:ring-yellow-400">
               <i className="ri-bug-line" /> Debug
             </Link>

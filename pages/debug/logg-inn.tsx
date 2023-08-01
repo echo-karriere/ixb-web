@@ -12,7 +12,7 @@ export default function whistleblower() {
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">
           <div className="max-w-3xl">
-            <h1>Logg inn - ITxBergen Debugger</h1>
+            <h1>Logg inn - ITxBergen DEBUG</h1>
             <p>
               Skriv inn referansekoden du fikk når du sendte inn ditt varsel.
               Alle svar fra oss blir lagret i 8 dager før de slettes.

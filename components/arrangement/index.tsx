@@ -24,7 +24,7 @@ function Event({ event, index }: EventProps) {
         <h3 className="font-bold truncate ">{event.title}</h3>
         <p className="truncate">
           <i className="ri-calendar-line mr-2" />
-          {new Date(event.deadline).toLocaleDateString("nb-NO", {
+          {new Date(event.starttime).toLocaleDateString("nb-NO", {
             year: "numeric",
             month: "long",
             day: "numeric",

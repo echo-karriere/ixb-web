@@ -79,9 +79,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/sifra"
+                    href="/debug"
                     className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
-                    Opplevd noe ugreit?
+                    Opplevd noe ugreit? ⚠️
                   </Link>
                 </li>
               </ul>
