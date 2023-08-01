@@ -51,9 +51,9 @@ export default function whistleblower() {
   return (
     <>
       <HeadSEO
-        title="ITxBergen Debugger | ITxBERGEN"
-        description="ITxBergen Debugger lar deg melde i fra kritikkverdig atferd på ITxBERGEN sine arrangementer."
-        canonical="/whistleblower"
+        title="ITxBergen Debug | ITxBERGEN"
+        description="ITxBergen Debug lar deg melde i fra kritikkverdig atferd på ITxBERGEN sine arrangementer."
+        canonical="/debug"
       />
 
       <main>

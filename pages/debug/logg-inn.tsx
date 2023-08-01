@@ -4,9 +4,9 @@ export default function whistleblower() {
   return (
     <>
       <HeadSEO
-        title="Logg inn - ITxBergen Debugger | ITxBERGEN"
-        description="ITxBergen Debugger - Logg inn for å lese svar på varsel."
-        canonical="/whistleblower/logg-inn"
+        title="Logg inn - ITxBergen Debug | ITxBERGEN"
+        description="ITxBergen Debug - Logg inn for å lese svar på varsel."
+        canonical="/debug/logg-inn"
       />
 
       <main>
