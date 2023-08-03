@@ -22,22 +22,26 @@ const EditAccount = () => {
   };
 
   const handlePinChange = (e: { currentTarget: { value: any } }) => {
-    const newPin = e.currentTarget.value;
+    const newPin = e.currentTarget.value.replace(/\D/g, "").slice(0, 8);
     setPin(newPin);
   };
 
   const handleCurrentPinChange = (e: { currentTarget: { value: any } }) => {
-    const currentPinValue = e.currentTarget.value;
+    const currentPinValue = e.currentTarget.value
+      .replace(/\D/g, "")
+      .slice(0, 8);
     setCurrentPin(currentPinValue);
   };
 
   const handleNewPinChange = (e: { currentTarget: { value: any } }) => {
-    const newPinValue = e.currentTarget.value;
+    const newPinValue = e.currentTarget.value.replace(/\D/g, "").slice(0, 8);
     setNewPin(newPinValue);
   };
 
   const handleConfirmNewPinChange = (e: { currentTarget: { value: any } }) => {
-    const confirmNewPinValue = e.currentTarget.value;
+    const confirmNewPinValue = e.currentTarget.value
+      .replace(/\D/g, "")
+      .slice(0, 8);
     setConfirmNewPin(confirmNewPinValue);
   };
 
@@ -106,10 +110,10 @@ const EditAccount = () => {
           type="submit"
           className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 w-40 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
           {" "}
-          Lagre navn endringer
+          Lagre endringer
         </button>
       </form>
-      <br />
+<br />
       <h2>Endre PIN</h2>
       <form className="flex flex-col" onSubmit={handleSubmitPin}>
         <label htmlFor="currentPin">Nåværende PIN</label>
@@ -154,10 +158,11 @@ const EditAccount = () => {
           className="border-2 rounded px-3 py-2 my-2"
         />
 
+
         <button
           type="submit"
           className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 w-40 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
-          Lagre ny PIN
+          Lagre endringer
         </button>
       </form>
     </>
