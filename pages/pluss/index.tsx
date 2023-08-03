@@ -30,7 +30,7 @@ const Plus = () => {
             {isPlus ? (
               <>
                 <h1>
-                  Velkommen, {userName}!{" "}
+                  Hallaien, {userName}!{" "}
                   <span className="bg-yellow-300 text-yellow-700 font-bold text-xs rounded-full px-2">
                     PLUSS+
                   </span>
@@ -54,7 +54,7 @@ const Plus = () => {
                 </Link>
                 <br />
                 <br />
-                <h2>Slett lokal PLUSS+ konto eller glemt PIN kode</h2>
+                <h2>Slett lokal PLUSS+ konto, eller glemt PIN kode</h2>
                 <p>
                   Ønsker du å slette din PLUSS+ konto kan du gjøre det her. Har
                   du glemt PIN koden din må du først slette din PLUSS+ konto og
