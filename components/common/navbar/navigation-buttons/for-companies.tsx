@@ -10,9 +10,10 @@ const forcompanies = [
     icon: IconOne,
   },
   {
-    name: "Send inn stillingsannonse",
-    description: "Bruk dette skjemaet for å sende inn en stillingsannonse",
-    href: "https://airtable.com/shrEXkOYcPiAG7cDP",
+    name: "Administrer stillingsannonser",
+    description:
+      "For deg som ønsker å publisere, redigere eller fjerne en stillingsannonse.",
+    href: "/for-bedrifter/stillingsannonser",
     icon: IconThree,
   },
   {
@@ -22,8 +23,6 @@ const forcompanies = [
     icon: IconTwo,
   },
 ];
-
-
 
 export default function ForCompanies() {
   return (
@@ -117,7 +116,6 @@ function IconOne() {
 function IconTwo() {
   return <i className="ri-pencil-line ri-2x text-[#33030d]"></i>;
 }
-
 
 function IconThree() {
   return <i className="ri-suitcase-line ri-2x text-[#33030d]"></i>;

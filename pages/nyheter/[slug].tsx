@@ -73,7 +73,15 @@ export default function news({ data }: EventProps) {
                 <Image src={imageUrl} alt={title} width={1920} height={1080} />
                 <br />
               </>
-            ) : null}
+            ) : (
+              <Image
+                className="rounded mb-6"
+                src={"/webpageAssets/placeholder.jpg"}
+                width={1920}
+                height={1080}
+                alt={""}
+              />
+            )}
             <p className="text-sm text-gray-500">
               Publisert:{" "}
               {new Date(data._createdAt).toLocaleDateString("no-NO", {

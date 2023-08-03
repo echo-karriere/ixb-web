@@ -54,6 +54,7 @@ export default function Navbar() {
                   <div>
                     <AboutUs />
                   </div>
+                  <div></div>
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ export default function News({ news }: NewsProps) {
     <div className="w-full md:w-1/3 px-4 mb-8" key={newsItem._id}>
       <Link href={`/nyheter/${newsItem.slug.current}`} passHref>
         <div className="bg-gray-100 rounded p-4 h-full cursor-pointer hover:bg-gray-200">
-          {newsItem.newsimage && (
+          {newsItem.newsimage ? (
             <Image
               className="rounded"
               src={
@@ -26,6 +26,14 @@ export default function News({ news }: NewsProps) {
                   .height(1080)
                   .url()!
               }
+              width={1920}
+              height={1080}
+              alt={newsItem.title}
+            />
+          ) : (
+            <Image
+              className="rounded"
+              src={"/webpageAssets/placeholder.jpg"}
               width={1920}
               height={1080}
               alt={newsItem.title}
@@ -57,8 +65,8 @@ export default function News({ news }: NewsProps) {
   return (
     <div className="max-w-7xl w-11/12 mx-auto pt-6">
       <h2 className="text-2xl font-bold mb-1 ml-4">Nyheter</h2>
-      <Link href="/nyheter" className="text-gray-500 underline p-4">
-        Se alle nyheter
+      <Link href="/nyheter" className="text-gray-500 underline m-4">
+        Se flere nyheter
       </Link>
       <br />
       <br />

@@ -6,6 +6,7 @@ import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
 import { Analytics } from "@vercel/analytics/react";
 import Notification from "../components/index/notification";
+import { useEffect, useState } from "react";
 
 //Route Events.
 Router.events.on("routeChangeStart", () => NProgress.start());
