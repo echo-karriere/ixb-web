@@ -106,10 +106,10 @@ const EditAccount = () => {
           type="submit"
           className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 w-40 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
           {" "}
-          Lagre endringer
+          Lagre navn endringer
         </button>
       </form>
-<br />
+      <br />
       <h2>Endre PIN</h2>
       <form className="flex flex-col" onSubmit={handleSubmitPin}>
         <label htmlFor="currentPin">Nåværende PIN</label>
@@ -154,11 +154,10 @@ const EditAccount = () => {
           className="border-2 rounded px-3 py-2 my-2"
         />
 
-
         <button
           type="submit"
           className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 w-40 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500">
-          Lagre endringer
+          Lagre ny PIN
         </button>
       </form>
     </>
