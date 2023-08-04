@@ -48,21 +48,21 @@ export default function Joblist({
   // Define the state for the selected companies and locations
   const [selectedCompanies, setSelectedCompanies] = useState<string[]>(() => {
     try {
-      return JSON.parse(localStorage.getItem("selectedCompanies") ?? "[]");
+      return JSON.parse(sessionStorage.getItem("selectedCompanies") ?? "[]");
     } catch {
       return [];
     }
   });
   const [selectedLocations, setSelectedLocations] = useState<string[]>(() => {
     try {
-      return JSON.parse(localStorage.getItem("selectedLocations") ?? "[]");
+      return JSON.parse(sessionStorage.getItem("selectedLocations") ?? "[]");
     } catch {
       return [];
     }
   });
   const [selectedTypes, setSelectedTypes] = useState<string[]>(() => {
     try {
-      return JSON.parse(localStorage.getItem("selectedTypes") ?? "[]");
+      return JSON.parse(sessionStorage.getItem("selectedTypes") ?? "[]");
     } catch {
       return [];
     }
@@ -82,7 +82,7 @@ export default function Joblist({
 
   useEffect(() => {
     try {
-      localStorage.setItem(
+      sessionStorage.setItem(
         "selectedCompanies",
         JSON.stringify(selectedCompanies)
       );
@@ -91,7 +91,7 @@ export default function Joblist({
 
   useEffect(() => {
     try {
-      localStorage.setItem(
+      sessionStorage.setItem(
         "selectedLocations",
         JSON.stringify(selectedLocations)
       );
@@ -100,7 +100,7 @@ export default function Joblist({
 
   useEffect(() => {
     try {
-      localStorage.setItem("selectedTypes", JSON.stringify(selectedTypes));
+      sessionStorage.setItem("selectedTypes", JSON.stringify(selectedTypes));
     } catch {}
   }, [selectedTypes]);
 
