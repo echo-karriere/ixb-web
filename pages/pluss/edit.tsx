@@ -1,16 +1,20 @@
 import { HeadSEO } from "../../components/common/functions/HeadSEO";
 import React, { useEffect, useState } from "react";
 import EditAccount from "../../components/pluss/editAccount";
+import secureLocalStorage from "react-secure-storage";
 
 export default function Plus() {
-  // Changed the function name to 'Plus'
   const [userName, setUserName] = useState("");
   const [isPlus, setIsPlus] = useState(false);
 
   useEffect(() => {
-    const userNameFromLocalStorage = localStorage.getItem("userName") || "";
+    const userNameFromLocalStorage =
+      secureLocalStorage.getItem("userName")?.toString() ?? "";
     setUserName(userNameFromLocalStorage);
-    if (localStorage.getItem("userName") && localStorage.getItem("userPIN")) {
+    if (
+      secureLocalStorage.getItem("userName") &&
+      secureLocalStorage.getItem("userPIN")
+    ) {
       setIsPlus(true);
     }
   }, []);

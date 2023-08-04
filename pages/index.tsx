@@ -10,6 +10,7 @@ import { client } from "../src/lib/sanity.client";
 import { groq } from "next-sanity";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import secureLocalStorage from "react-secure-storage";
 
 const eventQuery = groq`*[_type == "event" && defined(slug.current)] {
   _id,
@@ -31,13 +32,19 @@ const newsQuery = groq`*[_type == "news"] {
 const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
   const [userName, setUserName] = useState("");
   const [isPlus, setIsPlus] = useState(false);
+
   useEffect(() => {
-    const userNameFromLocalStorage = localStorage.getItem("userName") || "";
+    const userNameFromLocalStorage =
+      secureLocalStorage.getItem("userName")?.toString() ?? "";
     setUserName(userNameFromLocalStorage);
-    if (localStorage.getItem("userName") && localStorage.getItem("userPIN")) {
+    if (
+      secureLocalStorage.getItem("userName") &&
+      secureLocalStorage.getItem("userPIN")
+    ) {
       setIsPlus(true);
     }
   }, []);
+
   return (
     <div>
       <HeadSEO

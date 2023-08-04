@@ -1,4 +1,5 @@
 import { useState } from "react";
+import secureLocalStorage from "react-secure-storage";
 
 const CreateAccount = () => {
   const [name, setPlusName] = useState("");
@@ -33,11 +34,11 @@ const CreateAccount = () => {
       return;
     }
 
-    localStorage.setItem("userName", name);
-    localStorage.setItem("userPIN", pin);
+    secureLocalStorage.setItem("userName", name);
+    secureLocalStorage.setItem("userPIN", pin);
 
     // if localsotrage is set, then set isPlus to true
-    if (localStorage.getItem("userName") && localStorage.getItem("userPIN")) {
+    if (secureLocalStorage.getItem("userName") && secureLocalStorage.getItem("userPIN")) {
       setIsPlus(true);
     }
 

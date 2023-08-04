@@ -3,15 +3,20 @@ import React, { useEffect, useState } from "react";
 import CreateAccount from "../../components/pluss/createAccount";
 import AboutPluss from "../../components/pluss/aboutPluss";
 import Link from "next/link";
+import secureLocalStorage from "react-secure-storage";
 
 const Plus = () => {
   const [userName, setUserName] = useState("");
   const [isPlus, setIsPlus] = useState(false);
 
   useEffect(() => {
-    const userNameFromLocalStorage = localStorage.getItem("userName") || "";
+    const userNameFromLocalStorage =
+      secureLocalStorage.getItem("userName")?.toString() ?? "";
     setUserName(userNameFromLocalStorage);
-    if (localStorage.getItem("userName") && localStorage.getItem("userPIN")) {
+    if (
+      secureLocalStorage.getItem("userName") &&
+      secureLocalStorage.getItem("userPIN")
+    ) {
       setIsPlus(true);
     }
   }, []);

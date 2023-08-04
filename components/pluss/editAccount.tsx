@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import secureLocalStorage from "react-secure-storage";
 
 const EditAccount = () => {
   const [name, setPlusName] = useState("");
@@ -6,12 +7,12 @@ const EditAccount = () => {
   const [currentPin, setCurrentPin] = useState("");
   const [newPin, setNewPin] = useState("");
   const [confirmNewPin, setConfirmNewPin] = useState("");
-  const correctPin = localStorage.getItem("userPIN") || "1234"; // Use the correct PIN stored in localStorage or default to "1234"
+  const correctPin = secureLocalStorage.getItem("userPIN") ?? "1234";
 
-  // Load existing name from localStorage on component mount
+  // Load existing name from secureLocalStorage on component mount
   useEffect(() => {
-    const storedName = localStorage.getItem("userName");
-    if (storedName) {
+    const storedName = secureLocalStorage.getItem("userName");
+    if (typeof storedName === "string") {
       setPlusName(storedName);
     }
   }, []);
@@ -49,7 +50,7 @@ const EditAccount = () => {
     e.preventDefault();
 
     if (pin === correctPin) {
-      localStorage.setItem("userName", name);
+      secureLocalStorage.setItem("userName", name);
       alert("Name updated successfully!");
     } else {
       alert("Incorrect PIN. Name not updated.");
@@ -60,7 +61,7 @@ const EditAccount = () => {
     e.preventDefault();
 
     if (currentPin === correctPin && newPin === confirmNewPin) {
-      localStorage.setItem("userPIN", newPin);
+      secureLocalStorage.setItem("userPIN", newPin);
       alert("PIN updated successfully!");
       setPin(newPin); // Update the current PIN displayed in the input field
       setCurrentPin(""); // Reset currentPin input field
@@ -113,7 +114,7 @@ const EditAccount = () => {
           Lagre endringer
         </button>
       </form>
-<br />
+      <br />
       <h2>Endre PIN</h2>
       <form className="flex flex-col" onSubmit={handleSubmitPin}>
         <label htmlFor="currentPin">Nåværende PIN</label>
@@ -157,7 +158,6 @@ const EditAccount = () => {
           required
           className="border-2 rounded px-3 py-2 my-2"
         />
-
 
         <button
           type="submit"
