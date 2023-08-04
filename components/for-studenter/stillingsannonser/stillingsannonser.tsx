@@ -318,23 +318,7 @@ export default function Joblist({
                     </div>
 
                     <div className="favorite">
-                      <button
-                        aria-label={`${
-                          isFavorite(job._id)
-                            ? "Fjern fra favoritter"
-                            : "Legg til i favoritter"
-                        }`}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          toggleFavorite(job._id);
-                        }}
-                        className=" text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
-                        {isFavorite(job._id) ? (
-                          <p>&#10084;&#65039;</p>
-                        ) : (
-                          <p>&#128420;</p>
-                        )}
-                      </button>
+                      {isFavorite(job._id) ? <span>❤️</span> : null}
                     </div>
                   </div>
                 </Link>
@@ -355,7 +339,8 @@ export default function Joblist({
                 </h3>
                 <p className="text-gray-700">
                   Vi tilbyr gratis annonsering av stillingsannonser på våre
-                  nettsider. Klikk på knappen under for å publisere deres stillingsannonse på denne siden.
+                  nettsider. Klikk på knappen under for å publisere deres
+                  stillingsannonse på denne siden.
                 </p>
                 <Link href="https://airtable.com/shrEXkOYcPiAG7cDP">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center mt-4 cursor-pointer">
@@ -366,7 +351,6 @@ export default function Joblist({
               </div>
             </div>
           )}
-        
         </div>
       </div>
     </>
