@@ -25,6 +25,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.45.2",
+    "react-router-dom": "^6.14.2",
     "react-secure-storage": "^1.2.2",
     "react-select": "^5.7.0",
     "remixicon": "^3.0.0",
