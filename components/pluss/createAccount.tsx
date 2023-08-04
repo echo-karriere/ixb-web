@@ -4,7 +4,7 @@ import secureLocalStorage from "react-secure-storage";
 const CreateAccount = () => {
   const [name, setPlusName] = useState("");
   const [pin, setPlusPin] = useState("");
-  const [isPlus, setIsPlus] = useState(false);
+  const [, setIsPlus] = useState(false);
   const [pinConfirm, setPinConfirm] = useState("");
 
   const handleNameChange = (e: {

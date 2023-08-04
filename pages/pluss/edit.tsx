@@ -4,7 +4,7 @@ import EditAccount from "../../components/pluss/editAccount";
 import secureLocalStorage from "react-secure-storage";
 
 export default function Plus() {
-  const [userName, setUserName] = useState("");
+  const [, setUserName] = useState("");
   const [isPlus, setIsPlus] = useState(false);
 
   useEffect(() => {
