@@ -70,7 +70,7 @@ const Plus = () => {
                 <button
                   onClick={() => {
                     confirm(
-                      "Er du sikker på at du ønsker å slette din PLUSS+ konto? Ved å gjøre dette mister du det du har lagret på din PLUSS+ konto. Handlingen kan ikke angres."
+                      "Er du sikker på at du vil slette all informasjon som ITxBERGEN har lagret lokalt på din enhet?\n\nDette vil også fjerne alle stillingsannoner du har lagret som favoritt, og du må opprette en ny bruker for å få tilgang til ITxBERGEN PLUSS+.\n\nAll tilhørende data tilknyttet ITxBERGEN PLUSS+ vil også bli slettet.\n\nHandlingen kan ikke reverseres."
                     ) && localStorage.clear();
                     window.location.reload();
                   }}

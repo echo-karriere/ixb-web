@@ -2,7 +2,7 @@ import { ExternalLink } from "../../../components/common/functions/externalLink"
 
 # Informasjonskapsler (cookies)
 
-_Sist oppdatert: februar 2023_
+_Sist oppdatert: august 2023_
 
 <br />
 De aller fleste nettsider i dag benytter seg av informasjonskapsler (cookies). En
@@ -29,7 +29,29 @@ ned på siden.
 
 ## Hvilke informasjonskapsler bruker ITxBergen?
 
-Per februar 2023, ingen.
+Vi benytter ikke informasjonskapsler på våre nettsider, men bruker teknologier som øktlagring (Session Storage) og lokal lagring (Local Storage).
+Disse teknologiene lagrer informasjon lokalt på din enhet, og er ikke tilgjengelig for andre nettsider, eller blir sendt til våre servere.
+Disse teknologiene brukes for å lagre informasjon om brukerens valg på nettsiden, og for å lagre informasjon om brukeren.
+
+## I hvilke situasjoner bruker vi øktlagring og lokal lagring?
+
+Vi bruker øktlagring for å huske valg brukeren har gjort når de filtrerer stillinger på nettsiden. Denne dataen blir husket slik at valgene huskes når brukeren navigerer mellom ulike sider på nettsiden. Denne informasjonen blir slettet når brukeren forlater nettsiden.
+Vi bruker lokal lagring i situasjoner der det gir mening at valgene skal huskes ved neste besøk. Dette gjelder når brukeren velger å sette en stillingsannonse som favoritt, eller når brukeren velger å skjule informasjon.
+Vi benytter også lokal lagring i vår ITxBERGEN PLUSS+ tjeneste. Personopplysninger eller sensitive opplysninger blir kryptert med AES-256, og lagres lokalt på brukerens enhet. Denne informasjonen blir ikke sendt til våre servere, og er ikke tilgjengelig for andre nettsider.
+
+<br />
+Ønsker du å slette all informasjon som denne nettsiden har lagret lokalt på din enhet
+kan du
+<span
+  className="text-blue-600 underline cursor-pointer"
+  onClick={() =>
+    window.confirm(
+      "Er du sikker på at du vil slette all informasjon som ITxBERGEN har lagret lokalt på din enhet?\n\nDette vil også fjerne alle stillingsannoner du har lagret som favoritt, og du må opprette en ny bruker for å få tilgang til ITxBERGEN PLUSS+.\n\nAll tilhørende data tilknyttet ITxBERGEN PLUSS+ vil også bli slettet.\n\nHandlingen kan ikke reverseres."
+    ) &&
+    (localStorage.clear(), sessionStorage.clear(), window.location.reload())
+  }>
+  klikke her.
+</span>
 
 ## Hvordan administrere informasjonskapsler?
 
