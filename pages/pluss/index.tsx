@@ -13,12 +13,10 @@ const Plus = () => {
     const userNameFromLocalStorage =
       secureLocalStorage.getItem("userName")?.toString() ?? "";
     setUserName(userNameFromLocalStorage);
-    if (
-      secureLocalStorage.getItem("userName") &&
-      secureLocalStorage.getItem("userPIN")
-    ) {
-      setIsPlus(true);
-    }
+
+    const userIsPlus =
+      secureLocalStorage.getItem("userPIN") || localStorage.getItem("isPlus");
+    setIsPlus(!!userIsPlus); // Convert to boolean using double-negation !!
   }, []);
 
   return (
@@ -59,12 +57,10 @@ const Plus = () => {
                 </Link>
                 <br />
                 <br />
-                <h2>Slett lokal PLUSS+ konto, eller glemt PIN kode</h2>
+                <h2>Slett PLUSS+ konto</h2>
                 <p>
-                  Ønsker du å slette din PLUSS+ konto kan du gjøre det her. Har
-                  du glemt PIN koden din må du først slette din PLUSS+ konto og
-                  deretter opprette en ny konto. Vær oppmerksom på at du mister
-                  all data som er lagret.
+                  Ønsker du å slette din PLUSS+ konto kan du gjøre det her. Vær
+                  oppmerksom på at du mister all data som er lagret.
                 </p>
 
                 <button

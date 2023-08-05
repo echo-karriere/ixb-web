@@ -4,7 +4,6 @@ import secureLocalStorage from "react-secure-storage";
 const CreateAccount = () => {
   const [name, setPlusName] = useState("");
   const [pin, setPlusPin] = useState("");
-  const [, setIsPlus] = useState(false);
   const [pinConfirm, setPinConfirm] = useState("");
 
   const handleNameChange = (e: {
@@ -36,11 +35,8 @@ const CreateAccount = () => {
 
     secureLocalStorage.setItem("userName", name);
     secureLocalStorage.setItem("userPIN", pin);
-
-    // if localsotrage is set, then set isPlus to true
-    if (secureLocalStorage.getItem("userName") && secureLocalStorage.getItem("userPIN")) {
-      setIsPlus(true);
-    }
+    // set isPlus to true with local storage
+    localStorage.setItem("isPlus", "true");
 
     // Refresh the page after successful form submission
     window.location.reload();
