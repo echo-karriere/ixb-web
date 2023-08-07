@@ -13,10 +13,12 @@ const Plus = () => {
     const userNameFromLocalStorage =
       secureLocalStorage.getItem("userName")?.toString() ?? "";
     setUserName(userNameFromLocalStorage);
-
-    const userIsPlus =
-      secureLocalStorage.getItem("userPIN") || localStorage.getItem("isPlus");
-    setIsPlus(!!userIsPlus); // Convert to boolean using double-negation !!
+    if (
+      secureLocalStorage.getItem("userName") &&
+      secureLocalStorage.getItem("userPIN")
+    ) {
+      setIsPlus(true);
+    }
   }, []);
 
   return (
@@ -60,7 +62,8 @@ const Plus = () => {
                 <h2>Slett PLUSS+ konto</h2>
                 <p>
                   Ønsker du å slette din PLUSS+ konto kan du gjøre det her. Vær
-                  oppmerksom på at du mister all data som er lagret.
+                  oppmerksom på at du mister all data som er lagret. Handlingen
+                  kan ikke angres.
                 </p>
 
                 <button

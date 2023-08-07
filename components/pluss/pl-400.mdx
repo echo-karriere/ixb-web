@@ -1,0 +1,63 @@
+# Løsningsforslag på feilkode "PL-400"
+
+Har du fått opp feilmeldingen "PL-400" på nettsiden anngående din PLUSS+ konto?
+Da er det nettleseren din som hindrer funksjonaliteten,
+og vi har lagt til noen løsningsforslag for hvordan du kan løse problemet.
+
+<br />
+Det er hovedsakelig to grunner til hvorfor feilen har oppstått. Mest sansynlig er
+det fordi nettleseren din hindrer oss i å benytte fingerprinting. Vi bruker dette
+for å kryptere all data som du lagrer i PLUSS+ kontoen din. Dette er for å sikre
+at ingen andre kan se f.eks PIN koden din. En annen grunn er fordi enten du eller
+noen andre har endret de krypterte verdiene som vi har lagret i din nettleser med
+hjelp av lokal lagring. Om du eller noen andre har gjort dette, kan du hoppe rett
+til steg 3, og lese hvordan du kan resette nettleseren din slik at du kan opprette
+en ny konto.
+
+## 1. Problemer med nettleseren
+
+Mest sansynlig får du feilkoden "PL-400" fordi nettleseren har for strenge innstillinger for personvern,
+eller at den har for strenge innstillinger for cookies. Det kan også være at nettleseren har for strenge innstillinger mot fingerprinting.
+Gjerne les brukervilkårene til nettleseren din for å se om du kan endre på dette.
+
+### 1.0. Kjente problemer i ulike nettlesere
+
+### 1.1. Brave
+
+Brave har en funksjon som heter "Fingerprinting protection" som er aktivert som standard. Denne funksjonen hindrer oss i å kryptere dataen din.
+Det er to måter å løse dette på. Du kan deaktivere Brave Shields (trykk på løven i adressefeltet) for nettsiden, og deaktiver Shields for siden.
+Du kan også trykke på Brave Shields ikonet, velge avanserte innstillinger, og velge å godta fingeravtrykk for nettsiden.
+Du vil da umiddelbart kunne se informasjonen i din PLUSS+ konto igjen. Alle innstilllingene du gjør i Brave vil kun gjelde for denne nettsiden.
+
+### 1.2. Firefox
+
+Om du har aktivert de strengeste personverninnstillingene i Firefox, vil du ikke kunne bruke PLUSS+ kontoen din. Trykk på skjoldet i adressefeltet,
+og deaktiver utvidet sporingsbeskyttelse. Du kan også endre instillinger for beskyttelese fra "Streng" til "Standard".
+Du kan også skrive "about:preferences#privacy" i adressefeltet, for å komme til siden for personverninnstillinger i Firefox. Du kan også sette et unntak for itxbergen.no.
+
+### 1.3. Andre nettlesere
+
+Lek litt med innstillingene i nettleseren din, og se om du kan finne ut av det. Om du ikke får det til, kan du prøve å bruke en annen nettleser. Gjerne kontakt oss om du har noen spørsmål. Vi vil legge til guide for andre nettlesere når vi finner flere problemer.
+
+## 2. Problemer med nettleserutvidelser
+
+Enkelte nettleserutvidelser kan blokkere funksjonaliteten. Prøv å whiteliste itxbergen.no i nettleserutvidelsen din, eller deaktivere den helt. Dette gjelder spesielt nettleserutvidelser som har med blokkering av reklame, trackers, informasjonskapsler, scripts, fingerprinting, etc. å gjøre.
+
+## 3. Kryptert data er endret, modifisert eller slettet
+
+Om den krypterte dataen er endret, modifisert eller slettet, vil du ikke kunne bruke PLUSS+ kontoen din. Om du vet du har gjort dette selv, kan du trykke på knappen under for å resette PLUSS+ kontoen.
+Om du ikke har endret på den krypterte dataen selv, kan det være at noen andre har gjort det. Om du har mistanke om at noen andre har gjort det, kan du også trykke på knappen under for å resette PLUSS+ kontoen, men bør også sjekke om enheten din er infisert med virus eller malware.
+
+<br />
+<div
+  className="text-blue-600 underline cursor-pointer"
+  onClick={() =>
+    window.confirm(
+      "All data som er lagret på denne siden vil nå bli slettet. Handlingen kan ikke reverseres."
+    ) &&
+    (localStorage.clear(),
+    sessionStorage.clear(),
+    window.location.replace("/pluss"))
+  }>
+  Resett PLUSS+ kontoen
+</div>

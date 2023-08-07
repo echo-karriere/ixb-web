@@ -35,6 +35,7 @@ export default function Plus() {
             ) : (
               <>
                 <p>Access Denied</p>
+                <small>Feilmelding: AC-300</small>
               </>
             )}
           </div>
