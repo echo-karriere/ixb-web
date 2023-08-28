@@ -18,28 +18,30 @@ const EventQuery = groq`*[_type == "event"] {
     location,
 } | order(starttime asc)`;
 
-const AllWorkshops: NextPage<{ events: any[] }> = ({ events }) => {
+const AllPres: NextPage<{ events: any[] }> = ({ events }) => {
   return (
     <div>
       <HeadSEO
-        title="Workshops | ITxBergen"
-        description="Overblikk over workshops fra ITxBergen"
-        canonical="/arrangement/workshops"
+        title="Konseptpresentasjoner | ITxBergen"
+        description="Overblikk over konseptpresentasjoner fra ITxBergen"
+        canonical="/arrangement/konseptpresentasjoner"
       />
       <main>
         <div className="max-w-7xl w-11/12 mx-auto pt-6 pl-4">
-          <h1>Workshops</h1>
+          <h1>Konseptpresentasjoner</h1>
           <p className="max-w-4xl">
             Under karrieredagene har du mulighet til å delta på flere spennende
-            workshops. Her vil du få muligheten til å lære mer om ulike temaer
-            innenfor IT som avholdes av ulike bedrifter. Workshopsene varer i 60
-            minutter, og det krever at du melder deg på for å delta. Ta en titt
-            på de ulike workshopsene under, og meld deg på de du ønsker å delta
+            konseptpresentasjoner. En Konseptpresentasjon er en 20 minutters
+            presentasjon av en bedriften eller et tema som er spesielt
+            interessant, eller viktig innen IT-bransjen. Ta en titt på de ulike
+            konseptpresentasjonene under, og meld deg på de du ønsker å delta
             på.
           </p>
         </div>
         <Events
-          events={events.filter((event) => event.eventType === "Workshop")}
+          events={events.filter(
+            (event) => event.eventType === "Konseptpresentasjon"
+          )}
         />
         <br />
       </main>
@@ -57,4 +59,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default AllWorkshops;
+export default AllPres;

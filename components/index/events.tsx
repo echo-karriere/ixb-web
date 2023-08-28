@@ -16,6 +16,8 @@ function Event({ event, index }: EventProps) {
             ? "border-[#ffb000]"
             : event.eventType === "Workshop"
             ? "border-[#fe6100]"
+            : event.eventType === "Konseptpresentasjon"
+            ? "border-[#785ef0]"
             : event.eventType === "Arrangement"
             ? "border-[#dc267f]"
             : "border-[#648fff]"

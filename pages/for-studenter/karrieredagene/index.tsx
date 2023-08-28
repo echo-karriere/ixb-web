@@ -38,7 +38,7 @@ const CareerFair: NextPage = () => {
               </Link>
               <Link
                 className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-                href="/404">
+                href="/arrangement/konseptpresentasjoner">
                 Konseptpresentasjoner
               </Link>
               <Link

@@ -23,7 +23,7 @@ const AllEvents: NextPage<{ events: any[] }> = ({ events }) => {
     <div>
       <HeadSEO
         title="Arrangementer | ITxBergen"
-        description="Overblikk over arrangemnter  fra ITxBergen"
+        description="Overblikk over arrangemnter fra ITxBergen"
         canonical="/arrangement"
       />
       <main>

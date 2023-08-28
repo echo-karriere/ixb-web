@@ -90,6 +90,8 @@ export default function event({ data }: EventProps) {
                     ? "text-[#648fff]"
                     : eventType === "Workshop"
                     ? "text-[#fe6100]"
+                    : eventType === "Konseptpresentasjon"
+                    ? "text-[#785ef0]"
                     : eventType === "Karrieredag"
                     ? "text-[#ffb000]"
                     : eventType === "Arrangement"
