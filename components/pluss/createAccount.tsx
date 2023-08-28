@@ -105,8 +105,7 @@ const CreateAccount = () => {
             Det er fordi det allerede er en PLUSS+ bruker registrert i denne
             nettleseren, men at nettleseren din forhindrer siden i å hente ut
             informasjonen som er lagret i kontoen din. Trykk på knappen under
-            for å lese hvorfor dette skjer og hvordan du kan løse problemet, og
-            få tilbake informasjonen du har lagret i kontoen din.{" "}
+            for å lese hvorfor dette skjer og hvordan du kan løse problemet.
           </p>
           <small>Feilmelding: PL-400</small>
           <br />

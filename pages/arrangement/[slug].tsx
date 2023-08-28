@@ -26,6 +26,7 @@ export const getStaticProps = async ({
         eventType,
         starttime,
         endtime,
+        organizer,
         location,
         linkLocation,
         link
@@ -58,6 +59,7 @@ export default function event({ data }: EventProps) {
     location,
     starttime,
     endtime,
+    organizer,
     linkLocation,
     link,
   } = data;
@@ -81,18 +83,17 @@ export default function event({ data }: EventProps) {
           <hr className="my-4 bg-blue-200 md:hidden" />
           <div className="col-span-1 flex flex-col justify-left items-left">
             <p>
-              {" "}
               <i
                 aria-label="Arrangementstype:"
                 className={`ri-record-circle-fill ${
                   eventType === "Annet"
-                    ? "text-gray-700"
+                    ? "text-[#648fff]"
                     : eventType === "Workshop"
-                    ? "text-blue-700"
+                    ? "text-[#fe6100]"
                     : eventType === "Karrieredag"
-                    ? "text-red-700"
+                    ? "text-[#ffb000]"
                     : eventType === "Arrangement"
-                    ? "text-green-700"
+                    ? "text-[#dc267f]"
                     : ""
                 }`}
               />{" "}
@@ -114,10 +115,19 @@ export default function event({ data }: EventProps) {
                   {new Date(starttime).toLocaleTimeString("nb-NO", {
                     hour: "2-digit",
                     minute: "2-digit",
+                  })}{" "}
+                  -{" "}
+                  {new Date(endtime).toLocaleTimeString("nb-NO", {
+                    hour: "2-digit",
+                    minute: "2-digit",
                   })}
                 </p>
               </>
             )}
+            <p>
+              <i aria-label="Organiseres av:" className="ri-building-3-line" />{" "}
+              {organizer}
+            </p>
             <p>
               <i
                 aria-label="Arrangementet finner sted:"
@@ -147,7 +157,7 @@ URL:https://itxbergen.no/arrangement/${data.slug.current}
 DTSTART:${new Date(starttime).toISOString().replace(/-|:|\.\d\d\d/g, "")}
 DTEND:${new Date(endtime).toISOString().replace(/-|:|\.\d\d\d/g, "")}
 SUMMARY:${title}
-DESCRIPTION:For mer informasjon om arrangementet, og eventuelt forandringer, gå til <a href="https://itxbergen.no/arrangement/${
+DESCRIPTION:For mer informasjon om arrangementet, gå til <a href="https://itxbergen.no/arrangement/${
                   data.slug.current
                 }">itxbergen.no/arrangement/${data.slug.current}</a> 
                 

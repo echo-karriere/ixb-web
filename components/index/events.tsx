@@ -13,12 +13,12 @@ function Event({ event, index }: EventProps) {
       <div
         className={`border-t-4 ${
           event.eventType === "Karrieredag"
-            ? "border-red-700"
+            ? "border-[#ffb000]"
             : event.eventType === "Workshop"
-            ? "border-blue-700"
+            ? "border-[#fe6100]"
             : event.eventType === "Arrangement"
-            ? "border-green-700"
-            : "border-gray-700"
+            ? "border-[#dc267f]"
+            : "border-[#648fff]"
         } p-4 m-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
         key={event._id}>
         <div className="flex flex-col justify-between h-full">
@@ -32,6 +32,16 @@ function Event({ event, index }: EventProps) {
             month: "long",
             day: "numeric",
           })}
+
+          {event.starttime && (
+            <span>
+              {" "}
+              {new Date(event.starttime).toLocaleTimeString("nb-NO", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </span>
+          )}
         </p>
         <p className="truncate">
           <i className="ri-map-pin-line mr-2 " />

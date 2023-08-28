@@ -17,6 +17,7 @@ const eventQuery = groq`*[_type == "event" && defined(slug.current)] {
   title,
   slug,
   starttime,
+  endtime,
   eventType,
   location
 } | order(starttime asc)`;
