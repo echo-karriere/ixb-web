@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
-import Karrieredagene from "../../../components/for-studenter/karrieredagene/karrieredagene.mdx";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
-import Link from "next/link";
+import Image from "next/image";
 
 const CareerFair: NextPage = () => {
   return (
@@ -16,9 +15,29 @@ const CareerFair: NextPage = () => {
           <div className="max-w-3xl">
             <h1>Standkart</h1>
             <p>
-              Her vil vi senere laste opp et standkart over hvor du vil finne de
-              ulike bedriftene på karrieredagen.
+              Her er en oversikt over hvor de ulike bedriftene vil stå på
+              karrieredagene. Klikk på kartet for å se det i full størrelse.
             </p>
+            <br />
+            <h2>Standkart for torsdag 14. september</h2>
+            <a href="/karrieredagene/standkart-torsdag.jpg" target="_blank">
+              <Image
+                src="/karrieredagene/standkart-torsdag-udato.jpg"
+                alt="Standkart for torsdag"
+                width={1000}
+                height={1000}
+              />
+            </a>
+            <br />
+            <h2>Standkart for fredag 15. september</h2>
+            <a href="/karrieredagene/standkart-fredag.jpg" target="_blank">
+              <Image
+                src="/karrieredagene/standkart-fredag-udato.jpg"
+                alt="Standkart for fredag"
+                width={1000}
+                height={1000}
+              />
+            </a>
           </div>
         </div>
       </main>

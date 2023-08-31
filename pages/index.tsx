@@ -55,6 +55,56 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
       />
       <main>
         <Hero />
+        {/* <div className="max-w-7xl w-11/12 mx-auto pl-4 pt-6">
+
+          <div className="flex items-center">
+            <span className="absolute flex h-3 w-3 mr-6">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
+              <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
+            </span>
+            <h2 className="pl-6">Under 2 uker til karrieredagene!</h2>
+          </div>
+          <p>
+            Nå er det ikke lenge igjen til karrieredagene starter i Grieghallen.
+            I løpet av neste uke vil vi laste opp mer informasjon over hva som
+            skjer på karrieredagene. Følg med på denne siden for å få med deg
+            alt som skjer. Fredag neste uke åpner vi også opp for påmelding til å
+            kunne melde seg på ulike Workshops og Konseptpresentasjoner.
+          </p> */}
+          {/* <div className="mt-4 flex flex-wrap gap-2">
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/for-studenter/karrieredagene/timeplan">
+              Timeplan
+            </Link>
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/for-studenter/karrieredagene/standkart">
+              Standkart
+            </Link>
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/arrangement/lunsjseminar-knowit--sparebanken-vest">
+              Lunsjseminar
+            </Link>
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/arrangement/workshops">
+              Workshops
+            </Link>
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/arrangement/konseptpresentasjoner">
+              Konseptpresentasjoner
+            </Link>
+            <Link
+              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              href="/for-studenter/stillingsannonser">
+              Stillingsannonser
+            </Link>
+          </div> */}
+        {/* </div> */}
+        {/*PLUSS+ STARTS*/}
         {isPlus ? (
           <>
             <div className="max-w-7xl w-11/12 mx-auto pl-4 pt-6">
@@ -93,6 +143,7 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
             </div>
           </>
         ) : null}
+        {/*PLUSS+ ENDS*/}
         <Events events={events} />
         <News news={news} />
         <Infosection />
