@@ -6,7 +6,7 @@ export const logos = [
     url: "https://www.knowit.no",
   },
   {
-    imgUrl: "/karrieredagene/logo/Marinit.svg",
+    imgUrl: "/karrieredagene/logo/MarinIT.svg",
     alt: "MarinIT",
     url: "https://www.marinit.no",
   },
