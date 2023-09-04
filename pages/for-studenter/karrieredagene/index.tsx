@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Karrieredagene from "../../../components/for-studenter/karrieredagene/karrieredagene.mdx";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
 import Link from "next/link";
+import { logos } from "../../../data/logo";
+import LogoGrid from "../../../components/for-studenter/index/logoGrid";
 
 const CareerFair: NextPage = () => {
   return (
@@ -47,6 +49,7 @@ const CareerFair: NextPage = () => {
                 Stillingsannonser
               </Link>
             </div>
+            <LogoGrid logos={logos} />
           </div>
         </div>
       </main>

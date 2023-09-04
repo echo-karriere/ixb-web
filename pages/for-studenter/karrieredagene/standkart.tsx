@@ -20,7 +20,7 @@ const CareerFair: NextPage = () => {
             </p>
             <br />
             <h2>Standkart for torsdag 14. september</h2>
-            <a href="/karrieredagene/standkart-torsdag.jpg" target="_blank">
+            <a href="/karrieredagene/standkart-torsdag.jpg" >
               <Image
                 src="/karrieredagene/standkart-torsdag-udato.jpg"
                 alt="Standkart for torsdag"
@@ -30,7 +30,7 @@ const CareerFair: NextPage = () => {
             </a>
             <br />
             <h2>Standkart for fredag 15. september</h2>
-            <a href="/karrieredagene/standkart-fredag.jpg" target="_blank">
+            <a href="/karrieredagene/standkart-fredag.jpg">
               <Image
                 src="/karrieredagene/standkart-fredag-udato.jpg"
                 alt="Standkart for fredag"
