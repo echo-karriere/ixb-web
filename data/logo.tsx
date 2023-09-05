@@ -160,11 +160,11 @@ export const logos = [
     alt: "Norkart",
     url: "https://www.norkart.no",
   },
-  // {
-  //   imgUrl: "/karrieredagene/logo/Pwc.svg",
-  //   alt: "PwC Norge",
-  //   url: "https://www.pwc.no/no/karriere/nyutdannede-og-studenter.html",
-  // },
+  {
+    imgUrl: "/karrieredagene/logo/Pwc.svg",
+    alt: "PwC Norge",
+    url: "https://www.pwc.no/no/karriere/nyutdannede-og-studenter.html",
+  },
   {
     imgUrl: "/karrieredagene/logo/Sf.svg",
     alt: "Statsforvalterens fellestjenester",
