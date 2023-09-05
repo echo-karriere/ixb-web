@@ -6,8 +6,8 @@ export default function LogoCloud() {
       <h2 className="font-semibold text-center mt-10  mb-10">
         Samarbeidspartnere
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-5">
-        <div className="col-span-3 sm:col-span-2 lg:col-span-1 flex justify-center items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-5">
+        <div className="col-span-3 sm:col-span-2 sm:col-span-1 flex justify-center items-center">
           <Image
             width={500}
             height={500}
@@ -18,7 +18,7 @@ export default function LogoCloud() {
         </div>
 
         {/* :PARTNER 2 -> All */}
-        <div className="col-span-3 sm:col-span-2 lg:col-span-1 flex justify-center items-center">
+        <div className="col-span-3 sm:col-span-2 sm:col-span-1 flex justify-center items-center">
           <Image
             width={500}
             height={500}
@@ -29,7 +29,7 @@ export default function LogoCloud() {
         </div>
 
         {/* :PARTNER 2 -> All */}
-        <div className="col-span-3 sm:col-span-2 lg:col-span-1 flex justify-center items-center">
+        <div className="col-span-3 sm:col-span-2 sm:col-span-1 flex justify-center items-center">
           <Image
             width={500}
             height={500}
