@@ -6,9 +6,9 @@ export const logos = [
     url: "https://www.knowit.no",
   },
   {
-    imgUrl: "/karrieredagene/logo/MarinIT.svg",
-    alt: "MarinIT",
-    url: "https://www.marinit.no",
+    imgUrl: "/karrieredagene/logo/Sopra-steria.svg",
+    alt: "Sopra Steria",
+    url: "https://www.soprasteria.no",
   },
   {
     imgUrl: "/karrieredagene/logo/Sparebanken-vest.svg",
@@ -179,11 +179,6 @@ export const logos = [
     imgUrl: "/karrieredagene/logo/Skatteetaten.svg",
     alt: "Skatteetaten",
     url: "https://www.skatteetaten.no",
-  },
-  {
-    imgUrl: "/karrieredagene/logo/Sopra-steria.svg",
-    alt: "Sopra Steria",
-    url: "https://www.soprasteria.no",
   },
   {
     imgUrl: "/karrieredagene/logo/Stacc.svg",
