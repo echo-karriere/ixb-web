@@ -1,4 +1,3 @@
-// data/logoData.js
 export const logos = [
   {
     imgUrl: "/karrieredagene/logo/Knowit.svg",
