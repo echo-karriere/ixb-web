@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Logo {
   imgUrl: string;
@@ -14,26 +15,6 @@ interface LogoGridProps {
 }
 
 const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
-  const handleLogoClick = (logoUrl: string, alt: string) => {
-    const confirmation = window.confirm(
-      `Du forlater nå nettsidene til ITxBergen, og vil bli sendt videre til ${alt} sin nettside. Ønsker du å fortsette?`
-    );
-
-    if (confirmation) {
-      window.open(logoUrl, "_blank");
-    }
-  };
-
-  const handleLogoKeyPress = (
-    event: React.KeyboardEvent<HTMLDivElement>,
-    logoUrl: string,
-    alt: string
-  ) => {
-    if (event.key === "Enter") {
-      handleLogoClick(logoUrl, alt);
-    }
-  };
-
   return (
     <>
       <h2 className="text-gray-600 text-center pt-8 pb-4">
@@ -41,13 +22,12 @@ const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
       </h2>
       <div className="max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4">
         {logos.map((logo, index) => (
-          <div
+          <Link
             key={index}
-            className="bg-gray-100 p-4 hover:bg-gray-200 h-24 max-w-24 flex items-center justify-center cursor-pointer"
-            onClick={() => handleLogoClick(logo.url, logo.alt)}
-            tabIndex={0} // Make the logo focusable
-            onKeyDown={(e) => handleLogoKeyPress(e, logo.url, logo.alt)} // Handle Enter key press
-          >
+            href={`/for-studenter/karrieredagene/bedrift/${logo.url}`}
+            
+
+            className="bg-gray-100 p-4 hover:bg-gray-200 h-24 max-w-24 flex items-center justify-center cursor-pointer">
             <Image
               src={logo.imgUrl}
               alt={logo.alt}
@@ -56,7 +36,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
               layout="responsive"
               className="object-contain max-h-12 max-w-24"
             />
-          </div>
+          </Link>
         ))}
       </div>
     </>

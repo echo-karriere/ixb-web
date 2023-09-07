@@ -33,6 +33,9 @@ module.exports = withMDX(nextConfig);
 
 // Add CORS wildcard for API
 module.exports = {
+  experimental: {
+    scrollRestoration: true,
+  },
   ...module.exports,
   async headers() {
     return [

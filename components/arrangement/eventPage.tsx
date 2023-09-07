@@ -21,7 +21,7 @@ function EventPage({ event }: EventProps) {
             : event.eventType === "Arrangement"
             ? "border-[#dc267f]"
             : "border-[#648fff]"
-        } p-4 m-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
+        } p-4 mt-4 bg-[#f2f2f2] hover:bg-gray-200 rounded`}
         key={event._id}>
         <h3 className="font-bold truncate ">{event.title}</h3>
         <p className="truncate">
@@ -76,17 +76,14 @@ function EventPage({ event }: EventProps) {
 
 export default function Events({ events }: { events: SanityDocument[] }) {
   if (events.length === 0) {
-    return (
-      <div className="max-w-7xl w-11/12 mx-auto pt-6">
-        <p className="text-gray-500 ml-4">Ingen arrangementer å vise 🙁</p>
-      </div>
-    );
+    return <div></div>;
   }
   return (
-    <div className="max-w-7xl w-11/12 mx-auto pt-6">
-      <div className="flex flex-wrap">
+    <div>
+      <div className="flex flex-wrap mt-6">
+        <h2>Arrangementer bedriften deltar på:</h2>
         {events.map((event, index) => (
-          <div key={event._id} className={`w-full md:w-1/3 `}>
+          <div key={event._id} className={`w-full `}>
             <EventPage event={event} index={index} />
           </div>
         ))}

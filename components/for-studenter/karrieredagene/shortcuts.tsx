@@ -7,11 +7,6 @@ const buttons = [
     icon: "ri-time-line mr-2",
   },
   {
-    href: "/for-studenter/karrieredagene/standkart",
-    text: "Standkart",
-    icon: "ri-map-pin-2-line mr-2",
-  },
-  {
     href: "/arrangement/workshops",
     text: "Workshops",
     icon: "ri-group-line mr-2",
@@ -26,11 +21,7 @@ const buttons = [
     text: "Lunsjseminar",
     icon: "ri-cake-3-line",
   },
-  {
-    href: "/for-studenter/stillingsannonser",
-    text: "Stillingsannonser",
-    icon: "ri-suitcase-line",
-  },
+
 ];
 
 export default function Shortcuts() {
