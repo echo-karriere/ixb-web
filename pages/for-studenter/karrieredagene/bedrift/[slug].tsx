@@ -9,6 +9,7 @@ import Events from "../../../../components/arrangement/eventPage";
 import { GetStaticProps, GetStaticPaths } from "next"; // Import GetStaticPaths
 import { client } from "../../../../src/lib/sanity.client";
 import { groq } from "next-sanity";
+import React from "react";
 
 const EventQuery = groq`*[_type == "event"] {
   _id,
@@ -25,28 +26,24 @@ const CareerFair: NextPage<{ events: any[] }> = ({ events }) => {
   const router = useRouter();
   const { slug } = router.query;
 
-  // Find the matching company object in the companydata array
   const companyObject = companydata.find(
     (company) => company.companyName.toLowerCase() === slug
-  ); // Use toLowerCase to make it case-insensitive
+  );
 
-  // Get the company name if it exists, or a default value if not found
   const companyName = companyObject
     ? companyObject.companyName
     : "Company Not Found";
 
-  // Get the SVG map if it exists, or an empty string if not found
   const svgmap = companyObject ? companyObject.svgmap : "";
 
-  // Get the company URL if it exists, or an empty string if not found
   const companyUrl = companyObject ? companyObject.companyUrl : "";
 
   return (
     <div>
       <HeadSEO
-        title={`${companyName} | ITxBERGEN`} // Use the companyName here
-        description={`Her finner du informasjon om ${companyName} på karrieredagene til ITxBergen.`} // Use the companyName here
-        canonical={`/for-studenter/karrieredagene/${slug}`} // Use the slug here
+        title={`${companyName} | ITxBERGEN`}
+        description={`Her finner du informasjon om ${companyName} på karrieredagene til ITxBergen.`}
+        canonical={`/for-studenter/karrieredagene/${slug}`}
       />
       <main className="flex flex-col items-center justify-center ">
         <div className="max-w-screen-md w-full mt-6 md:mt-10 text-center">
@@ -57,8 +54,8 @@ const CareerFair: NextPage<{ events: any[] }> = ({ events }) => {
                 <Image
                   src={svgmap}
                   alt={companyName}
-                  height={500} // Adjust the height for mobile
-                  width={500} // Adjust the width for mobile
+                  height={500}
+                  width={500}
                   className="max-w-11/12"
                 />
               )}
@@ -100,16 +97,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-// Implement getStaticPaths
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Generate paths for all available company slugs
   const paths = companydata.map((company) => ({
-    params: { slug: company.companyName.toLowerCase() }, // Use toLowerCase to make it case-insensitive
+    params: { slug: company.companyName.toLowerCase() },
   }));
 
   return {
     paths,
-    fallback: false, // Set to true if you have dynamic data not available at build time
+    fallback: false,
   };
 };
 

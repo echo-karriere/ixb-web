@@ -171,7 +171,7 @@ export const companydata = [
   },
   {
     companyName: "PwC Norge",
-    svgmap: "/karrieredagene/standkart/Pwc.svg",
+    svgmap: "/karrieredagene/standkart/PwC.svg",
     companyUrl: "https://www.pwc.no/no/karriere/nyutdannede-og-studenter.html",
   },
   {
