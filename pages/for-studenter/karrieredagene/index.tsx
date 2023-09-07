@@ -16,11 +16,11 @@ const CareerFair: NextPage = () => {
       />
       <main>
         <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">
-          <div className="max-w-4xl">
+          <div className="max-w-3xl">
             <Karrieredagene />
+            <Shortcuts />
+            <LogoGrid logos={logos} />
           </div>
-          <Shortcuts />
-          <LogoGrid logos={logos} />
         </div>
       </main>
     </div>
