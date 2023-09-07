@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
 import Image from "next/image";
 
-const CareerFair: NextPage = () => {
+const CareerFairStand: NextPage = () => {
   return (
     <div>
       <HeadSEO
@@ -45,4 +45,4 @@ const CareerFair: NextPage = () => {
   );
 };
 
-export default CareerFair;
+export default CareerFairStand;
