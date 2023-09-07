@@ -33,7 +33,7 @@ const buttons = [
   },
 ];
 
-export default function Hero() {
+export default function Shortcuts() {
   return (
     <div className="mt-4 flex flex-wrap gap-2">
       {buttons.map((button, index) => (
