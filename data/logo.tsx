@@ -156,8 +156,8 @@ export const logos = [
   },
   {
     imgUrl: "/karrieredagene/logo/Norgesgruppen.svg",
-    alt: "NorgesGruppen Data",
-    url: "norgesgruppen data",
+    alt: "NorgesGruppen",
+    url: "norgesgruppen",
   },
   {
     imgUrl: "/karrieredagene/logo/Norkart.svg",

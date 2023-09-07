@@ -160,7 +160,7 @@ export const companydata = [
     companyUrl: "https://www.netsecurity.no",
   },
   {
-    companyName: "NorgesGruppen Data",
+    companyName: "NorgesGruppen",
     svgmap: "/karrieredagene/standkart/Norgesgruppen.svg",
     companyUrl: "https://www.norgesgruppendata.no",
   },

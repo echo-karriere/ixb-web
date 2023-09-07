@@ -17,16 +17,16 @@ interface LogoGridProps {
 const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
   return (
     <>
-      <h2 className="text-gray-600 text-center pt-8 pb-4">
-        Bedrifter som deltar:
-      </h2>
+      <h2 className="text-gray-800 text-center pt-8">Bedrifter som deltar:</h2>
+      <p className="text-gray-600 italic text-center pb-4">
+        Trykk på logoen for å se standplass og mer informasjon
+      </p>
+
       <div className="max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4">
         {logos.map((logo, index) => (
           <Link
             key={index}
             href={`/for-studenter/karrieredagene/bedrift/${logo.url}`}
-            
-
             className="bg-gray-100 p-4 hover:bg-gray-200 h-24 max-w-24 flex items-center justify-center cursor-pointer">
             <Image
               src={logo.imgUrl}
