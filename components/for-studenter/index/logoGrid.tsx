@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Logo {
   imgUrl: string;
@@ -38,7 +37,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
       <h2 className="text-gray-600 text-center pt-8 pb-4">
         Bedrifter som deltar:
       </h2>
-      <div className="max-w-3xl px-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4">
         {logos.map((logo, index) => (
           <div
             key={index}
