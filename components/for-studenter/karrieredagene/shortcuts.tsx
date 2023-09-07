@@ -17,11 +17,10 @@ const buttons = [
     icon: "ri-presentation-line",
   },
   {
-    href: "/arrangement/lunsjseminar-knowit--sparebanken-vest",
+    href: "/arrangement/lunsjseminar",
     text: "Lunsjseminar",
     icon: "ri-cake-3-line",
   },
-
 ];
 
 export default function Shortcuts() {
