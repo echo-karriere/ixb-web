@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const buttons = [
   {
-    href: "/for-students/karrieredagene/timeplan",
+    href: "/for-studenter/karrieredagene/timeplan",
     text: "Timeplan",
     icon: "ri-time-line mr-2",
   },
   {
-    href: "/for-students/karrieredagene/standkart",
+    href: "/for-studenter/karrieredagene/standkart",
     text: "Standkart",
     icon: "ri-map-pin-2-line mr-2",
   },
@@ -27,7 +27,7 @@ const buttons = [
     icon: "ri-cake-3-line",
   },
   {
-    href: "/for-students/stillingsannonser",
+    href: "/for-studenter/stillingsannonser",
     text: "Stillingsannonser",
     icon: "ri-suitcase-line",
   },
