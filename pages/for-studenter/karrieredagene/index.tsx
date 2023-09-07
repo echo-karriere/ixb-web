@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Karrieredagene from "../../../components/for-studenter/karrieredagene/karrieredagene.mdx";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
-import Shortcuts from "../../../components/for-studenter/index/shortcuts";
+import Shortcuts from "../../../components/for-studenter/karrieredagene/shortcuts";
 import { logos } from "../../../data/logo";
-import LogoGrid from "../../../components/for-studenter/index/logoGrid";
+import LogoGrid from "../../../components/for-studenter/karrieredagene/logoGrid";
 import "remixicon/fonts/remixicon.css";
 
 const CareerFair: NextPage = () => {

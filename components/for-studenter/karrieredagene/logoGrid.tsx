@@ -1,3 +1,5 @@
+// For å legge til en ny logo, sjekk ut data/logo.tsx
+
 import React from "react";
 import Image from "next/image";
 
