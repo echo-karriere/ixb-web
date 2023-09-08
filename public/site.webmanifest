@@ -6,31 +6,31 @@
   "screenshots": [
     {
       "src": "../webpageAssets/app/wide1.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
       "src": "../webpageAssets/app/wide2.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
       "src": "../webpageAssets/app/wide3.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
       "src": "../webpageAssets/app/wide4.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
       "src": "../webpageAssets/app/wide5.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "1280x720",
       "form_factor": "wide"
     }
