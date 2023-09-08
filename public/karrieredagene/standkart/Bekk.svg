@@ -11,7 +11,7 @@
 <rect x="726" y="1388" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="726" y="1898" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="1388" width="153" height="162" transform="rotate(-180 879 1388)" fill="white" fill-opacity="0.4"/>
-<rect x="879" y="1898" width="153" height="162" transform="rotate(-180 879 1898)" fill="#C7B374"/>
+<rect x="879" y="1898" width="153" height="162" transform="rotate(-180 879 1898)" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="878" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="1388" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="1898" width="153" height="162" fill="white" fill-opacity="0.4"/>
@@ -22,10 +22,11 @@
 <rect x="1032" y="1898" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="1185" y="1388" width="153" height="162" transform="rotate(-180 1185 1388)" fill="white" fill-opacity="0.4"/>
 <rect x="1185" y="1898" width="153" height="162" transform="rotate(-180 1185 1898)" fill="white" fill-opacity="0.4"/>
-<rect x="275" y="1336" width="256" height="162" transform="rotate(-90 275 1336)" fill="white" fill-opacity="0.4"/>
+<rect x="275" y="1336" width="256" height="162" transform="rotate(-90 275 1336)" fill="#C7B374"/>
+<rect x="275" y="1336" width="256" height="162" transform="rotate(-90 275 1336)" fill="#C7B374"/>
 <rect x="275" y="1592" width="256" height="162" transform="rotate(-90 275 1592)" fill="white" fill-opacity="0.4"/>
 <rect x="275" y="1848" width="256" height="162" transform="rotate(-90 275 1848)" fill="white" fill-opacity="0.4"/>
-<rect x="275" y="2154" width="153" height="162" transform="rotate(-90 275 2154)" fill="white" fill-opacity="0.4"/>
+<rect x="275" y="2154" width="153" height="162" transform="rotate(-90 275 2154)" fill="#85676D"/>
 <rect x="275" y="2001" width="153" height="162" transform="rotate(-90 275 2001)" fill="white" fill-opacity="0.4"/>
 <rect x="1489" y="1898" width="256" height="162" transform="rotate(90 1489 1898)" fill="white" fill-opacity="0.4"/>
 <rect x="1489" y="1642" width="256" height="162" transform="rotate(90 1489 1642)" fill="white" fill-opacity="0.4"/>
