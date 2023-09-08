@@ -5,32 +5,32 @@
   "start_url": "/",
   "screenshots": [
     {
-      "src": "../webpageAssets/app/wide1.jpg",
-      "type": "image/jpg",
+      "src": "../webpageAssets/app/Lysbilde1.png",
+      "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
-      "src": "../webpageAssets/app/wide2.jpg",
-      "type": "image/jpg",
+      "src": "../webpageAssets/app/Lysbilde2.png",
+      "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
-      "src": "../webpageAssets/app/wide3.jpg",
-      "type": "image/jpg",
+      "src": "../webpageAssets/app/Lysbilde3.png",
+      "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
-      "src": "../webpageAssets/app/wide4.jpg",
-      "type": "image/jpg",
+      "src": "../webpageAssets/app/Lysbilde4.png",
+      "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
     },
     {
-      "src": "../webpageAssets/app/wide5.jpg",
-      "type": "image/jpg",
+      "src": "../webpageAssets/app/Lysbilde5.png",
+      "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
     }
