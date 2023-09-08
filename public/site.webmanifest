@@ -1,11 +1,35 @@
 {
   "name": "ITxBergen",
   "short_name": "ITxBergen",
-  "description": "Legg til ITxBergen, og ha oss alltid lett tilgjengelig!",
+  "description": "Last ned appen til ITxBergen, og ha programmet til karrieredagene lett tilgjengelig. I tillegg kan du finne stillingsannonser, lagre favorittannonser, og regne ut karaktersnittet ditt.",
   "start_url": "/",
   "screenshots": [
     {
-      "src": "../webpageAssets/ITxBergen_image.png",
+      "src": "../webpageAssets/app/wide1.jpg",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "../webpageAssets/app/wide2.jpg",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "../webpageAssets/app/wide3.jpg",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "../webpageAssets/app/wide4.jpg",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "../webpageAssets/app/wide5.jpg",
       "type": "image/png",
       "sizes": "1280x720",
       "form_factor": "wide"
