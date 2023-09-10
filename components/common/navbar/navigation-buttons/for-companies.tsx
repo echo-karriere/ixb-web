@@ -18,7 +18,7 @@ const forcompanies = [
   },
   {
     name: "Påmeding karrieredagene",
-    description: "Meld dere på ventelisten til karrieredagene.",
+    description: "Vis interesse for karrieredagene 2024.",
     href: "/for-bedrifter/pamelding",
     icon: IconTwo,
   },
