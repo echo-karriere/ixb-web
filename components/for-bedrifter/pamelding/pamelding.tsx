@@ -22,7 +22,7 @@ export default function PameldingInfo() {
         <p>
           Påmeldingen til Karrieredagene 2024 har ikke åpnet enda, men du kan
           allerede nå melde din interesse ved å skrive inn bedriftens navn
-          nedenfor og trykke på "Fortsett". Du vil bli sendt videre til en side
+          nedenfor og trykke på Fortsett. Du vil bli sendt videre til en side
           hvor du kan legge inn en e-post hvor vi kan kontakte dere når
           påmeldingen åpner.
         </p>
