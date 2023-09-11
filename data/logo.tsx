@@ -85,11 +85,6 @@ export const logos = [
     url: "equinor",
   },
   {
-    imgUrl: "/karrieredagene/logo/E-tjenesten.svg",
-    alt: "Etterretningstjenesten",
-    url: "etterretningstjenesten",
-  },
-  {
     imgUrl: "/karrieredagene/logo/Experis.svg",
     alt: "Experis",
     url: "experis",

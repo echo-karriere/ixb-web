@@ -90,11 +90,6 @@ export const companydata = [
     companyUrl: "https://www.experis.no",
   },
   {
-    companyName: "Etterretningstjenesten",
-    svgmap: "/karrieredagene/standkart/E-tjenesten.svg",
-    companyUrl: "https://www.etterretningstjenesten.no",
-  },
-  {
     companyName: "Intility",
     svgmap: "/karrieredagene/standkart/Intility.svg",
     companyUrl: "https://www.intility.no",
