@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { HeadSEO } from "../../../components/common/functions/HeadSEO";
-
+import  Timeplan  from "../../../components/for-studenter/karrieredagene/timeplan";
 
 const CareerFairTime: NextPage = () => {
   return (
@@ -11,15 +11,9 @@ const CareerFairTime: NextPage = () => {
         canonical="/for-studenter/karrieredagene/timeplan"
       />
       <main>
-        <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">
-          <div className="max-w-3xl">
-            <h1>Timeplan</h1>
-            <p>
-              Her vil vi senere komme med en oversikt over hva som skjer når på
-              karrieredagene.
-            </p>
-          </div>
-        </div>
+  
+            <Timeplan />
+          
       </main>
     </div>
   );
