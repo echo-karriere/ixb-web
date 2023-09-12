@@ -66,9 +66,10 @@ export const timetableFriday = [
   {
     starttime: "15:00",
     endtime: "15:20",
-    title: "Hvordan er det å jobbe i Bouvet? - konsulenter forteller",
-    description: "Delta på Bouvet sin konsepresentasjon",
-    url: "/arrangement/bouvet-konseptpresentasjon",
+    title:
+      "Fra Kode til Kubernetes: En Praktisk Gjennomgang av Deployments til Skyen",
+    description: "Delta på Aritma sin konsepresentasjon",
+    url: "/arrangement/aritma-konseptpresentasjon",
   },
   {
     starttime: "15:30",
@@ -82,7 +83,6 @@ export const timetableFriday = [
     endtime: "02:00",
     title: "Bankett",
     description:
-      "Banketten er et av høydepunktene på karrieredagene. Her blir det servert treretters middag, og det vil være underholdning og utdeling av priser. Banketten er for studenter og bedrifter som er med på karrieredagene. Trykk på knappen under for å melde deg på banketten.",
-    url: "https://www.youtube.com/embed/jIQ6UV2onyI?autoplay=1",
+      "Banketten er et av høydepunktene på karrieredagene. Her blir det servert treretters middag, og det vil være underholdning og utdeling av priser.",
   },
 ];
