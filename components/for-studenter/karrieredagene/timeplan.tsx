@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { timetableThursday } from "../../../data/timetableThursday1";
 import { timetableFriday } from "../../../data/timetableFriday";
 
 const Timeline = () => {
-  const [selectedDay, setSelectedDay] = useState("Torsdag");
+  const [selectedDay, setSelectedDay] = useState(
+    typeof window !== "undefined"
+      ? sessionStorage.getItem("selectedDay") || "Torsdag"
+      : "Torsdag"
+  );
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("selectedDay", selectedDay);
+    }
+  }, [selectedDay]);
 
   const toggleDay = (day: React.SetStateAction<string>) => {
     setSelectedDay(day);

@@ -9,7 +9,7 @@
 <rect x="726" y="1898" width="153" height="162" transform="rotate(-180 726 1898)" fill="white" fill-opacity="0.4"/>
 <rect x="726" y="878" width="153" height="162" fill="white" fill-opacity="0.4"/>
 <rect x="726" y="1388" width="153" height="162" fill="white" fill-opacity="0.4"/>
-<rect x="726" y="1898" width="153" height="162" fill="white" fill-opacity="0.4"/>
+<rect x="726" y="1898" width="153" height="162" fill="#C7B374"/>
 <rect x="879" y="1388" width="153" height="162" transform="rotate(-180 879 1388)" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="1898" width="153" height="162" transform="rotate(-180 879 1898)" fill="white" fill-opacity="0.4"/>
 <rect x="879" y="878" width="153" height="162" fill="white" fill-opacity="0.4"/>
@@ -30,7 +30,7 @@
 <rect x="1489" y="1898" width="256" height="162" transform="rotate(90 1489 1898)" fill="white" fill-opacity="0.4"/>
 <rect x="1489" y="1642" width="256" height="162" transform="rotate(90 1489 1642)" fill="white" fill-opacity="0.4"/>
 <rect x="1489" y="1386" width="256" height="162" transform="rotate(90 1489 1386)" fill="white" fill-opacity="0.4"/>
-<rect x="1489" y="1233" width="153" height="162" transform="rotate(90 1489 1233)" fill="#C7B374"/>
+<rect x="1489" y="1233" width="153" height="162" transform="rotate(90 1489 1233)" fill="white" fill-opacity="0.4"/>
 <path d="M2203.5 682H2358L2324.5 932H2169.5L2203.5 682Z" fill="white" fill-opacity="0.4"/>
 <path d="M2168 932H2322.5L2289 1182H2134L2168 932Z" fill="white" fill-opacity="0.4"/>
 <path d="M2135 1182H2289.5L2256 1432H2101L2135 1182Z" fill="white" fill-opacity="0.4"/>
