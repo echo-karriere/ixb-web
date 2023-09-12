@@ -19,8 +19,8 @@ const CareerFair: NextPage = () => {
             <h1>Career Fair for IT-Students</h1>
             <p>
               Welcome to ITxBergen&#39;s career fair for IT students in the
-              Bergen area. This year, the career days will be held on September
-              14th and 15th, and will be held in{" "}
+              Bergen area. This year, the career fair will be held on September
+              14th and 15th in{" "}
               <Link
                 className="text-blue-600 underline"
                 href="https://goo.gl/maps/sma7WGLp3tBggsC67"
