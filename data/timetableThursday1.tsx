@@ -30,7 +30,7 @@ export const timetableThursday = [
   {
     starttime: "13:00",
     endtime: "13:20",
-    title: "Equinor sin konsepresentasjon",
+    title: "Mitt første år i Equinor",
     description: "Delta på Equinor sin konsepresentasjon",
     url: "/arrangement/equinor-konseptpresentasjon",
   },
@@ -79,9 +79,9 @@ export const timetableThursday = [
   {
     starttime: "15:30",
     endtime: "15:50",
-    title: "Hvordan bruke teknologi for å lage bærekraftige løsninger i dagligvare?",
+    title:
+      "Hvordan bruke teknologi for å lage bærekraftige løsninger i dagligvare?",
     description: "Delta på NorgesGruppen sin konsepresentasjon",
     url: "/arrangement/norgesgruppen-konseptpresentasjon",
   },
-
 ];
