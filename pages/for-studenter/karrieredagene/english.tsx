@@ -18,9 +18,9 @@ const CareerFair: NextPage = () => {
           <div className="max-w-3xl">
             <h1>Career Fair for IT-Students</h1>
             <p>
-              Welcome to ITxBergen's career fair for IT students in the Bergen
-              area. This year, the career days will be held on September 14th
-              and 15th, and will be held in{" "}
+              Welcome to ITxBergen&#39;s career fair for IT students in the
+              Bergen area. This year, the career days will be held on September
+              14th and 15th, and will be held in{" "}
               <Link
                 className="text-blue-600 underline"
                 href="https://goo.gl/maps/sma7WGLp3tBggsC67"
@@ -38,7 +38,7 @@ const CareerFair: NextPage = () => {
             <p className="mt-2">
               We are kicking off the career fair with a balloon drop. There will
               be prizes in some of the balloons. Show up by 10:00 to
-              participate. Maybe you're lucky and win?
+              participate. Maybe you&#39;re lucky and win?
             </p>
             <br />
             <p>
@@ -110,8 +110,8 @@ const CareerFair: NextPage = () => {
                 can be found here
               </Link>
               . Click on their logo to see where they are located at the career
-              fair. 'Torsdag' means that they are attending on Thursday, and
-              'Fredag' means that they are attending on Friday.
+              fair. &#39;Torsdag&#39; means that they are attending on Thursday,
+              and &#39;Fredag&#39; means that they are attending on Friday.
             </p>
             <h2>Job Listings and Internship Opportunities</h2>
             <p>
