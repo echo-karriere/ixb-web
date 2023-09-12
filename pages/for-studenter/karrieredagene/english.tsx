@@ -43,7 +43,7 @@ const CareerFair: NextPage = () => {
             <br />
             <p>
               <span className="font-bold text-md">Lightning Talks</span>: 10:15
-              AM - 11:30 PM
+              AM - 11:30 AM
             </p>
             <p>
               Are you curious about which companies are participating in the
