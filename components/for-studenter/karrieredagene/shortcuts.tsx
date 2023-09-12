@@ -4,12 +4,12 @@ const buttons = [
   {
     href: "/for-studenter/karrieredagene/timeplan",
     text: "Timeplan",
-    icon: "ri-time-line mr-2",
+    icon: "ri-time-line",
   },
   {
     href: "/arrangement/workshops",
     text: "Workshops",
-    icon: "ri-group-line mr-2",
+    icon: "ri-group-line",
   },
   {
     href: "/arrangement/konseptpresentasjoner",
@@ -20,6 +20,11 @@ const buttons = [
     href: "/arrangement/lunsjseminar",
     text: "Lunsjseminar",
     icon: "ri-cake-3-line",
+  },
+  {
+    href: "/for-studenter/karrieredagene/english",
+    text: "English",
+    icon: "ri-global-line",
   },
 ];
 

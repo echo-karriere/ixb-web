@@ -17,7 +17,9 @@ interface LogoGridProps {
 const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
   return (
     <>
-      <h2 className="text-gray-800 text-center pt-8">Bedrifter som deltar:</h2>
+      <h2 id="attending" className="text-gray-800 text-center pt-8">
+        Bedrifter som deltar:
+      </h2>
       <p className="text-gray-600 italic text-center pb-4">
         Trykk på logoen for å se standplass og mer informasjon
       </p>
