@@ -61,20 +61,13 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
               <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
             </span>
-            <h2 className="pl-6">Vi søker frivillige!</h2>
+            <h2 className="pl-6">Karrieredagen starter kl. 10:00</h2>
           </div>
           <p>
-            Ønsker du å hjelpe oss med å arrangere karrieredagene? Vi ser etter
-            frivillige som vil hjelpe til på karrieredagene. Som takk vil du få
-            en billett til banketten etter karrieredagene. Er du interessert i å
-            hjelpe til? Send oss en mail til{" "}
-            <a
-              className="underline text-blue-700"
-              href="mailto:kontakt@itxbergen.no">
-              kontakt@itxbergen.no
-            </a>{" "}
-            og skriv maks 3-4 setninger om din motivasjon, eller hvorfor vi skal
-            velge deg.
+            Klokken 10 starter vi karrieredagene med ballongslipp. Møt opp litt
+            før, så du ikke går glipp av det. Inngangen til karrieredagen finner
+            dere ved Peer Gynt inngangen på sørsiden av Grieghallen (Retning mot
+            Høyden og Nygårdsgaten). Vi gleder oss til å se dere!
           </p>
           {/* <div className="mt-4 flex flex-wrap gap-2">
             <Link
