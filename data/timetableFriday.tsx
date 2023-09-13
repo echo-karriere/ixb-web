@@ -44,7 +44,7 @@ export const timetableFriday = [
   {
     starttime: "13:00",
     endtime: "14:30",
-    title: "Lunsjseminar: Generativ AI",
+    title: "Lunsjseminar: Tietoevry",
     description: "Delta på Tietoevry sitt lunsjseminar",
     url: "/arrangement/lunsjseminar-tietoevry",
   },
