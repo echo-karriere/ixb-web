@@ -8,8 +8,8 @@ export default function Hero() {
           Vi samler IT-studentene i Bergen
         </h1>
         <p className="text-white text-md text-sm  md:text-xl md:w-9/12 pl-4 pr-4 md:pl-24 md:pr-24">
-          Neste karrieredagene arrangeres 14. og 15. september 2023 i
-          Grieghallen. Vi gleder oss til å se deg der!
+          Karrieredagene pågår i dag mellom kl 10:00 og 16:00. Du finner oss ved
+          Peer Gynt innganen på sørsiden av Grieghallen.
         </p>
         <br />
         <Link

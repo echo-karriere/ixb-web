@@ -61,13 +61,18 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
               <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
             </span>
-            <h2 className="pl-6">Karrieredagen starter kl. 10:00</h2>
+            <h2 className="pl-6">Karrieredagen pågår nå!</h2>
           </div>
           <p>
-            Klokken 10 starter vi karrieredagene med ballongslipp. Møt opp litt
-            før, så du ikke går glipp av det. Inngangen til karrieredagen finner
-            dere ved Peer Gynt inngangen på sørsiden av Grieghallen (Retning mot
-            Høyden og Nygårdsgaten). Vi gleder oss til å se dere!
+            Karrieredagene pågår i dag frem til kl 16:00. Klikk på knappen
+            ovenfor for å ta en titt på programmet.{" "}
+            <Link
+              href="https://www.google.com/maps/@60.3881774,5.3275985,3a,26.1y,58.56h,92.74t/data=!3m6!1e1!3m4!1s6TTenDuI2hbByksxyc9dwQ!2e0!7i16384!8i8192?entry=ttu"
+              className="text-blue-500 underline"
+              target="_blank">
+              {" "}
+              Du finner inngangen her <i className="ri-external-link-line"></i>
+            </Link>
           </p>
           {/* <div className="mt-4 flex flex-wrap gap-2">
             <Link
