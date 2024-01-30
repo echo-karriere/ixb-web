@@ -8,8 +8,8 @@ export default function Hero() {
           Vi samler IT-studentene i Bergen
         </h1>
         <p className="text-white text-md text-sm  md:text-xl md:w-9/12 pl-4 pr-4 md:pl-24 md:pr-24">
-          Takk for i år. Vi vil snart komme i gang med å planlegge neste års
-          arrangement. Følg med for oppdateringer.
+          Karrieredagene for 2024 vil bli avholdt den 19. september i
+          Grieghallen. Vi åpner for påmelding av bedrifter den 12. februar.
         </p>
         {/* <br />
         <Link
