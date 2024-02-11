@@ -25,7 +25,7 @@ export default function PameldingInfo() {
         <h1>Påmelding til ITxBERGEN sine karrieredag 2024</h1>
         <p>
           Påmeldingen til ITxBERGEN sin karrieredag den 19. september 2024 er nå
-          åpen for påmelding av bedrifter. En ypperlig mulighet til å møte
+          åpen for bedrifter. En ypperlig mulighet til å møte
           IT-studenter fra Universitetet i Bergen, Høgskulen på Vestlandet,
           Kristiania og Noroff.
         </p>
