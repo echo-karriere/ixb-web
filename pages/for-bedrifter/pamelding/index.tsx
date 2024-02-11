@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { HeadSEO } from "../../components/common/functions/HeadSEO";
-import Pamelding from "../../components/for-bedrifter/pamelding/pamelding";
+import { HeadSEO } from "../../../components/common/functions/HeadSEO";
+import Pamelding from "../../../components/for-bedrifter/pamelding/pamelding";
 import { useEffect, useState } from "react";
 
 const SuccessMessage = () => {

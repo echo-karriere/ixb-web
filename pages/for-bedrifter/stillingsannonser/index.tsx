@@ -76,9 +76,6 @@ export default function jobads() {
                 <br />
                 <span className="font-bold text-xl">
                   Rediger stillingsannonser{" "}
-                  <span className="bg-yellow-300 text-yellow-700 font-bold text-xs rounded-full px-2">
-                    PLUSS+
-                  </span>
                 </span>
                 <br />
                 For deg som allerede har publisert en stillingsannonse og ønsker
