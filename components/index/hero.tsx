@@ -8,15 +8,15 @@ export default function Hero() {
           Vi samler IT-studentene i Bergen
         </h1>
         <p className="text-white text-md text-sm  md:text-xl md:w-9/12 pl-4 pr-4 md:pl-24 md:pr-24">
-          Karrieredagene for 2024 vil bli avholdt den 19. september i
+          Karrieredagen for 2024 vil bli avholdt den 19. september i
           Grieghallen. Påmeldingen er nå åpen for bedrifter.
         </p>
-         <br />
+        <br />
         <Link
           href="/for-bedrifter/pamelding"
           className="bg-[#cab169] text-[#33030d] text-sm md:text-lg font-semibold  px-4 py-2 ml-4 mr-4 mt-16 md:mt-6 md:ml-24 focus:outline-none focus:ring-4 rounded focus:ring-blue-400 hover:bg-white">
           Gå til påmeldingen{" "}
-        </Link> 
+        </Link>
       </div>
     </div>
   );
