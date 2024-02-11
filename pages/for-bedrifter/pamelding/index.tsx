@@ -35,7 +35,7 @@ const ApplyCarrerFair: NextPage = () => {
     <div>
       <HeadSEO
         title="Påmelding til ITxBERGEN sine karrieredager 2024"
-        description="Ønsker du og din bedrift å være med på ITxBERGEN (tidligere echo karriere) sine karrieredager i 2023? Her kan du melde dere på."
+        description="Ønsker du og din bedrift å være med på ITxBERGEN sin karrieredag i 2024? Her kan du melde dere på."
         canonical="/for-bedrifter/pamelding"
       />
       <main>
