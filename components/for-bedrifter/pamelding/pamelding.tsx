@@ -24,10 +24,10 @@ export default function PameldingInfo() {
       <div className="max-w-3xl">
         <h1>Påmelding til ITxBERGEN sine karrieredag 2024</h1>
         <p>
-          Påmeldingen til ITxBERGEN sin karrieredag 2024 er nå åpen for
-          påmelding av bedrifter. En ypperlig mulighet til å møte IT-studenter
-          fra Universitetet i Bergen, Høgskulen på Vestlandet, Kristiania og
-          Noroff.
+          Påmeldingen til ITxBERGEN sin karrieredag den 19. september 2024 er nå
+          åpen for påmelding av bedrifter. En ypperlig mulighet til å møte
+          IT-studenter fra Universitetet i Bergen, Høgskulen på Vestlandet,
+          Kristiania og Noroff.
         </p>
         <br />
         <Link
@@ -72,17 +72,17 @@ export default function PameldingInfo() {
         <h2 className="mt-10">Ettersend informasjon</h2>
         <p>
           Alle bedriftene må ettersende logo i vektor format (eksempelvis en
-          .SVG fil). Om dere skal delta på
-          konesptpresentasjon eller workshop, så sender dere en e-post til oss
-          på{" "}
+          .SVG fil). Om dere skal delta på konesptpresentasjon eller workshop,
+          så sender dere en e-post til oss på{" "}
           <Link
             href="mailto:kontakt@itxbergen.no"
             className="underline text-blue-500 hover:text-blue-700">
             kontakt@itxbergen.no
           </Link>{" "}
           for å avklare tema, samt få lagt ut informasjon på nettsiden vår om
-          hva som er innholdet i workshopen eller konseptpresentasjonen. Absolutt siste frist for dette er 1. september.
-          På valg av tema er det førstemann til mølla prinsippet.
+          hva som er innholdet i workshopen eller konseptpresentasjonen.
+          Absolutt siste frist for dette er 1. september. På valg av tema er det
+          førstemann til mølla prinsippet.
         </p>
       </div>
     </div>
