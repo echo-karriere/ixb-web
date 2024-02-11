@@ -100,7 +100,7 @@ export default function ForStudents() {
                           </Link>
                         ))}
                       </div>
-                      <div className="bg-gray-800 p-4">
+                      {/* <div className="bg-gray-800 p-4">
                         <a
                           href="https://skjema.ixb.no/bli-styremedlem"
                           target="_blank"
@@ -118,7 +118,7 @@ export default function ForStudents() {
                             Send inn din søknad her.
                           </span>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </span>
                 )}

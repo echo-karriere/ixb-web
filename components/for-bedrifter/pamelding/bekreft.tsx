@@ -5,7 +5,7 @@ export default function PameldingBekreft() {
   return (
     <div className="max-w-7xl w-11/12 mt-6 md:mt-10 mx-auto">
       <div className="max-w-3xl">
-        <h1>Før du går videre til påmeldingen...</h1>
+        <h1>Bare en liten ting først...</h1>
         <p>
           Før dere starter påmeldingen, ønsker vi at dere har lest og forstått
           avtale- og påmeldingsvilkårene for ITxBERGEN sin karrieredag 2024.

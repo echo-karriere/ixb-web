@@ -6,8 +6,8 @@ const ApplyCarrerFairConfirm: NextPage = () => {
   return (
     <div>
       <HeadSEO
-        title="Bedriften er nå påmeldt til ITxBERGEN sin karrieredag 2024"
-        description="Bedriften er nå påmeldt til ITxBERGEN sin karrieredag i 2024."
+        title="Prisliste"
+        description="Oversikt over priser for å delta på ITxBERGEN sin karrieredag 2024."
         canonical="/for-bedrifter/pamelding/prisliste"
       />
       <main>
