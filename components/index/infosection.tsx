@@ -26,14 +26,14 @@ export default function Infosection() {
           <Link
             className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
             href="/for-studenter">
-            Mer informajon til studenter
+            Mer informasjon til studenter
           </Link>
           <br />
           <br />
           <Link
             className="bg-gray-700 text-white rounded shadow-md px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4  focus:ring-yellow-500"
             href="/for-bedrifter">
-            Mer informajon til bedrifter
+            Mer informasjon til bedrifter
           </Link>
           <br />
           <br />

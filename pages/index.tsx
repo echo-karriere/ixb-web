@@ -55,53 +55,7 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
       />
       <main>
         <Hero />
-        {/* <div className="max-w-7xl w-11/12 mx-auto pl-4 pt-6">
-          <div className="flex items-center">
-            <span className="absolute flex h-3 w-3 mr-6">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
-              <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
-            </span>
-            <h2 className="pl-6">Takk for i år!</h2>
-          </div>
-          <p>
-            Tusen takk for alle som deltok i år. Husk at du kan sjekke ut
-            stillingsannonser på vår nettside. For dere med bankettbillett, vi
-            sees i kveld.
-          </p> */}
-          {/* <div className="mt-4 flex flex-wrap gap-2">
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/for-studenter/karrieredagene/timeplan">
-              Timeplan
-            </Link>
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/for-studenter/karrieredagene/standkart">
-              Standkart
-            </Link>
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/arrangement/lunsjseminar-knowit--sparebanken-vest">
-              Lunsjseminar
-            </Link>
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/arrangement/workshops">
-              Workshops
-            </Link>
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/arrangement/konseptpresentasjoner">
-              Konseptpresentasjoner
-            </Link>
-            <Link
-              className="flex-shrink-0 bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500"
-              href="/for-studenter/stillingsannonser">
-              Stillingsannonser
-            </Link>
-          </div> */}
-        {/* </div> */}
-        {/*PLUSS+ STARTS*/}
+
         {isPlus ? (
           <>
             <div className="max-w-7xl w-11/12 mx-auto pl-4 pt-6">
