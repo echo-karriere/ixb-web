@@ -30,7 +30,7 @@
     "react-secure-storage": "^1.2.2",
     "react-select": "^5.7.0",
     "remixicon": "^3.0.0",
-    "sanitize-html": "^2.10.0",
+    "sanitize-html": "^2.12.1",
     "sanity": "^3.35.0",
     "tailwindcss-radix": "^2.7.0"
   },
