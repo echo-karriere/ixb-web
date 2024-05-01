@@ -23,31 +23,40 @@ export const getStaticProps = async () => {
     }
   });
 
-  // sort after role
   data.sort((a: { role: string }, b: { role: string }) => {
-    if (a.role === "Leder") {
-      return -1;
-    } else if (b.role === "Leder") {
-      return 1;
-    } else if (a.role === "Nestleder") {
-      return -1;
-    } else if (b.role === "Nestleder") {
-      return 1;
-    } else if (a.role === "Økonomiansvarlig") {
-      return -1;
-    } else if (b.role === "Økonomiansvarlig") {
-      return 1;
-    } else if (a.role === "Webansvarlig") {
-      return -1;
-    } else if (b.role === "Webansvarlig") {
-      return 1;
-    } else if (a.role === "Bedriftsansvarlig") {
-      return -1;
-    } else if (b.role === "Bedriftsansvarlig") {
-      return 1;
-    } else {
-      return a.role.localeCompare(b.role);
+    // Prioritize "Ansvarlig" and "Ansvarleg" within each role group
+    const ansvarligPriority = (role: string) =>
+      role.includes("Ansvarlig") || role.includes("Ansvarleg") ? 0 : 1;
+
+    // Check high-level groups
+    const rolePriority = (role: string) => {
+      if (role === "Leder" || role === "Leiar") return 1;
+      if (role === "Nestleder" || role === "Nestleiar") return 2;
+      if (role.includes("Økonomi")) return 3;
+      if (role.includes("Web")) return 4;
+      if (role.includes("Bedrift")) return 5;
+      if (role.includes("PR")) return 6;
+      else return 7;
+    };
+
+    // Calculate priorities
+    const aRolePriority = rolePriority(a.role);
+    const bRolePriority = rolePriority(b.role);
+
+    // First sort by role group
+    if (aRolePriority !== bRolePriority) {
+      return aRolePriority - bRolePriority;
     }
+
+    // If within the same group, sort by whether they include "Ansvarlig" or "Ansvarleg"
+    const aAnsvarligPriority = ansvarligPriority(a.role);
+    const bAnsvarligPriority = ansvarligPriority(b.role);
+    if (aAnsvarligPriority !== bAnsvarligPriority) {
+      return aAnsvarligPriority - bAnsvarligPriority;
+    }
+
+    // If both have the same Ansvarlig status and are in the same group, sort alphabetically
+    return a.role.localeCompare(b.role);
   });
 
   return {
