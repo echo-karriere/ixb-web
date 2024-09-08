@@ -12,6 +12,11 @@ const buttons = [
     icon: "ri-presentation-line",
   },
   {
+    href: "/for-studenter/stillingsannonser",
+    text: "Stillingsannonser",
+    icon: "ri-suitcase-line",
+  },
+  {
     href: "/for-studenter/karrieredagene/english",
     text: "English",
     icon: "ri-global-line",
