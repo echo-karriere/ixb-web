@@ -107,7 +107,7 @@ export const logos = [
     url: "https://netcompany.com/no",
   },
   {
-    imgUrl: "/karrieredagene/logo/nordea.svg",
+    imgUrl: "/karrieredagene/logo/Nordea.svg",
     alt: "Nordea liv",
     url: "https://www.nordealiv.no",
   },
