@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Logo {
   imgUrl: string;
@@ -20,15 +19,15 @@ const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
       <h2 id="attending" className="text-gray-800 text-center pt-8">
         Bedrifter som deltar:
       </h2>
-      <p className="text-gray-600 italic text-center pb-4">
-        Trykk på logoen for å se standplass og mer informasjon
-      </p>
+      
 
       <div className="max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4">
         {logos.map((logo, index) => (
-          <Link
+          <a
             key={index}
-            href={`/for-studenter/karrieredagene/bedrift/${logo.url}`}
+            href={logo.url}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gray-100 p-4 hover:bg-gray-200 h-24 max-w-24 flex items-center justify-center cursor-pointer">
             <Image
               src={logo.imgUrl}
@@ -38,7 +37,7 @@ const LogoGrid: React.FC<LogoGridProps> = ({ logos }) => {
               layout="responsive"
               className="object-contain max-h-12 max-w-24"
             />
-          </Link>
+          </a>
         ))}
       </div>
     </>

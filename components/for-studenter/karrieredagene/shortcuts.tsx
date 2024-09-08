@@ -2,11 +2,6 @@ import Link from "next/link";
 
 const buttons = [
   {
-    href: "/for-studenter/karrieredagene/timeplan",
-    text: "Timeplan",
-    icon: "ri-time-line",
-  },
-  {
     href: "/arrangement/workshops",
     text: "Workshops",
     icon: "ri-group-line",
@@ -15,11 +10,6 @@ const buttons = [
     href: "/arrangement/konseptpresentasjoner",
     text: "Konseptpresentasjoner",
     icon: "ri-presentation-line",
-  },
-  {
-    href: "/arrangement/lunsjseminar",
-    text: "Lunsjseminar",
-    icon: "ri-cake-3-line",
   },
   {
     href: "/for-studenter/karrieredagene/english",

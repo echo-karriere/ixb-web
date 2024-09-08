@@ -24,17 +24,10 @@ export default function PameldingInfo() {
       <div className="max-w-3xl">
         <h1>Påmelding til ITxBERGEN sine karrieredag 2024</h1>
         <p>
-          Påmeldingen til ITxBERGEN sin karrieredag den 19. september 2024 er nå
-          åpen for bedrifter. En ypperlig mulighet til å møte
-          IT-studenter fra Universitetet i Bergen, Høgskulen på Vestlandet,
-          Kristiania og Noroff.
+          Påmeldingen er stengt. Vi vil snart åpne for påmelding til ITxBERGEN
+          2025.
         </p>
         <br />
-        <Link
-          href="/for-bedrifter/pamelding/bekreft"
-          className="bg-gray-700 text-white rounded shadow-md px-4 py-2 hover:bg-blue-600 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-yellow-500">
-          Gå til påmelding
-        </Link>
         <br />
         <h2 className="mt-10">Er bedriften allerede påmeldt?</h2>
         <p>

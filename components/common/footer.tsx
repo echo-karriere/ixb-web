@@ -180,13 +180,6 @@ export default function Footer() {
                     <i className="ri-external-link-fill"></i>
                   </a>
                 </li>
-                <li>
-                  <Link
-                    href="/slack"
-                    className="text-gray-600 hover:text-blue-600 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:rounded-lg p-2 focus:ring-blue-400">
-                    <i className="ri-slack-fill ri-lg"></i> Slack{" "}
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
