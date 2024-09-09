@@ -25,6 +25,11 @@ export const logos = [
     url: "https://bergen-chamber.no",
   },
   {
+    imgUrl: "/karrieredagene/logo/bkk.svg",
+    alt: "BKK",
+    url: "https://bkk.no",
+  },
+  {
     imgUrl: "/karrieredagene/logo/Bouvet.svg",
     alt: "Bouvet",
     url: "https://bouvet.no",
