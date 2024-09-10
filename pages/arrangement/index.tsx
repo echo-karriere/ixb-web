@@ -22,13 +22,13 @@ const AllEvents: NextPage<{ events: any[] }> = ({ events }) => {
   return (
     <div>
       <HeadSEO
-        title="Arrangementer | ITxBergen"
-        description="Overblikk over arrangemnter fra ITxBergen"
+        title="Timeplan | ITxBergen"
+        description="Overblikk over timeplanen til årets karrieredag"
         canonical="/arrangement"
       />
       <main>
         <div className="max-w-7xl w-11/12 mx-auto pt-6 pl-4">
-          <h1>Arrangementer</h1>
+          <h1>Timeplan for karrieredagen</h1>
         </div>
         <Events events={events} />
         <br />

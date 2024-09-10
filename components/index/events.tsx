@@ -65,7 +65,7 @@ export default function Events({ events }: { events: SanityDocument[] }) {
   }
   return (
     <div className="max-w-7xl w-11/12 mx-auto pt-6">
-      <h2 className="text-2xl font-bold ml-4">Arrangementer</h2>
+      <h2 className="text-2xl font-bold ml-4">Timeplan for karrieredagen</h2>
       <div className="flex flex-wrap">
         {events.slice(0, 6).map((event, index) => (
           <div key={event._id} className={`w-full md:w-1/3 `}>
@@ -78,7 +78,7 @@ export default function Events({ events }: { events: SanityDocument[] }) {
           <div className="w-full flex justify-center ">
             <Link href="/arrangement" passHref>
               <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none focus:ring-4 focus:ring-yellow-400">
-                Vis flere arrangementer
+                Vis hele timeplanen
                 <i className="ri-arrow-right-line ml-1" />
               </button>
             </Link>
