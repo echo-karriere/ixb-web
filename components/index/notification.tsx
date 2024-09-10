@@ -23,27 +23,21 @@ export default function Notification() {
   }
 
   return (
-    <><div className="flex justify-left w-full mx-auto px-6 py-4 relative">
-      <div className="max-w-7xl w-11/12 mx-auto">
-        <div className="ml-3">
-          <p className="text-lg">
-            echo karriere har byttet navn, og vil fra 1. mars være kjent som
-            ITxBergen.{" "}
-            <Link href="/nytt-navn" className="underline rounded-lg">
-              {" "}
-              Du kan lese mer om navnbytte her
-            </Link>
-            .
-          </p>
-
-          <button
-            onClick={handleClose}
-            className=" bg-gray-700 hover:bg-gray-900 mt-2 p-1.5 rounded text-white "
-            aria-label="Close">
-            Skjul denne meldingen
-          </button>
+    <>
+      <div className="max-w-7xl w-11/12 mx-auto pl-4">
+        <div className="flex items-center">
+          <span className="absolute flex h-3 w-3 mr-6">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
+            <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
+          </span>
+          <h2 className="pl-6">Følg med på nettsiden torsdag kl.12:00</h2>
         </div>
+        <p>
+          På torsdag kl. 12:00 vil vi åpne påmeldingen til workshops og
+          konseptpresentasjoner. Gjerne ta en titt på timeplanen om du finner
+          noe interessant. Vi oppdaterer innholdet fortløpende.
+        </p>
       </div>
-    </div><hr className="border-gray-200" /></>
+    </>
   );
 }
