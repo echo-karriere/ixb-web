@@ -30,12 +30,12 @@ export default function Notification() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
             <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
           </span>
-          <h2 className="pl-6">Følg med på nettsiden torsdag kl.12:00</h2>
+          <h2 className="pl-6">Sjekk ut timeplanen</h2>
         </div>
         <p>
-          På torsdag kl. 12:00 vil vi åpne påmeldingen til workshops og
-          konseptpresentasjoner. Gjerne ta en titt på timeplanen om du finner
-          noe interessant. Vi oppdaterer innholdet fortløpende.
+          Fra klokken 12:00 har du muligheten til å melde deg på en rekke ulike
+          workshops og konseptpresentasjoner. Ta en titt på timeplanen under, og
+          meld deg på det du ønsker å delta på.
         </p>
       </div>
     </>
