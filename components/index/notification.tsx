@@ -33,9 +33,9 @@ export default function Notification() {
           <h2 className="pl-6">Sjekk ut timeplanen</h2>
         </div>
         <p>
-          Fra klokken 12:00 har du muligheten til å melde deg på en rekke ulike
-          workshops og konseptpresentasjoner. Ta en titt på timeplanen under, og
-          meld deg på det du ønsker å delta på.
+          Frem til karrieredagen har du muligheten til å melde deg på en rekke
+          ulike workshops og konseptpresentasjoner. Ta en titt på timeplanen
+          under, og meld deg på det du ønsker å delta på.
         </p>
       </div>
     </>
