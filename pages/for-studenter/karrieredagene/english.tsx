@@ -52,7 +52,7 @@ const CareerFair: NextPage = () => {
                 href="/for-studenter/stillingsannonser">
                 Click here to see the listings
               </Link>
-              .
+              
             </p>
           </div>
         </div>
