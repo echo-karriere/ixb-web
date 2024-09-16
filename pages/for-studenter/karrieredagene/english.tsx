@@ -4,6 +4,8 @@ import { HeadSEO } from "../../../components/common/functions/HeadSEO";
 
 import "remixicon/fonts/remixicon.css";
 import Link from "next/link";
+import { ExternalLink } from "../../../components/common/functions/externalLink";
+import { InternalLink } from "../../../components/common/functions/internalLink";
 
 const CareerFair: NextPage = () => {
   return (
@@ -18,20 +20,91 @@ const CareerFair: NextPage = () => {
           <div className="max-w-3xl">
             <h1>Career Fair for IT-Students</h1>
             <p>
-              Welcome to ITxBergen&#39;s career fair for IT students in the
-              Bergen area. This year, the career fair will be held on September
-              19th in{" "}
-              <Link
-                className="text-blue-600 underline"
-                href="https://goo.gl/maps/sma7WGLp3tBggsC67"
-                target="_blank">
-                Grieghallen <i className="ri-external-link-line"></i>
-              </Link>
-              . On this page you will find usefull information about the career
-              fair.
+              Welcome to ITxBergen's Career Fair for IT students in the Bergen
+              area. This year's Career Fair will take place on September 19th
+              and will be held at{" "}
+              <ExternalLink
+                href="https://maps.app.goo.gl/X7WFoc8XboGbw5yS8"
+                linkText="Grieghallen"
+              />{" "}
+              (Please use the{" "}
+              <ExternalLink
+                href="https://www.google.com/maps/@60.3882408,5.3274699,3a,48.7y,63.53h,93.8t/data=!3m6!1e1!3m4!1sLWxiuTrmQbww-JH8wcy_Ag!2e0!7i16384!8i8192?entry=ttu"
+                linkText="Peer Gynt entrance"
+              />
+              ). On this page, you will find resources for the Career Fair,
+              including events and other information.
             </p>
             <h2>Schedule:</h2>
-            <p>We will soon publish the schedule for the career fair.</p>
+
+            <p>
+              <span className="font-bold">Balloon Drop</span>: 10:00 - 10:15
+              (Ground Floor)
+            </p>
+            <p>
+              We’re starting the career fair with a balloon drop, and some of
+              the balloons will contain prizes! Be sure to arrive by 10:00 to
+              join in. Who knows, you might be one of the lucky winners!
+            </p>
+            <br />
+
+            <p>
+              <span className="font-bold">Lightning Talks</span>: 10:15 - 11:30
+              (Ground Floor)
+            </p>
+            <p>
+              Curious about which companies are participating in the career
+              fair? Attend the lightning talks for a quick introduction to some
+              of the companies that are attending. Please note that it will be
+              in Norwegian.
+            </p>
+            <br />
+            <p>
+              <span className="font-bold">
+                Visit the Companies at their Stands{" "}
+              </span>
+              : 11:30 - 16:00 (2nd Floor)
+            </p>
+            <p>
+              Stop by the company stands to ask questions and explore the
+              opportunities available to you. During this time, you can also
+              attend workshops and concept presentations. For more details and
+              to sign up for workshops and presentations (which will be held at
+              the 3rd floor), check the links below. Please note that most
+              sessions will likely be conducted in Norwegian.
+            </p>
+            <br />
+            <ul>
+              <li>
+                <InternalLink
+                  href="/arrangement/workshops"
+                  linkText="More information about the workshops (in norwegian)"
+                />
+              </li>
+              <li>
+                <InternalLink
+                  href="/arrangement/konseptpresentasjoner"
+                  linkText="More information about the concept presentations (in norwegian)"
+                />
+              </li>
+            </ul>
+            <br />
+
+            <p>
+              <span className="font-bold">Banquet</span>: 19:00 - 00:30
+            </p>
+            <p>
+              Some students may be fortunate enough to receive a special
+              invitation to the banquet from one of the companies. Further
+              details will be shared directly with those invited.
+            </p>
+            <br />
+            <p className="italic">
+              Note that in Norway, the 1st floor is considered the same as the
+              ground floor. What might be referred to as the "Ground Floor" in
+              other countries is regarded as the floor below the first floor in
+              Norway.
+            </p>
             <h2>Companies Attending</h2>
             <p>
               An overview of the companies attending the career fair{" "}
@@ -41,6 +114,15 @@ const CareerFair: NextPage = () => {
                 can be found here
               </Link>
               .
+            </p>
+
+            <h2>Map of the Stand Area</h2>
+            <p>
+              An overview of the stand area can be{" "}
+              <InternalLink
+                href="/files/standkart.pdf"
+                linkText="downloaded from here"
+              />
             </p>
             <h2>Job Listings and Internship Opportunities</h2>
             <p>

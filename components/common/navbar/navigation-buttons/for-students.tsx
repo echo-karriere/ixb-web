@@ -11,8 +11,8 @@ const forstudents = [
     icon: IconFour,
   },
   {
-    name: "Karrieredagene 2024",
-    description: "Hva skjer på karrieredagene?",
+    name: "Karrieredagen 2024",
+    description: "Hva skjer på karrieredagen?",
     href: "/for-studenter/karrieredagene",
     icon: IconOne,
   },
