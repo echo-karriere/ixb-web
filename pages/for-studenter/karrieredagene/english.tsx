@@ -105,7 +105,7 @@ const CareerFair: NextPage = () => {
               Floor&quot; in other countries is regarded as the floor below the
               first floor in Norway.
             </p>
-            <h2>Companies Attending</h2>
+            <h2>Attending Companies</h2>
             <p>
               An overview of the companies attending the career fair{" "}
               <Link
