@@ -10,7 +10,7 @@ const CareerFair: NextPage = () => {
   return (
     <div>
       <HeadSEO
-        title="Karrieredagene 2024 | ITxBERGEN"
+        title="Karrieredagen 2024 | ITxBERGEN"
         description="Informasjon over hva som skjer på karrieredagene til ITxBergen."
         canonical="/for-studenter/karrieredagene"
       />
