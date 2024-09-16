@@ -20,9 +20,9 @@ const CareerFair: NextPage = () => {
           <div className="max-w-3xl">
             <h1>Career Fair for IT-Students</h1>
             <p>
-              Welcome to ITxBergen's Career Fair for IT students in the Bergen
-              area. This year's Career Fair will take place on September 19th
-              and will be held at{" "}
+              Welcome to ITxBergen&apos;s Career Fair for IT students in the
+              Bergen area. This year&apos;s Career Fair will take place on
+              September 19th and will be held at{" "}
               <ExternalLink
                 href="https://maps.app.goo.gl/X7WFoc8XboGbw5yS8"
                 linkText="Grieghallen"
@@ -101,9 +101,9 @@ const CareerFair: NextPage = () => {
             <br />
             <p className="italic">
               Note that in Norway, the 1st floor is considered the same as the
-              ground floor. What might be referred to as the "Ground Floor" in
-              other countries is regarded as the floor below the first floor in
-              Norway.
+              ground floor. What might be referred to as the &quot;Ground
+              Floor&quot; in other countries is regarded as the floor below the
+              first floor in Norway.
             </p>
             <h2>Companies Attending</h2>
             <p>
