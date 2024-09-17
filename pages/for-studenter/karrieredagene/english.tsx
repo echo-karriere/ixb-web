@@ -29,7 +29,7 @@ const CareerFair: NextPage = () => {
               />{" "}
               (Please use the{" "}
               <ExternalLink
-                href="https://www.google.com/maps/@60.3882408,5.3274699,3a,48.7y,63.53h,93.8t/data=!3m6!1e1!3m4!1sLWxiuTrmQbww-JH8wcy_Ag!2e0!7i16384!8i8192?entry=ttu"
+                href="https://www.google.com/maps/@60.3882061,5.3275722,3a,34.2y,55.56h,88.91t/data=!3m7!1e1!3m5!1sRaaCX-jLrl5pplMWPkpatg!2e0!5s20230901T000000!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
                 linkText="Peer Gynt entrance"
               />
               ). On this page, you will find resources for the Career Fair,
