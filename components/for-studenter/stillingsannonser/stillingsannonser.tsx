@@ -246,6 +246,37 @@ export default function Joblist({
               Nullstill filter
             </button>
           ) : null}
+          <p className="mt-4">
+            Antall resultater:{" "}
+            {
+              joblistings.filter((job) => {
+                if (
+                  selectedCompanies.length > 0 &&
+                  !selectedCompanies.includes(job.company)
+                ) {
+                  return false;
+                }
+                if (
+                  selectedLocations.length > 0 &&
+                  !job.location.some((loc: string) =>
+                    selectedLocations.includes(loc)
+                  )
+                ) {
+                  return false;
+                }
+                if (
+                  selectedTypes.length > 0 &&
+                  !selectedTypes.includes(job.type)
+                ) {
+                  return false;
+                }
+                if (showFavorites && !isFavorite(job._id)) {
+                  return false;
+                }
+                return true;
+              }).length
+            }
+          </p>
         </div>
         <div className="col-span-2 md:ml-8 md:w-full">
           {joblistings
