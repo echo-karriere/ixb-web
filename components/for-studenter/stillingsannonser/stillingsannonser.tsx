@@ -29,9 +29,16 @@ export default function Joblist({
   // Get a list of all unique companies
   const allCompanies = joblistings
     .map((job) => job.company)
-    .filter((company, index, companies) => companies.indexOf(company) === index)
-    .sort();
+    .filter(
+      (company, index, companies) => companies.indexOf(company) === index
+    );
 
+  // if company is Sparebanken Vest, put it at the top
+  allCompanies.sort((a, b) => {
+    if (a === "Sparebanken Vest") return -1;
+    if (b === "Sparebanken Vest") return 1;
+    return a.localeCompare(b);
+  });
   // Get a list of all unique locations
   const allLocations = joblistings
     .flatMap((job) => job.location)

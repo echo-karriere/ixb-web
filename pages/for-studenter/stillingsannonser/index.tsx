@@ -30,17 +30,25 @@ export const getStaticProps = async () => {
     return !job.deadline || jobDeadline >= now;
   });
 
-  // sort after deadline so that the closest deadline is first,
-  // and jobs without a deadline are always at the bottom
-  filteredData.sort((a: { deadline: string }, b: { deadline: string }) => {
-    if (!a.deadline) {
-      return 1;
+  // sort so that Sparebanken Vest is at the top, then sort by deadline
+  filteredData.sort(
+    (
+      a: { deadline: string; company: string },
+      b: { deadline: string; company: string }
+    ) => {
+      // First, check if either job's company is Sparebanken Vest
+      if (a.company === "Sparebanken Vest") return -1;
+      if (b.company === "Sparebanken Vest") return 1;
+      if (!a.deadline) {
+        return 1;
+      }
+      if (!b.deadline) {
+        return -1;
+      }
+      // but if company is Sparebanken Vest, put it at the top
+      return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
     }
-    if (!b.deadline) {
-      return -1;
-    }
-    return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
-  });
+  );
 
   return { props: { data: filteredData } };
 };
