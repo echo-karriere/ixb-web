@@ -33,9 +33,7 @@ export default function Notification() {
           </span>
           <h2 className="pl-6">Takk for i år</h2>
         </div>
-        <p>
-          Takk for i år alle sammen. For de med bankettbillett, vi sees i kveld.
-        </p>
+        <p>Takk for i år alle sammen. Sjekk gjerne ut Helt Sikker sin CTF.</p>
       </div>
     </>
   );
