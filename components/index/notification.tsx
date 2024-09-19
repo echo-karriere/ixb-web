@@ -34,7 +34,7 @@ export default function Notification() {
           <h2 className="pl-6">Takk for i år</h2>
         </div>
         <p>
-          Takk for i år alle sammen. For de med bankettbillett, vi ses i kveld.
+          Takk for i år alle sammen. For de med bankettbillett, vi sees i kveld.
         </p>
       </div>
     </>
