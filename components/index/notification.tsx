@@ -31,11 +31,10 @@ export default function Notification() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#33030d] opacity-75"></span>
             <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#33030d]"></span>
           </span>
-          <h2 className="pl-6">Karrieredagen starter kl.10:00</h2>
+          <h2 className="pl-6">Karrieredagen pågår nå</h2>
         </div>
         <p>
-          Fra klokken 10 starter årets karriedag. Møt gjerne opp litt før, så du
-          rekker å være med på ballongslippet. Benytt{" "}
+          Årets karrieredag pågår nå. Benytt{" "}
           <ExternalLink
             href="https://www.google.com/maps/@60.3882061,5.3275722,3a,34.2y,55.56h,88.91t/data=!3m7!1e1!3m5!1sRaaCX-jLrl5pplMWPkpatg!2e0!5s20230901T000000!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
             linkText="inngang Peer Gynt"
