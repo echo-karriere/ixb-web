@@ -56,7 +56,7 @@ const Home: NextPage<{ events: any[]; news: any[] }> = ({ events, news }) => {
       />
       <main>
         <Hero />
-        <Notification />
+        {/* <Notification /> */}
         <Events events={events} />
         <News news={news} />
         <Infosection />
