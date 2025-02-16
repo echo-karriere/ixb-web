@@ -12,9 +12,9 @@ export default function Hero() {
         </p>
         <br />
         <Link
-          href="/for-studenter/karrieredagene"
+          href="/for-bedrifter/pamelding"
           className="bg-[#cab169] text-[#33030d] text-sm md:text-lg font-semibold  px-4 py-2 ml-4 mr-4 mt-16 md:mt-6 md:ml-24 focus:outline-none focus:ring-4 rounded focus:ring-blue-400 hover:bg-white">
-          Gå til programmet{" "}
+          Gå til påmelding{" "}
         </Link>
       </div>
     </div>
