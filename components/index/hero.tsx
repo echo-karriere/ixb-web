@@ -8,7 +8,7 @@ export default function Hero() {
           Vi samler IT-studentene i Bergen
         </h1>
         <p className="text-white text-md text-sm  md:text-xl md:w-9/12 pl-4 pr-4 md:pl-24 md:pr-24">
-          Karrieredagen for 2025 avholdes i Grieghallen 18. september 2025. Påmeldingen åpner snart.
+          Karrieredagen for 2025 avholdes i Grieghallen 18. september 2025. Påmeldingen for bedrifter er nå åpen.
         </p>
         <br />
         <Link
