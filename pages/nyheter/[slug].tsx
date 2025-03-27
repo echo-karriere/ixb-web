@@ -29,7 +29,7 @@ export const getStaticProps = async ({
     newsimage,
     
     }`,
-    { slug }
+    { slug },
   );
 
   return { props: { data } };
